@@ -5,13 +5,14 @@
 @theme {
   --color-brand-green: #9de410;
   --font-poppins: "Poppins", sans-serif;
+
 }
 
 
 @layer base {
   html {
     scroll-behavior: smooth;
-     @apply font-poppins;
+    @apply font-poppins;
   }
 
   html,
@@ -25,4 +26,43 @@
   body::-webkit-scrollbar {
     display: none;
   }
+}
+
+@layer utilities {
+  .h1 {
+    @apply text-5xl font-bold;
+  }
+
+  .h2 {
+    @apply text-4xl font-semibold;
+  }
+
+  .h3 {
+    @apply text-3xl font-medium;
+  }
+
+  .h4 {
+    @apply text-2xl font-medium;
+  }
+
+  .h5 {
+    @apply text-xl font-normal;
+  }
+
+  .h6 {
+    @apply text-lg font-normal;
+  }
+
+  .nav-glow {
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-shadow: 0 0 10px #0aff47, 0 0 20px #0aff47;
+    }
+  }
+
+  .glow-effect {
+    box-shadow: 0 4px 30px rgba(147, 0, 245, 0.5);
+  }
+
 }

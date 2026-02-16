@@ -1,9 +1,8 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import { HiOutlineLightBulb } from "react-icons/hi";
-import { LiaLaptopCodeSolid } from "react-icons/lia";
-import { GiPirateFlag } from "react-icons/gi";
+import { VscVscode } from "react-icons/vsc";
+import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
@@ -19,9 +18,9 @@ const Hero = () => {
           <div className="absolute w-72 h-72 md:w-96 md:h-96 bg-lime-400/10 rounded-full blur-[150px] animate-pulse"></div>
 
           {/* Floating UI Icons */}
-          <HiOutlineLightBulb className="absolute text-lime-400 size-10 top-0 right-10 animate-bounce " />
-          <LiaLaptopCodeSolid className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse " />
-          <GiPirateFlag className="absolute text-lime-400 size-10 top-10 left-0 -rotate-12 animate-pulse" />
+          <LiaLaptopCodeSolid className="absolute text-lime-400 size-10 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]  " />
+          <LiaCodeBranchSolid className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] " />
+          <VscVscode className="absolute text-lime-400 size-10 top-10 left-0 -rotate-12 animate-pulse mix-blend-plus-lighter" />
 
           {/* Hero Profile Image */}
           <div className="relative size-72 md:size-112 rounded-full overflow-hidden flex items-center justify-center ">
@@ -60,7 +59,7 @@ const Hero = () => {
           </div>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-            Full Stack Developer | Turning Ideas into Scalable Digital Products
+            Turning Ideas into Scalable Digital Products
           </p>
 
           {/* Social Links */}

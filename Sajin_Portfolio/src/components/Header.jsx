@@ -14,12 +14,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-stone-950 shadow-lg z-50">
+   <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm  z-50">
+
       <nav className="container mx-auto px-4 h-14 flex items-center justify-between">
 
-        <div className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer">
+        <div className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer ">
           <GiBarbedCoil size={26} />
-          <span>SAJIN</span>
+          <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">SAJIN</span>
         </div>
 
         {/* Desktop Navbar */}
@@ -28,7 +29,8 @@ const Header = () => {
             <a
               key={index}
               href={link.href}
-              className="text-gray-400 hover:text-lime-400 font-medium transition"
+              className="text-gray-400 nav-glow font-medium transition "
+              tabIndex={0}
             >
               {link.name}
             </a>
@@ -39,12 +41,12 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-lime-400"
+            className="text-lime-400 "
           >
             {isOpen ? (
-              <GiCrossedSwords size={26} />
+              <GiCrossedSwords size={26} className=" drop-shadow-[0_0_10px_#0aff47]" />
             ) : (
-              <RiMenu3Fill size={26} />
+              <RiMenu3Fill size={26} className="drop-shadow-[0_0_10px_#0aff47]" />
             )}
           </button>
         </div>
@@ -59,7 +61,7 @@ const Header = () => {
               key={index}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block px-6 py-3 text-gray-400 hover:text-lime-400 transition"
+              className="block px-6 py-3 text-gray-400 nav-glow transition"
             >
               {link.name}
             </a>
