@@ -1,11 +1,9 @@
 const Projects = () => {
 
   return (
-    <>
-      <h1>
-        Projects
-      </h1>
-    </>
+    <section id="projects" className="min-h-screen flex justify-center items-center">
+        <h1 className="h1 text-white">Projects</h1>
+    </section>
   )
 };
 
