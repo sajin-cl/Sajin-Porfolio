@@ -1,17 +1,11 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords, GiBarbedCoil } from "react-icons/gi";
 import { useState } from "react";
+import {navLinks} from '../data/data'
 
 const Header = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   return (
    <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm  z-50">

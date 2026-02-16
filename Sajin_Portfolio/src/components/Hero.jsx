@@ -1,6 +1,4 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { socialLinks } from "../data/data";
 import { VscVscode } from "react-icons/vsc";
 import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
@@ -64,27 +62,25 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex justify-center lg:justify-start gap-8 pt-8">
-            {[
-              { icon: <FaGithub />, href: "https://github.com/sajin-cl" },
-              { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/sajincl/" },
-              { icon: <FaInstagram />, href: "https://www.instagram.com/sajin_cl/" },
-              { icon: <SiLeetcode />, href: "https://leetcode.com/u/sajin-cl/" }
-            ].map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-lime-400 hover:scale-125 transition-all duration-300 ease-out text-3xl"
-              >
-                {social.icon}
-              </a>
-            ))}
+            {socialLinks.map((social, index) => {
+              const Icon = social.icon
+              return (
+                < a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-lime-400 hover:scale-125 transition-all duration-300 ease-out text-3xl"
+                >
+                  <Icon />
+                </a>
+              )
+            })}
           </div>
         </div>
 
       </div>
-    </section>
+    </section >
   );
 };
 
