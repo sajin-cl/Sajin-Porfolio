@@ -1,11 +1,11 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-
 import {
-  SiHtml5, SiCss3, SiJavascript, SiReact,SiExpress , SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub
+  SiLeetcode,SiHtml5, SiCss3, SiJavascript, SiReact,SiExpress , SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
+import { TbBrandVite } from "react-icons/tb";
+
 
 
 export const navLinks = [
@@ -30,6 +30,7 @@ export const skillsData = {
     { name: "VS Code", color: "#007ACC", icon: VscVscode },
     { name: "Postman", color: "#F24E1E", icon: SiFigma },
     { name: "MongoDB", color: "#47A248", icon: SiMongodb },
+    { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
     { name: "GitHub", color: "#FFFFFF", icon: SiGithub },
     { name: "Figma", color: "#FF007F", icon: SiFigma },
     { name: "Vercel", color: "#FFFFFF", icon: SiVercel },
@@ -45,3 +46,28 @@ export const skillsData = {
     { name: "Express", color: "#61DAFB", icon: SiExpress },
   ]
 };
+
+
+export const projectsData = [
+  {
+    name: "Portfolio Website",
+    description: "A personal portfolio built with React, Tailwind CSS, and Vite.",
+    image: "/project1.png", 
+    github: "https://github.com/yourrepo",
+    live: "https://yourportfolio.com",
+  },
+  {
+    name: "Multi Vendor Grocerry Ecommerce",
+    description: "Full-stack e-commerce app using MERN stack with JWT auth.",
+    image: "/project2.png",
+    github: "https://github.com/sajin-cl/Multi-Vendor-Grocery-Ecommerce-Vite-React",
+    live: "https://power-house-ecommerce.vercel.app/",
+  },
+  {
+    name: "Ecommerce Website",
+    description: "Admin & Users--Session--Express--Bcrypt--cors--Bootstrap--Hbs",
+    image: "/project3.png",
+    github: "https://github.com/sajin-cl/Admin_and_User-based-Ecommerce",
+    live: "#",
+  },
+];

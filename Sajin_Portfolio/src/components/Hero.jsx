@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
           <h2 className="text-2xl md:text-3xl text-gray-400 font-medium tracking-tight">Hi There,</h2>
 
-          <div className="min-h-24 md:min-h-32">
+          <div className="min-h-16 md:min-h-32">
             <h1 className="text-3xl md:text-6xl font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
               <Typewriter
                 options={{
@@ -56,7 +56,7 @@ const Hero = () => {
             </h1>
           </div>
 
-          <p className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed ">
             Turning Ideas into Scalable Digital Products
           </p>
 
