@@ -50,7 +50,7 @@ export const skillsData = {
 
 export const projectsData = [
   {
-    name: "Portfolio Website",
+    name: "Personal Website",
     description: "A personal portfolio built with React, Tailwind CSS, and Vite.",
     image: "/project1.png", 
     github: "https://github.com/yourrepo",

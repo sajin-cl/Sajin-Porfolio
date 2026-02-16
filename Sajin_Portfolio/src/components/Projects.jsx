@@ -36,10 +36,10 @@ const Projects = () => {
                 {/* Buttons */}
                 <div className="flex gap-4">
                   <a
-                    href={project.demoUrl}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-md lg:text-base border-1 border-lime-400 text-lime-400 font-bold 
+                    className="text-md lg:text-base border border-lime-400 text-lime-400 font-bold 
              tracking-wide px-4 py-2  rounded-full w-full hover:bg-lime-400/20 transition-colors text-center cursor-pointer "
                   >
                     GitHub

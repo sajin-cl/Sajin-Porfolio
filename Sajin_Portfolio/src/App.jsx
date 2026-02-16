@@ -5,9 +5,10 @@ import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import Leetcode from "./components/Leetcode"
 
 function App() {
-d
+  d
   return (
     <div className="min-h-screen flex flex-col scroll-smooth">
       <Header />
@@ -15,6 +16,7 @@ d
         <Hero />
         <About />
         <Skills />
+        <Leetcode />
         <Projects />
         <Contact />
       </main>

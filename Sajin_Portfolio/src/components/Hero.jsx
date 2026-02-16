@@ -60,6 +60,18 @@ const Hero = () => {
             Turning Ideas into Scalable Digital Products
           </p>
 
+            <h1 className="text-xl md:h4 font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
+              <Typewriter
+                options={{
+                  strings: ["BE Computer Science Engineer","MERN Stack Developer Intern – Logiprompt Techno Solutions, Kazhakuttam"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 60,
+                  deleteSpeed: 60,
+                }}
+              />
+            </h1>
+
           {/* Social Links */}
           <div className="flex justify-center lg:justify-start gap-8 pt-8">
             {socialLinks.map((social, index) => {
@@ -77,6 +89,7 @@ const Hero = () => {
               )
             })}
           </div>
+          
         </div>
 
       </div>
