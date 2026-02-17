@@ -94,9 +94,9 @@ const Hero = () => {
           {/* Download CV button */}
           <div className="mt-13 flex justify-center lg:justify-start">
             <a
-              href="/resume.pdf"
+              href="/SajinCL_Mern_Stack_Developer_Resume.pdf"
               download="SajinCL_Mern_Stack_Developer_Resume.pdf"
-              className="px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
+              className="whitespace-nowrap px-20 md:px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
             >
               Download CV
             </a>
