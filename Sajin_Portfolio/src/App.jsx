@@ -1,9 +1,9 @@
 import { lazy, Suspense } from 'react'
 
 import Header from "./components/Header"
-import Hero from "./components/Hero"
 import Footer from "./components/Footer"
 
+const Hero = lazy(() => import("./components/Hero"));
 const About = lazy(() => import("./components/About"));
 const Skills = lazy(() => import("./components/Skills"));
 const Leetcode = lazy(() => import("./components/Leetcode"));
@@ -17,7 +17,7 @@ function App() {
     <div className="min-h-screen flex flex-col scroll-smooth">
       <Header />
       <main className="pt-16" >
-        <Hero />
+
         <Suspense fallback={
           <div className="space-y-4 p-6 animate-pulse">
             <div className="h-6 bg-gray-700 rounded w-1/3"></div>
@@ -25,6 +25,7 @@ function App() {
             <div className="h-4 bg-gray-700 rounded w-5/6"></div>
           </div>
         }>
+          <Hero />
           <About />
           <Skills />
           <Leetcode />
