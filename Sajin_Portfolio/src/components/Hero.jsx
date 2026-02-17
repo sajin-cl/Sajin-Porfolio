@@ -60,28 +60,29 @@ const Hero = () => {
             Turning Ideas into Scalable Digital Products
           </p>
 
-            <h1 className="text-xl md:h4 font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
-              <Typewriter
-                options={{
-                  strings: ["BE Computer Science Engineer","MERN Stack Developer Intern – Logiprompt Techno Solutions, Kazhakuttam"],
-                  autoStart: true,
-                  loop: true,
-                  delay: 60,
-                  deleteSpeed: 60,
-                }}
-              />
-            </h1>
+          <h1 className="text-xl md:h6 font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
+            <Typewriter
+              options={{
+                strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN Stack Developer Intern – Logiprompt Techno Solutions, Kazhakuttam"],
+                autoStart: true,
+                loop: true,
+                delay: 60,
+                deleteSpeed: 60,
+              }}
+            />
+          </h1>
 
-          {/* Social Links */}
+          {/* Social Links icons */}
           <div className="flex justify-center lg:justify-start gap-8 pt-8">
             {socialLinks.map((social, index) => {
               const Icon = social.icon
               return (
-                < a
+                <a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={social.name}
                   className="text-gray-400 hover:text-lime-400 hover:scale-125 transition-all duration-300 ease-out text-3xl"
                 >
                   <Icon />
@@ -89,7 +90,18 @@ const Hero = () => {
               )
             })}
           </div>
-          
+
+          {/* Download CV button */}
+          <div className="mt-13 flex justify-center lg:justify-start">
+            <a
+              href="/resume.pdf"
+              download="SajinCL_Mern_Stack_Developer_Resume.pdf"
+              className="px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
+            >
+              Download CV
+            </a>
+          </div>
+
         </div>
 
       </div>

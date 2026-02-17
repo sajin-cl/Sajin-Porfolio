@@ -1,10 +1,11 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
-  SiLeetcode,SiHtml5, SiCss3, SiJavascript, SiReact,SiExpress , SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub
+  SiLeetcode, SiHtml5, SiCss3, SiJavascript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
+import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
 
 
@@ -18,10 +19,16 @@ export const navLinks = [
 
 
 export const socialLinks = [
-  { icon: FaGithub, href: "https://github.com/sajin-cl" },
-  { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/" },
-  { icon: FaInstagram, href: "https://www.instagram.com/sajin_cl/" },
-  { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/" },
+  { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'sajin-cl' },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'sajincl' },
+  { icon: FaInstagram, href: "https://www.instagram.com/sajin_cl/", name: '@sajin_cl' },
+  { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'sajin-cl' },
+  {
+    icon: MdAttachEmail,
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.",
+    name: 'sajincl222@gmail.com'
+  },
+  { icon: MdOutlineWifiCalling3, href: "tel:+918056825814", name: 'call me' }
 ];
 
 
@@ -52,7 +59,7 @@ export const projectsData = [
   {
     name: "Personal Website",
     description: "A personal portfolio built with React, Tailwind CSS, and Vite.",
-    image: "/project1.png", 
+    image: "/project1.png",
     github: "https://github.com/yourrepo",
     live: "https://yourportfolio.com",
   },
