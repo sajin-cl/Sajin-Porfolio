@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
+import { motion } from 'framer-motion';
 
 
 const Contact = () => {
@@ -24,9 +25,12 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen bg-stone-950 flex items-center justify-center p-4 mx-auto">
       <div className="w-full max-w-lg  rounded-2xl p-8 mx-auto">
-        <h1 className="h1 text-white mb-5 text-center">
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
+          className="h1 text-white mb-5 text-center"
+        >
           Contact Us
-        </h1>
+        </motion.h1>
         <div className="text-white text-center mb-5">
           <Typewriter
             options={{
@@ -99,3 +103,4 @@ const Contact = () => {
 
 
 export default Contact;
+

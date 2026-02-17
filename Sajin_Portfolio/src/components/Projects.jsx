@@ -1,13 +1,17 @@
 import { projectsData } from '../data/data'
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
     <section id="projects" className="flex min-h-screen justify-between items-center bg-stone-950">
       <div className="w-full py-10 bg-stone-950 flex flex-col items-center gap-8">
         <div className="text-center">
-          <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-5">
+          <motion.h2 
+          initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
+          className="text-3xl lg:text-5xl font-semibold text-white mb-5"
+          >
             PROJECTS
-          </h2>
+          </motion.h2>
 
         </div>
 
