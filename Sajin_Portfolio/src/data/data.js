@@ -78,3 +78,27 @@ export const projectsData = [
     live: "#",
   },
 ];
+
+export const certificationsData = [
+  {
+    name: "MERN Stack Intern Certificate",
+    issuer:"Logipromt Techno solutions  (Trivandrum)",
+    description: "Developed RESTful APIs using Node.js and Express following MVC architecture",
+    image: "/mern_stack_intern_certificate.jpg",
+    credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
+  },
+  {
+    name: "UI UX 30Days Masterclass Certificate",
+     issuer:"NoviTech R&D Pvt Ltd",
+    description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.",
+    image: "/ui-ux-certificate.jpg",
+    credential: "#",
+  },
+  {
+    name: "Digital-marketting-certificate",
+     issuer:"First Success Technologies",
+    description: "Completed a 2-day Online Digital Marketing Workshop conducted by Santhosh Kumar A, CEO of First Success Technologies.",
+    image: "/Digital-marketting-certificate.jpg",
+    credential: "#",
+  },
+]
