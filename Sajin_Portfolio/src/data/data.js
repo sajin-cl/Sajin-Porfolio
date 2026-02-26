@@ -83,7 +83,7 @@ export const certificationsData = [
   {
     name: "MERN Stack Intern Certificate",
     issuer:"Logipromt Techno solutions  (Trivandrum)",
-    description: "Developed RESTful APIs using Node.js and Express following MVC architecture",
+    description: "Developed RESTful APIs using Nodejs and Express following MVC architecture.Developed responsive single-page applications using React with reusable components and efficient state management",
     image: "/mern_stack_intern_certificate.jpg",
     credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
   },
