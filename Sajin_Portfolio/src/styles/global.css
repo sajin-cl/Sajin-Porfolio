@@ -26,6 +26,14 @@
   body::-webkit-scrollbar {
     display: none;
   }
+
+   /* avoid autofill backgroud color */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #0c0a09 inset;
+    -webkit-text-fill-color: #d4d4d4;
+    transition: background-color 5000s ease-in-out;
+  }
 }
 
 @layer utilities {
