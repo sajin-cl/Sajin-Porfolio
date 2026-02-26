@@ -59,7 +59,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-screen bg-stone-950 flex items-center justify-center p-4 mx-auto">
-      <div className="w-full max-w-lg  rounded-2xl p-8 mx-auto">
+      <div className="w-full max-w-lg  rounded-2xl md:p-8 mx-auto">
         <motion.h1
           initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
           className="h1 text-white mb-5 text-center"

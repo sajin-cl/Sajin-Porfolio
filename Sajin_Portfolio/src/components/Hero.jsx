@@ -29,12 +29,12 @@ const Hero = () => {
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce"
-           
+
           >
             <h2 className="text-4xl md:text-5xl drop-shadow-[0_0_15px_#84ff65]">
               3+
             </h2>
-            <p className="text-md drop-shadow-[0_0_5px_#84ff65] -mt-1">
+            <p className="text-md drop-shadow-[0_0_5px_#84ff65] -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
             </p>
           </motion.div>
