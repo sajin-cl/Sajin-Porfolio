@@ -69,7 +69,7 @@ const Contact = () => {
         <div className="text-white text-center mb-5">
           <Typewriter
             options={{
-              strings: ["Feel free to reach out for collaborations & projects"],
+              strings: ["Currently seeking job opportunities. Reach out to connect!"],
               autoStart: true,
               loop: true,
               delay: 80,
