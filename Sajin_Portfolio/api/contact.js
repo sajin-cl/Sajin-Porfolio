@@ -20,12 +20,15 @@ export default async function contactUs(req, res) {
     const mailOptions = {
       from: `"PORTFOLIO REPLY" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: `portfolio response from ${name} `,
-      text: `
-      Name: ${name}
-      Email: ${email}
-      Message: ${message}
-      `,
+      subject: `Message from ${name} via Portfolio`,
+      html: `
+    <div style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message}</p>
+    </div>
+  `
     };
 
     await transporter.sendMail(mailOptions);
