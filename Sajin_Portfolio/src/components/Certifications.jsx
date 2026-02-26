@@ -62,9 +62,11 @@ const Certifications = () => {
                   href={cert?.credential}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 text-md text-center w-full outline outline-lime-400 bg-lime-600
-                  hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00]
-                  text-white rounded-full transition-all duration-300 "
+                  className={`px-4 py-2 text-md text-center w-full rounded-full transition-all duration-300 
+                   ${cert?.credential !== "#"
+                      ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
+                      : "outline outline-gray-700 text-gray-500 cursor-not-allowed"}
+  `}
                 >
                   {cert?.credential !== "#" ? "View Credential" : "Not Credential"}
                 </a>
