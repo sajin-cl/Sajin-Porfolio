@@ -66,7 +66,7 @@ const Contact = () => {
         >
           Contact Us
         </motion.h1>
-        <div className="text-white text-center mb-5">
+        <div className="text-white text-center mb-5 text-sm">
           <Typewriter
             options={{
               strings: ["Currently seeking job opportunities. Reach out to connect!"],
