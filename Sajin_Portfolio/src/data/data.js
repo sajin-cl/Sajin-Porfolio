@@ -60,8 +60,8 @@ export const projectsData = [
     name: "Personal Website",
     description: "A personal portfolio built with React, Tailwind CSS, and Vite.",
     image: "/project1.png",
-    github: "https://github.com/yourrepo",
-    live: "https://yourportfolio.com",
+    github: "https://github.com/sajin-cl/Sajin-Porfolio",
+    live: "#",
   },
   {
     name: "Multi Vendor Grocerry Ecommerce",
