@@ -75,7 +75,7 @@ const Hero = () => {
           <h1 className="text-xl md:h6 font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
             <Typewriter
               options={{
-                strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN Stack Developer Intern – Logiprompt Techno Solutions, Kazhakuttam", "ACTIVE IN LINKEDIN"],
+                strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN Stack Developer Intern – Logiprompt Techno Solutions, Trivandrum", "ACTIVE IN LINKEDIN"],
                 autoStart: true,
                 loop: true,
                 delay: 60,
