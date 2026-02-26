@@ -1,12 +1,12 @@
 import { socialLinks } from "../data/data";
-import { VscVscode } from "react-icons/vsc";
+
 import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
 
-  const MotionVsCode = motion(VscVscode);
+
   const MotionGit = motion(LiaCodeBranchSolid);
 
   return (
@@ -25,9 +25,19 @@ const Hero = () => {
           <MotionGit
             drag dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
             className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] " />
-          <MotionVsCode
-            drag dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute text-lime-400 size-10 top-10 left-0 -rotate-12 animate-pulse mix-blend-plus-lighter" />
+          <motion.div
+            drag
+            dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
+            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce"
+           
+          >
+            <h2 className="text-4xl md:text-5xl drop-shadow-[0_0_15px_#84ff65]">
+              3+
+            </h2>
+            <p className="text-md drop-shadow-[0_0_5px_#84ff65] -mt-1">
+              ProjectS
+            </p>
+          </motion.div>
 
           {/* Hero Profile Image */}
           <div className="relative size-72 md:size-112 rounded-full overflow-hidden flex items-center justify-center ">
@@ -107,7 +117,7 @@ const Hero = () => {
           <div className="mt-13 flex justify-center lg:justify-start">
             <motion.a
               initial={{ opacity: 0, filter: "blur(15px)" }}
-              whileInView={{ opacity: 1,  filter: "blur(0px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }}
               transition={{ duration: 1.2 }}
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(132,255,101,0.6)" }}
               whileTap={{ scale: 0.95 }}

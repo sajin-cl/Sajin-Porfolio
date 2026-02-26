@@ -62,7 +62,7 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                placeholder="your@mail.com"
+                placeholder="your@gmail.com"
                 className="w-full border  text-gray-300 py-4 text-sm border-gray-800 rounded-lg px-4  focus:outline-none focus:ring-2 focus:ring-lime-400"
               />
             </div>
@@ -80,7 +80,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-lime-400 text-white py-2 rounded-full hover:bg-lime-600 transition duration-200 font-medium"
+              className="w-full bg-lime-400 text-white py-2 rounded-full hover:bg-lime-600 transition duration-200 font-medium cursor-no-drop"
               onClick={handleClick}>
               Send Message
             </button>

@@ -101,4 +101,4 @@ export const certificationsData = [
     image: "/Digital-marketting-certificate.jpg",
     credential: "#",
   },
-]
+];

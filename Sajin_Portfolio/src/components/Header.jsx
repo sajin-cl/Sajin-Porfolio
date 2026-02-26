@@ -12,10 +12,12 @@ const Header = () => {
 
       <nav className="container mx-auto px-4 h-14 flex items-center justify-between">
 
-        <div className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer ">
+        <a className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer "
+        href="#hero"
+        >
           <GiBarbedCoil size={26} />
           <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">SAJIN</span>
-        </div>
+        </a>
 
         {/* Desktop Navbar */}
         <div className="hidden md:flex gap-8">
