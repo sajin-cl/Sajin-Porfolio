@@ -27,7 +27,20 @@
     display: none;
   }
 
-   /* avoid autofill backgroud color */
+  /* carousel hide scrollbar */
+
+  .carousel-scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+  }
+
+  .carousel-scrollbar-hide::-webkit-scrollbar {
+    display: none;
+
+  }
+
+  /* avoid autofill backgroud color */
   input:-webkit-autofill,
   textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #0c0a09 inset;
