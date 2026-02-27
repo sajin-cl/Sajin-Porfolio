@@ -28,7 +28,6 @@
   }
 
   /* carousel hide scrollbar */
-
   .carousel-scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;

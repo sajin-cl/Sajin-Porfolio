@@ -6,7 +6,6 @@ import { useRef } from "react";
 const Certifications = () => {
   const carouselRef = useRef(null);
 
-  // Scroll by one card width
   const scroll = (direction) => {
 
     const card = carouselRef.current.querySelector(".carousel-card");
@@ -83,7 +82,7 @@ const Certifications = () => {
                     href={cert?.credential}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-4 py-2 text-md text-center w-full rounded-full transition-all duration-300 ${cert?.credential !== "#"
+                    className={`px-4 py-2 text-center w-full rounded-full transition-all duration-300 ${cert?.credential !== "#"
                         ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
                         : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
                       }`}
@@ -95,7 +94,7 @@ const Certifications = () => {
             ))}
           </div>
 
-          {/* Right Arrow  */}
+          {/* Right Arrow  */}  
           <MdKeyboardDoubleArrowRight
             size={40}
             className="absolute right-0 md:right-[-6px] lg:right-[-30px] z-10 cursor-pointer text-lime-300"
