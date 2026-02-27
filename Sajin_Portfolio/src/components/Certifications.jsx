@@ -52,7 +52,7 @@ const Certifications = () => {
           {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 py-10 touch-pan-x carousel-scrollbar-hide"
+            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 py-10  carousel-scrollbar-hide"
           >
             {certificationsData.map((cert, index) => (
               <div

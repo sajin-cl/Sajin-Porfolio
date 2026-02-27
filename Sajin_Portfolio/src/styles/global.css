@@ -32,12 +32,12 @@
   .carousel-scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
-
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 
   .carousel-scrollbar-hide::-webkit-scrollbar {
     display: none;
-
   }
 
   /* avoid autofill backgroud color */
