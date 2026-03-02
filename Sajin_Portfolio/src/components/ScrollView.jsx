@@ -18,10 +18,10 @@ const ScrollRow = ({ items, reverse = false, duration = 15 }) => (
           return (
             <div
               key={`${idx}-${i}`}
-              className="flex flex-col items-center justify-center min-w-[100px]"
+              className="flex flex-col items-center justify-center min-w-[100px] cursor-pointer hover:scale-110 transition-all duration-300"
             >
               <Icon size={40} color={item.color} />
-              <span className="mt-2 text-white">{item.name}</span>
+              <span className="mt-2 text-white  text-xs">{item.name}</span>
             </div>
           );
         })
