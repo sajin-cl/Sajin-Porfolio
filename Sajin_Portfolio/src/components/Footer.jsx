@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="text-white text-sm tracking-widest w-1/4 flex  items-center">
           <img src="/logo.png" alt="logo" loading="lazy" className="h-10 block" />
           <div className="footer-logo-info">
-            <p className="text-xl">SAJIN</p>
+            <p className="text-xl font-poppins">Sajin</p>
             <p className="text-xs text-lime-200">portfolio</p>
           </div>
         </div>

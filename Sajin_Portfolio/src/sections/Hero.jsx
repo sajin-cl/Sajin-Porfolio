@@ -2,9 +2,10 @@ import { socialLinks } from "../data/data";
 import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import toast from "react-hot-toast";
 
 const Hero = () => {
-
+  
   const MotionGit = motion(LiaCodeBranchSolid);
 
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
           <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce sm:border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
+            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
 
           >
             <div className="text-4xl md:text-5xl  font-bold">
@@ -50,7 +51,7 @@ const Hero = () => {
               }}
               src="/profile.webp"
               alt="Sajin Profile"
-              fetchpriority="high"
+              fetchPriority="high"
               className="w-full h-full scale-140 translate-y-10 object-contain"
             />
           </div>
@@ -122,6 +123,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               href="/SajinCL_Mern_Stack_Developer_Resume.pdf"
               download="SajinCL_Mern_Stack_Developer_Resume.pdf"
+              onClick={() => toast.success("CV Downloaded!")}
               className="whitespace-nowrap px-20 md:px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
             >
               Download CV
