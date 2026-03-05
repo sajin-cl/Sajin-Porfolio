@@ -35,7 +35,7 @@ const Certifications = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-5xl font-semibold text-white mb-5"
+            className="text-3xl md:text-5xl font-semibold text-white mb-5"
           >
             CERTIFICATIONS
           </motion.h1>
@@ -47,8 +47,15 @@ const Certifications = () => {
           {/* Left Arrow  */}
           <MdKeyboardDoubleArrowLeft
             size={40}
-            className="absolute left-0 z-10 cursor-pointer text-lime-300"
+            className="absolute z-10 left-2 md:left-4 lg:left-0 cursor-pointer text-lime-300"
             onClick={() => scroll("left")}
+          />
+
+          {/* Right Arrow  */}
+          <MdKeyboardDoubleArrowRight
+            size={40}
+            className="absolute z-10 right-2 md:right-4 lg:right-0 cursor-pointer text-lime-300"
+            onClick={() => scroll("right")}
           />
 
           {/* Scrollable container */}
@@ -99,12 +106,6 @@ const Certifications = () => {
             ))}
           </div>
 
-          {/* Right Arrow  */}
-          <MdKeyboardDoubleArrowRight
-            size={40}
-            className="absolute right-0 md:right-[-6px] lg:right-[-30px] z-10 cursor-pointer text-lime-300"
-            onClick={() => scroll("right")}
-          />
         </div>
       </div>
     </section>

@@ -7,10 +7,10 @@ const Projects = () => {
   const carouselRef = useRef(null);
   const scrollAmountRef = useRef(0);
 
-  
+
   useLayoutEffect(() => {
     const card = carouselRef.current?.querySelector('.carousel-card');
-    if (card) scrollAmountRef.current = card.clientWidth + 16; 
+    if (card) scrollAmountRef.current = card.clientWidth + 16;
   }, []);
 
   const scroll = (direction) => {
@@ -29,24 +29,31 @@ const Projects = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
-          className="text-3xl lg:text-5xl font-semibold text-white mb-5 text-center"
+          className="text-3xl md:text-5xl font-semibold text-white mb-5 text-center"
         >
           PROJECTS
         </motion.h1>
 
         {/* Carousel */}
         <div className="flex w-full max-w-6xl items-center relative">
-          {/* Left arrow */}
+          {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
             size={40}
             onClick={() => scroll('left')}
-            className="absolute left-0 z-50 text-lime-300 cursor-pointer"
+            className="absolute z-50 left-2 md:left-4 lg:left-0  text-lime-300 cursor-pointer"
+          />
+
+          {/* Right Arrow */}
+          <MdKeyboardDoubleArrowRight
+            size={40}
+            onClick={() => scroll('right')}
+            className="absolute  z-50 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer"
           />
 
           {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex gap-4 w-full p-10 overflow-x-auto scroll-smooth carousel-scrollbar-hide"
+            className="flex gap-4 w-full py-10 px-10 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide"
           >
             {projectsData.map((project, index) => (
               <div
@@ -105,9 +112,8 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${
-                        !project.live ? 'cursor-not-allowed ' : ''
-                      }`}
+                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${!project.live ? 'cursor-not-allowed ' : ''
+                        }`}
                     >
                       {project.live ? 'Live Demo' : 'Not available'}
                     </a>
@@ -117,12 +123,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Right arrow */}
-          <MdKeyboardDoubleArrowRight
-            size={40}
-            onClick={() => scroll('right')}
-            className="absolute right-0 md:right-[-6px] lg:right-[-30px] z-50 text-lime-300 cursor-pointer"
-          />
         </div>
       </div>
     </section>
