@@ -1,11 +1,12 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
-  SiLeetcode, SiHtml5, SiCss3, SiJavascript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub
+  SiLeetcode, SiHtml5, SiCss3, SiJavascript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
+import { color } from "framer-motion";
 
 
 
@@ -50,7 +51,7 @@ export const skillsData = {
     { name: "JavaScript", color: "#F7DF1E", icon: SiJavascript },
     { name: "React", color: "#61DAFB", icon: SiReact },
     { name: "Node", color: "#00FF00", icon: FaNodeJs },
-    { name: "Express", color: "#61DAFB", icon: SiExpress },
+    { name: "Express", color: "#FFF", icon: SiExpress },
   ]
 };
 
@@ -58,47 +59,72 @@ export const skillsData = {
 export const projectsData = [
   {
     name: "Personal Website",
-    description: "A personal portfolio built with React, Tailwind CSS, and Vite.",
+    description: "A responsive developer portfolio showcasing projects, skills, and contact information, built with React, Tailwind CSS, and Vite.",
     image: "/project1.png",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
+    ],
     github: "https://github.com/sajin-cl/Sajin-Porfolio",
-    live: "#",
+    live: null,
   },
   {
-    name: "Multi Vendor Grocerry Ecommerce",
+    name: "Multi Vendor Grocery Ecommerce",
     description: "Full-stack e-commerce app using MERN stack with JWT auth.",
     image: "/project2.png",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
+      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Node", color: "#00FF00", icon: FaNodeJs },
+      { name: "Express", color: "#FFF", icon: SiExpress },
+      { name: "MongoDB", color: "#47A248", icon: SiMongodb },
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
+    ],
     github: "https://github.com/sajin-cl/Multi-Vendor-Grocery-Ecommerce-Vite-React",
     live: "https://power-house-ecommerce.vercel.app/",
   },
   {
     name: "Ecommerce Website",
-    description: "Admin & Users--Session--Express--Bcrypt--cors--Bootstrap--Hbs",
+    description: "Role-based e-commerce platform with separate admin and user panels, session authentication, and product management.",
     image: "/project3.png",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
+      { name: "Node", color: "#00FF00", icon: FaNodeJs },
+      { name: "Express", color: "#FFF", icon: SiExpress },
+      { name: "Handlebars", color: "#FF5733", icon: SiHandlebarsdotjs }
+    ],
     github: "https://github.com/sajin-cl/Admin_and_User-based-Ecommerce",
-    live: "#",
+    live: null,
   },
 ];
 
 export const certificationsData = [
   {
     name: "MERN Stack Intern Certificate",
-    issuer:"Logipromt Techno solutions  (Trivandrum)",
+    issuer: "Logipromt Techno solutions  (Trivandrum)",
     description: "Developed RESTful APIs using Nodejs and Express following MVC architecture.Developed responsive single-page applications using React with reusable components and efficient state management",
     image: "/mern_stack_intern_certificate.jpg",
     credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
   },
   {
     name: "UI UX 30Days Masterclass Certificate",
-     issuer:"NoviTech R&D Pvt Ltd",
+    issuer: "NoviTech R&D Pvt Ltd",
     description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.",
     image: "/ui-ux-certificate.jpg",
-    credential: "#",
+    credential: null,
   },
   {
     name: "Digital-marketting-certificate",
-     issuer:"First Success Technologies",
+    issuer: "First Success Technologies",
     description: "Completed a 2-day Online Digital Marketing Workshop conducted by Santhosh Kumar A, CEO of First Success Technologies.",
     image: "/Digital-marketting-certificate.jpg",
-    credential: "#",
+    credential: null,
   },
 ];

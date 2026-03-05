@@ -9,7 +9,11 @@ const Projects = () => {
 
   const scroll = (direction) => {
 
+    if (!carouselRef.current) return;
+
     const card = carouselRef.current.querySelector('.carousel-card');
+
+    if (!card) return;
 
     const scrollAmount = card.clientWidth + 16;
 
@@ -57,7 +61,7 @@ const Projects = () => {
               /* project card */
               <div
                 key={index}
-                className="carousel-card flex flex-col w-full md:w-1/2 lg:w-1/3 shrink-0  rounded-2xl overflow-hidden bg-stone-950 outline outline-gray-900
+                className="carousel-card flex flex-col w-full md:w-1/2 xl:w-1/3 shrink-0  rounded-2xl overflow-hidden bg-stone-950 outline outline-gray-900
              hover:outline-lime-900  hover:shadow-[0_15px_25px_rgba(0,255,0,0.3)]"
               >
 
@@ -70,10 +74,18 @@ const Projects = () => {
 
                 {/* Project Info */}
                 <div className="p-6 flex flex-col grow ">
-                  <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2  md:flex-1">
+                  <h3 className="text-xl lg:text-2xl font-semibold  text-white mb-2 min-h-[3.8rem]  leading-snug">
                     {project.name}
                   </h3>
-                  <p className="text-gray-300  mb-4 flex-1   leading-loose tracking-wide" title={project.description}>{project.description}</p>
+                  <p className="text-gray-300  mb-4 flex-1 text-xs  leading-loose tracking-wide" title={project.description}>{project.description}</p>
+
+                  {/* skills icons */}
+                  <div className='flex justify-center my-3 gap-4 '>
+                    {project?.skills.map((skill, idx) => {
+                      const Icon = skill.icon;
+                      return <Icon key={idx} color={skill.color} size={20} title={skill.name} className='cursor-pointer hover:scale-110'/>
+                    })}
+                  </div>
 
                   {/* Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -92,9 +104,9 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`px-4 py-2  text-center w-full outline outline-lime-400 bg-lime-600  hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00]
-                     text-white  rounded-full transition-all duration-300 ${project.live == '#' ? "cursor-not-allowed" : ""}`}
+                     text-white  rounded-full transition-all duration-300 ${!project.live ? "cursor-not-allowed" : ""}`}
                     >
-                      {project.live !== '#' ? "Live Demo" : "Not available"}
+                      {project.live ? "Live Demo" : "Not available"}
                     </a>
                   </div>
                 </div>
