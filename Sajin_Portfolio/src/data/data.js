@@ -73,7 +73,7 @@ export const projectsData = [
   },
   {
     name: "Multi Vendor Grocery Ecommerce",
-    description: "Full-stack e-commerce app using MERN stack with JWT auth.",
+    description: "A multi-vendor grocery marketplace built with the MERN stack, allowing vendors to manage products and users to browse, add to cart, and place orders with JWT-based authentication.",
     image: "/project2.png",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },

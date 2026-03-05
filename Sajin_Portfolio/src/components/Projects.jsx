@@ -77,10 +77,10 @@ const Projects = () => {
                   <h3 className="text-xl lg:text-2xl font-semibold  text-white mb-2 min-h-[3.8rem]  leading-snug">
                     {project.name}
                   </h3>
-                  <p className="text-gray-300  mb-4 flex-1 text-xs  leading-loose tracking-wide" title={project.description}>{project.description}</p>
+                  <p className="text-gray-300  mb-4 flex-1 text-xs border-b  border-gray-800 leading-loose tracking-wide pb-2" title={project.description}>{project.description}</p>
 
                   {/* skills icons */}
-                  <div className='flex justify-center my-3 gap-4 '>
+                  <div className='flex justify-center mb-4 gap-4 '>
                     {project?.skills.map((skill, idx) => {
                       const Icon = skill.icon;
                       return <Icon key={idx} color={skill.color} size={20} title={skill.name} className='cursor-pointer hover:scale-110'/>
