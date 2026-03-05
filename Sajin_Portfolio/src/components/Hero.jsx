@@ -26,7 +26,7 @@ const Hero = () => {
           <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce md:border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
+            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce sm:border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
 
           >
             <div className="text-4xl md:text-5xl  font-bold">
