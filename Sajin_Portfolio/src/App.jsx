@@ -1,16 +1,16 @@
 import { lazy, Suspense } from 'react'
 import {Toaster} from 'react-hot-toast'
-import Header from "./components/Header"
+import Header from "@/components/Header"
 
 
-const Hero = lazy(() => import("./sections/Hero"));
-const About = lazy(() => import("./sections/About"));
-const Skills = lazy(() => import("./sections/Skills"));
-const Leetcode = lazy(() => import("./sections/Leetcode"));
-const Projects = lazy(() => import("./sections/Projects"));
-const Certifications = lazy(() => import("./sections/Certifications"));
-const Contact = lazy(() => import("./sections/Contact"));
-const Footer = lazy(() => import("./components/Footer"));
+const Hero = lazy(() => import("@/sections/Hero"));
+const About = lazy(() => import("@/sections/About"));
+const Skills = lazy(() => import("@/sections/Skills"));
+const Leetcode = lazy(() => import("@/sections/Leetcode"));
+const Projects = lazy(() => import("@/sections/Projects"));
+const Certifications = lazy(() => import("@/sections/Certifications"));
+const Contact = lazy(() => import("@/sections/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 
 function App() {

@@ -1,5 +1,5 @@
-import { skillsData } from "../data/data";
-import ScrollRow from "../components/ScrollView";
+import { skillsData } from "@/config/data";
+import ScrollRow from "@/components/ScrollView";
 import { motion } from 'framer-motion';
 
 

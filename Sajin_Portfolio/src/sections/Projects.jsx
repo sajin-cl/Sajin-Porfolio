@@ -1,4 +1,4 @@
-import { projectsData } from '../data/data';
+import { projectsData } from '@/config/data';
 import { motion } from 'framer-motion';
 import { useRef, useLayoutEffect } from 'react';
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';

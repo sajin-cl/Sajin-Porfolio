@@ -1,4 +1,4 @@
-import { socialLinks } from "../data/data";
+import { socialLinks } from "@/config/data";
 import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";

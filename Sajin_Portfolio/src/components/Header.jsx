@@ -1,7 +1,7 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords, GiBarbedCoil } from "react-icons/gi";
 import { useState } from "react";
-import {navLinks} from '../data/data'
+import {navLinks} from '@/config/data'
 
 const Header = () => {
   

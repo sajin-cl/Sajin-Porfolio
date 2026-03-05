@@ -1,4 +1,4 @@
-import { certificationsData } from '../data/data';
+import { certificationsData } from '@/config/data';
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { useLayoutEffect, useRef } from "react";
@@ -82,7 +82,7 @@ const Certifications = () => {
                   <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2">
                     {cert?.name}
                   </h3>
-                  <p className="text-lime-400 mb-2 text-sm">{cert?.issuer}</p>
+                  <p className="text-lime-400 mb-2 text-sm border-b pb-3 border-gray-800">{cert?.issuer}</p>
                   <ul className="text-gray-300 mb-4 flex-1 leading-relaxed text-sm list-disc list-inside space-y-1">
                     {cert?.description &&
                       cert.description

@@ -1,4 +1,4 @@
-import { navLinks, socialLinks } from "../data/data";
+import { navLinks, socialLinks } from "@/config/data";
 import { motion } from 'framer-motion';
 
 const Footer = () => {
