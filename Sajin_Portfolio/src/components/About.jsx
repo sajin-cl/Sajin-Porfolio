@@ -22,11 +22,11 @@ const About = () => {
           >
             About Me
           </motion.h1>
-          <motion.h6
-            className="h6 text-lime-200 py-3 font-sans"
+          <motion.h2
+            className="text-lg font-normal text-lime-200 py-3 font-sans"
             initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 } }} viewport={{ once: true }}
           >MERN Stack Developer | React Developer | Node Developer
-          </motion.h6>
+          </motion.h2>
           <motion.p
             className="text-white text-xl leading-normal tracking-wide p-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans"
             initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}

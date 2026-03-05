@@ -1,11 +1,9 @@
 import { socialLinks } from "../data/data";
-
 import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
-
 
   const MotionGit = motion(LiaCodeBranchSolid);
 
@@ -31,12 +29,12 @@ const Hero = () => {
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce md:border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
 
           >
-            <h2 className="text-4xl md:text-5xl  font-bold">
+            <div className="text-4xl md:text-5xl  font-bold">
               3+
-            </h2>
-            <p className="text-md  -mt-1" style={{ fontFamily: "Inter" }}>
+            </div>
+            <div className="text-md  -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
-            </p>
+            </div>
           </motion.div>
 
           {/* Hero Profile Image */}
@@ -52,6 +50,7 @@ const Hero = () => {
               }}
               src="/profile.webp"
               alt="Sajin Profile"
+              fetchpriority="high"
               className="w-full h-full scale-140 translate-y-10 object-contain"
             />
           </div>
@@ -59,10 +58,10 @@ const Hero = () => {
 
         {/* LEFT SIDE: Text & Social Content */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-          <h2 className="text-2xl md:text-3xl text-gray-400 font-medium tracking-tight">Hi There,</h2>
+          <h1 className="text-2xl md:text-3xl text-gray-400 font-medium tracking-tight">Hi There,</h1>
 
           <div className="min-h-16 md:min-h-32">
-            <h1 className="text-3xl md:text-6xl font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-6xl font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
               <Typewriter
                 options={{
                   strings: ["I'm Sajin CL", "I'm a MERN Stack Developer", "React Developer", "Node Developer"],
@@ -72,7 +71,7 @@ const Hero = () => {
                   deleteSpeed: 50,
                 }}
               />
-            </h1>
+            </h2>
           </div>
 
           <motion.p
@@ -82,7 +81,7 @@ const Hero = () => {
             Turning Ideas into Scalable Digital Products
           </motion.p>
 
-          <h1 className="text-xl md:h6 font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
+          <h2 className="text-xl md:text-lg font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
             <Typewriter
               options={{
                 strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN Stack Developer Intern – Logiprompt Techno Solutions, Trivandrum", "ACTIVE IN LINKEDIN"],
@@ -92,7 +91,7 @@ const Hero = () => {
                 deleteSpeed: 60,
               }}
             />
-          </h1>
+          </h2>
 
           {/* Social Links icons */}
           <div className="flex justify-center lg:justify-start gap-8 pt-4">

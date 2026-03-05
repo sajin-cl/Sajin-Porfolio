@@ -13,7 +13,7 @@ const Skills = () => {
       <div className="container w-full py-10 flex flex-col gap-8">
         <motion.h1
           initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
-          className="h2 md:h1 text-white text-center"
+          className="text-4xl md:text-5xl font-bold text-white text-center"
         >
           SKILLS & TECHNOLOGY
         </motion.h1>

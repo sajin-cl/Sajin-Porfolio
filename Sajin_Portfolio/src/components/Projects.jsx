@@ -1,70 +1,58 @@
-import { projectsData } from '../data/data'
+import { projectsData } from '../data/data';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
-import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import { useRef, useLayoutEffect } from 'react';
+import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
 
 const Projects = () => {
-
   const carouselRef = useRef(null);
+  const scrollAmountRef = useRef(0);
+
+  
+  useLayoutEffect(() => {
+    const card = carouselRef.current?.querySelector('.carousel-card');
+    if (card) scrollAmountRef.current = card.clientWidth + 16; 
+  }, []);
 
   const scroll = (direction) => {
+    if (!carouselRef.current || !scrollAmountRef.current) return;
 
-    if (!carouselRef.current) return;
-
-    const card = carouselRef.current.querySelector('.carousel-card');
-
-    if (!card) return;
-
-    const scrollAmount = card.clientWidth + 16;
-
-    if (direction === 'left') {
-      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    }
-    else {
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-
+    carouselRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmountRef.current : scrollAmountRef.current,
+      behavior: 'smooth',
+    });
   };
-
 
   return (
     <section id="projects" className="flex min-h-screen justify-between items-center bg-stone-950">
-      <div className="w-full py-10 bg-stone-950 flex flex-col items-center gap-8">
-        <div className="text-center">
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
-            className="text-3xl lg:text-5xl font-semibold text-white mb-5"
-          >
-            PROJECTS
-          </motion.h2>
+      <div className="w-full py-10 flex flex-col items-center gap-8">
+        <motion.h1
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+          viewport={{ once: true }}
+          className="text-3xl lg:text-5xl font-semibold text-white mb-5 text-center"
+        >
+          PROJECTS
+        </motion.h1>
 
-        </div>
-
-        {/* Courousil */}
-        <div className='flex w-full max-w-6xl items-center relative '>
-
-          {/* left arrow */}
+        {/* Carousel */}
+        <div className="flex w-full max-w-6xl items-center relative">
+          {/* Left arrow */}
           <MdKeyboardDoubleArrowLeft
             size={40}
-            onClick={() => { scroll('left') }}
-            className='absolute left-0 z-50 text-lime-300 cursor-pointer'
+            onClick={() => scroll('left')}
+            className="absolute left-0 z-50 text-lime-300 cursor-pointer"
           />
 
-
-          {/* scrollable container */}
+          {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex gap-4 w-full  p-10 overflow-x-auto scroll-smooth carousel-scrollbar-hide"
+            className="flex gap-4 w-full p-10 overflow-x-auto scroll-smooth carousel-scrollbar-hide"
           >
             {projectsData.map((project, index) => (
-
-              /* project card */
               <div
                 key={index}
-                className="carousel-card flex flex-col w-full md:w-1/2 xl:w-1/3 shrink-0  rounded-2xl overflow-hidden bg-stone-950 outline outline-gray-900
-             hover:outline-lime-900  hover:shadow-[0_15px_25px_rgba(0,255,0,0.3)]"
+                className="carousel-card flex flex-col w-full md:w-1/2 xl:w-1/3 shrink-0 rounded-2xl overflow-hidden bg-stone-950 outline outline-gray-900 hover:outline-lime-900 hover:shadow-[0_15px_25px_rgba(0,255,0,0.3)]"
               >
-
                 {/* Project Image */}
                 <img
                   src={project.image}
@@ -75,17 +63,30 @@ const Projects = () => {
                 />
 
                 {/* Project Info */}
-                <div className="p-6 flex flex-col grow ">
-                  <h3 className="text-xl lg:text-2xl font-semibold  text-white mb-2 min-h-[3.8rem]  leading-snug">
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2 min-h-[3.8rem] leading-snug">
                     {project.name}
                   </h3>
-                  <p className="text-gray-300  mb-4 flex-1 text-xs border-b  border-gray-800 leading-loose tracking-wide pb-2" title={project.description}>{project.description}</p>
+                  <p
+                    className="text-gray-300 mb-4 flex-1 text-xs border-b border-gray-800 leading-loose tracking-wide pb-2"
+                    title={project.description}
+                  >
+                    {project.description}
+                  </p>
 
-                  {/* skills icons */}
-                  <div className='flex justify-center mb-4 gap-4 '>
+                  {/* Skills icons */}
+                  <div className="flex justify-center mb-4 gap-4">
                     {project?.skills.map((skill, idx) => {
                       const Icon = skill.icon;
-                      return <Icon key={idx} color={skill.color} size={20} title={skill.name} className='cursor-pointer hover:scale-110'/>
+                      return (
+                        <Icon
+                          key={idx}
+                          color={skill.color}
+                          size={20}
+                          title={skill.name}
+                          className="cursor-pointer hover:scale-110"
+                        />
+                      );
                     })}
                   </div>
 
@@ -95,8 +96,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" lg:text-base border border-lime-400 text-lime-400 font-bold 
-                       tracking-wide px-4 py-2  rounded-full w-full  hover:bg-lime-400/20 transition-colors text-center "
+                      className="lg:text-base border border-lime-400 text-lime-400 font-bold tracking-wide px-4 py-2 rounded-full w-full hover:bg-lime-400/20 transition-colors text-center"
                     >
                       GitHub
                     </a>
@@ -105,10 +105,11 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-4 py-2  text-center w-full outline outline-lime-400 bg-lime-600  hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00]
-                     text-white  rounded-full transition-all duration-300 ${!project.live ? "cursor-not-allowed" : ""}`}
+                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${
+                        !project.live ? 'cursor-not-allowed ' : ''
+                      }`}
                     >
-                      {project.live ? "Live Demo" : "Not available"}
+                      {project.live ? 'Live Demo' : 'Not available'}
                     </a>
                   </div>
                 </div>
@@ -116,13 +117,12 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* right arrow */}
+          {/* Right arrow */}
           <MdKeyboardDoubleArrowRight
             size={40}
-            onClick={() => { scroll('right') }}
-            className='absolute right-0 md:right-[-6px] lg:right-[-30px] z-50 text-lime-300 cursor-pointer'
+            onClick={() => scroll('right')}
+            className="absolute right-0 md:right-[-6px] lg:right-[-30px] z-50 text-lime-300 cursor-pointer"
           />
-
         </div>
       </div>
     </section>

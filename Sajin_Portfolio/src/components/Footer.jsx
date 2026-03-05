@@ -3,20 +3,23 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <motion.footer 
-     initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
-    className="w-full bg-stone-950 border-t border-lime-300/40 relative ">
+    <motion.footer
+      initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
+      className="w-full bg-stone-950 border-t border-lime-300/40 relative ">
 
       <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
 
         {/* Logo */}
-        <div className="text-white text-sm tracking-widest w-1/4">
-          <img src="/logo.png" alt="logo" loading="lazy" className="h-10" />
-          Sajin
+        <div className="text-white text-sm tracking-widest w-1/4 flex  items-center">
+          <img src="/logo.png" alt="logo" loading="lazy" className="h-10 block" />
+          <div className="footer-logo-info">
+            <p className="text-xl">SAJIN</p>
+            <p className="text-xs text-lime-200">portfolio</p>
+          </div>
         </div>
 
         {/* Links */}
-        <div className="text-white flex flex-wrap justify-center items-center gap-6 ">
+        <div className="text-white flex flex-wrap justify-center md:justify-end items-center gap-6 ">
           {navLinks.map((link, idx) => (
             <a key={idx} href={link.href} className="hover:text-lime-300 transition">
               {link.name}

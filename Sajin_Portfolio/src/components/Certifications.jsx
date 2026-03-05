@@ -1,22 +1,25 @@
 import { certificationsData } from '../data/data';
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import { useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const Certifications = () => {
   const carouselRef = useRef(null);
+  const scrollAmountRef = useRef(0);
+
+
+  useLayoutEffect(() => {
+    const card = carouselRef.current.querySelector('.carousel-card');
+    if (card) scrollAmountRef.current = card.clientWidth + 16;
+  }, []);
 
   const scroll = (direction) => {
+    if (!carouselRef.current || !scrollAmountRef.current) return;
 
-    const card = carouselRef.current.querySelector(".carousel-card");
-
-    const scrollAmount = card.clientWidth + 16;
-
-    if (direction === "left") {
-      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
+    carouselRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmountRef.current : scrollAmountRef.current,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -28,14 +31,14 @@ const Certifications = () => {
 
         {/* Title */}
         <div className="text-center">
-          <motion.h2
+          <motion.h1
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
             className="text-3xl lg:text-5xl font-semibold text-white mb-5"
           >
             CERTIFICATIONS
-          </motion.h2>
+          </motion.h1>
         </div>
 
         {/* Carousel */}
@@ -85,8 +88,8 @@ const Certifications = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`px-4 py-2 text-center w-full rounded-full transition-all duration-300 ${cert?.credential
-                        ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
-                        : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
+                      ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
+                      : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
                       }`}
                   >
                     {cert?.credential ? "View Credential" : "Not Credential"}
@@ -96,7 +99,7 @@ const Certifications = () => {
             ))}
           </div>
 
-          {/* Right Arrow  */}  
+          {/* Right Arrow  */}
           <MdKeyboardDoubleArrowRight
             size={40}
             className="absolute right-0 md:right-[-6px] lg:right-[-30px] z-10 cursor-pointer text-lime-300"
