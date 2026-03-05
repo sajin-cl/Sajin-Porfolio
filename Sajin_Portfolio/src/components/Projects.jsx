@@ -69,6 +69,8 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.name}
+                  height={400}
+                  width={200}
                   className="w-full h-48 object-cover"
                 />
 

@@ -8,8 +8,9 @@ const About = () => {
 
         {/*  Left side image */}
         <div className="w-full md:w-1/2">
-
-          <img src="/working-avatar.png" alt="" className=" object-contain p-3 w-full max-w-[520px] md:w-[520px] md:h-[520px]" />
+          <img src="/working-avatar.webp" 
+          alt="Developer avatar working on laptop" width="520" height="520" loading="lazy"
+            className=" object-contain p-3 w-full max-w-[520px] md:w-[520px] h-auto" />
         </div>
 
         {/* Right side content */}
@@ -28,7 +29,7 @@ const About = () => {
           </motion.h6>
           <motion.p
             className="text-white text-xl leading-normal tracking-wide p-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans"
-             initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
+            initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }} viewport={{ once: true }}
           >
             Hello, I'm <span className="text-lime-300">Sajin CL</span> , a <span className="text-lime-300"> MERN Stack Developer</span>. I enjoy building responsive, functional, and scalable web applications, from mobile-friendly websites to full-featured desktop sites. I am passionate about creating clean, efficient code and delivering seamless user experiences.
           </motion.p>

@@ -50,7 +50,7 @@ const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              src="/profile.png"
+              src="/profile.webp"
               alt="Sajin Profile"
               className="w-full h-full scale-140 translate-y-10 object-contain"
             />
@@ -114,7 +114,7 @@ const Hero = () => {
           </div>
 
           {/* Download CV button */}
-          <div className="mt-13 flex justify-center lg:justify-start">
+          <div className="mt-13 mb-10 flex justify-center lg:justify-start">
             <motion.a
               initial={{ opacity: 0, filter: "blur(15px)" }}
               whileInView={{ opacity: 1, filter: "blur(0px)" }}

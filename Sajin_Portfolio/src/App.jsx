@@ -22,7 +22,7 @@ function App() {
 
       <Suspense fallback={
         <div className=" animate-pulse text-lime-400 w-full min-h-screen flex flex-col justify-center items-center">
-          <img src="/logo.png" alt="" className='h-25 animate-spin transition' />
+          <img src="/logo.png" alt="Loading logo" className='h-25 animate-spin transition'/>
           <p className='mt-4'> Loading...</p>
         </div>
       }>

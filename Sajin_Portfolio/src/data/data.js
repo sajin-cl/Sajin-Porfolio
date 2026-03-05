@@ -60,7 +60,7 @@ export const projectsData = [
   {
     name: "Personal Website",
     description: "A responsive developer portfolio showcasing projects, skills, and contact information, built with React, Tailwind CSS, and Vite.",
-    image: "/project1.png",
+    image: "/project1.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -74,7 +74,7 @@ export const projectsData = [
   {
     name: "Multi Vendor Grocery Ecommerce",
     description: "A multi-vendor grocery marketplace built with the MERN stack, allowing vendors to manage products and users to browse, add to cart, and place orders with JWT-based authentication.",
-    image: "/project2.png",
+    image: "/project2.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -91,7 +91,7 @@ export const projectsData = [
   {
     name: "Ecommerce Website",
     description: "Role-based e-commerce platform with separate admin and user panels, session authentication, and product management.",
-    image: "/project3.png",
+    image: "/project3.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -110,21 +110,21 @@ export const certificationsData = [
     name: "MERN Stack Intern Certificate",
     issuer: "Logipromt Techno solutions  (Trivandrum)",
     description: "Developed RESTful APIs using Nodejs and Express following MVC architecture.Developed responsive single-page applications using React with reusable components and efficient state management",
-    image: "/mern_stack_intern_certificate.jpg",
+    image: "/mern_stack_intern_certificate.webp",
     credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
   },
   {
     name: "UI UX 30Days Masterclass Certificate",
     issuer: "NoviTech R&D Pvt Ltd",
     description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.",
-    image: "/ui-ux-certificate.jpg",
+    image: "/ui-ux-certificate.webp",
     credential: null,
   },
   {
     name: "Digital-marketting-certificate",
     issuer: "First Success Technologies",
     description: "Completed a 2-day Online Digital Marketing Workshop conducted by Santhosh Kumar A, CEO of First Success Technologies.",
-    image: "/Digital-marketting-certificate.jpg",
+    image: "/Digital-marketting-certificate.webp",
     credential: null,
   },
 ];

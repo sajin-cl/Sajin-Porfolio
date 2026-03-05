@@ -11,7 +11,7 @@ const Footer = () => {
 
         {/* Logo */}
         <div className="text-white text-sm tracking-widest w-1/4">
-          <img src="/logo.png" alt="" className="h-10" />
+          <img src="/logo.png" alt="logo" loading="lazy" className="h-10" />
           Sajin
         </div>
 

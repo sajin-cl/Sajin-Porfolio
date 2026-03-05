@@ -62,6 +62,8 @@ const Certifications = () => {
                 <img
                   src={cert?.image}
                   alt={cert?.name}
+                  width={400}
+                  height={200}
                   className="w-full h-48 object-cover"
                 />
 
