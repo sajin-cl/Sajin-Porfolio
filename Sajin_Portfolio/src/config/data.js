@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
-  SiLeetcode, SiHtml5, SiCss3, SiJavascript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
+  SiLeetcode, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
@@ -44,6 +44,7 @@ export const skillsData = {
     { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
     { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
     { name: "JavaScript", color: "#F7DF1E", icon: SiJavascript },
+    { name: "TypeScript", color: "#2965F1", icon: SiTypescript },
     { name: "React", color: "#61DAFB", icon: SiReact },
     { name: "Node", color: "#00FF00", icon: FaNodeJs },
     { name: "Express", color: "#FFF", icon: SiExpress },
