@@ -7,7 +7,6 @@ const Certifications = () => {
   const carouselRef = useRef(null);
   const scrollAmountRef = useRef(0);
 
-
   useLayoutEffect(() => {
     const card = carouselRef.current.querySelector('.carousel-card');
     if (card) scrollAmountRef.current = card.clientWidth + 16;
@@ -28,7 +27,6 @@ const Certifications = () => {
       className="flex min-h-screen justify-between items-center bg-stone-950"
     >
       <div className="w-full py-10 flex flex-col items-center gap-8 relative">
-
         {/* Title */}
         <div className="text-center">
           <motion.h1
@@ -43,15 +41,14 @@ const Certifications = () => {
 
         {/* Carousel */}
         <div className="relative w-full max-w-6xl flex items-center">
-
-          {/* Left Arrow  */}
+          {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
             size={40}
             className="absolute z-10 left-2 md:left-4 lg:left-0 cursor-pointer text-lime-300"
             onClick={() => scroll("left")}
           />
 
-          {/* Right Arrow  */}
+          {/* Right Arrow */}
           <MdKeyboardDoubleArrowRight
             size={40}
             className="absolute z-10 right-2 md:right-4 lg:right-0 cursor-pointer text-lime-300"
@@ -61,7 +58,7 @@ const Certifications = () => {
           {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 py-10  carousel-scrollbar-hide"
+            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 py-10 carousel-scrollbar-hide"
           >
             {certificationsData.map((cert, index) => (
               <div
@@ -82,7 +79,9 @@ const Certifications = () => {
                   <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2">
                     {cert?.name}
                   </h3>
-                  <p className="text-lime-400 mb-2 text-sm border-b pb-3 border-gray-800">{cert?.issuer}</p>
+                  <p className="text-lime-400 mb-2 text-sm border-b pb-3 border-gray-800">
+                    {cert?.issuer}
+                  </p>
                   <ul className="text-gray-300 mb-4 flex-1 leading-relaxed text-sm list-disc list-inside space-y-1">
                     {cert?.description &&
                       cert.description
@@ -94,10 +93,11 @@ const Certifications = () => {
                     href={cert?.credential}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-4 py-2 text-center w-full rounded-full transition-all duration-300 ${cert?.credential
-                      ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
-                      : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
-                      }`}
+                    className={`px-4 py-2 text-center w-full rounded-full transition-all duration-300 ${
+                      cert?.credential
+                        ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
+                        : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
+                    }`}
                   >
                     {cert?.credential ? "View Credential" : "Not Credential"}
                   </a>
@@ -105,7 +105,6 @@ const Certifications = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

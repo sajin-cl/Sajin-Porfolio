@@ -7,9 +7,6 @@ import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
-
-
-
 export const navLinks = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
@@ -17,7 +14,6 @@ export const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
-
 
 export const socialLinks = [
   { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'sajin-cl' },
@@ -31,7 +27,6 @@ export const socialLinks = [
   },
   { icon: MdOutlineWifiCalling3, href: "tel:+918056825814", name: 'call me' }
 ];
-
 
 export const skillsData = {
   tools: [
@@ -54,7 +49,6 @@ export const skillsData = {
     { name: "Express", color: "#FFF", icon: SiExpress },
   ]
 };
-
 
 export const projectsData = [
   {
@@ -108,8 +102,8 @@ export const projectsData = [
 export const certificationsData = [
   {
     name: "MERN Stack Intern Certificate",
-    issuer: "Logipromt Techno solutions  (Trivandrum)",
-    description: "Developed RESTful APIs using Nodejs and Express following MVC architecture.Developed responsive single-page applications using React with reusable components and efficient state management",
+    issuer: "Logipromt Techno solutions (Trivandrum)",
+    description: "Developed RESTful APIs using Nodejs and Express following MVC architecture. Developed responsive single-page applications using React with reusable components and efficient state management",
     image: "/mern_stack_intern_certificate.webp",
     credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
   },
@@ -121,7 +115,7 @@ export const certificationsData = [
     credential: null,
   },
   {
-    name: "Digital-marketting-certificate",
+    name: "Digital Marketting Certificate",
     issuer: "First Success Technologies",
     description: "Completed a 2-day Online Digital Marketing Workshop conducted by Santhosh Kumar A, CEO of First Success Technologies.",
     image: "/Digital-marketting-certificate.webp",

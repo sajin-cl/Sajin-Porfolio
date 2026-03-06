@@ -7,7 +7,6 @@ const Projects = () => {
   const carouselRef = useRef(null);
   const scrollAmountRef = useRef(0);
 
-
   useLayoutEffect(() => {
     const card = carouselRef.current?.querySelector('.carousel-card');
     if (card) scrollAmountRef.current = card.clientWidth + 16;
@@ -40,14 +39,14 @@ const Projects = () => {
           <MdKeyboardDoubleArrowLeft
             size={40}
             onClick={() => scroll('left')}
-            className="absolute z-50 left-2 md:left-4 lg:left-0  text-lime-300 cursor-pointer"
+            className="absolute z-50 left-2 md:left-4 lg:left-0 text-lime-300 cursor-pointer"
           />
 
           {/* Right Arrow */}
           <MdKeyboardDoubleArrowRight
             size={40}
             onClick={() => scroll('right')}
-            className="absolute  z-50 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer"
+            className="absolute z-50 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer"
           />
 
           {/* Scrollable container */}
@@ -112,8 +111,9 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${!project.live ? 'cursor-not-allowed ' : ''
-                        }`}
+                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${
+                        !project.live ? 'cursor-not-allowed' : ''
+                      }`}
                     >
                       {project.live ? 'Live Demo' : 'Not available'}
                     </a>
@@ -122,7 +122,6 @@ const Projects = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

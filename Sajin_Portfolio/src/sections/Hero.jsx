@@ -5,41 +5,40 @@ import Typewriter from "typewriter-effect";
 import toast from "react-hot-toast";
 
 const Hero = () => {
-  
   const MotionGit = motion(LiaCodeBranchSolid);
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-stone-950 pt-20 overflow-hidden">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-
         {/* RIGHT SIDE: Animated Image & Floating Icons */}
         <div className="relative flex justify-center items-center w-full lg:w-1/2">
-
           {/* Background Glow */}
           <div className="absolute w-72 h-72 md:w-96 md:h-96 bg-lime-400/10 rounded-full blur-[150px] animate-pulse"></div>
 
           {/* Floating UI Icons */}
           <LiaLaptopCodeSolid
-            className="absolute text-lime-400 size-10 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]  " />
+            className="absolute text-lime-400 size-10 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
+          />
           <MotionGit
-            drag dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] " />
+            drag
+            dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
+            className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47]"
+          />
           <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
-
           >
-            <div className="text-4xl md:text-5xl  font-bold">
+            <div className="text-4xl md:text-5xl font-bold">
               3+
             </div>
-            <div className="text-md  -mt-1" style={{ fontFamily: "Inter" }}>
+            <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
             </div>
           </motion.div>
 
           {/* Hero Profile Image */}
-          <div className="relative size-72 md:size-112 rounded-full overflow-hidden flex items-center justify-center ">
+          <div className="relative size-72 md:size-112 rounded-full overflow-hidden flex items-center justify-center">
             <motion.img
               initial={{ translateY: 0 }}
               animate={{ translateY: 15 }}
@@ -77,7 +76,9 @@ const Hero = () => {
 
           <motion.p
             className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed"
-            initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }} viewport={{ once: true }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
+            viewport={{ once: true }}
           >
             Turning Ideas into Scalable Digital Products
           </motion.p>
@@ -97,7 +98,7 @@ const Hero = () => {
           {/* Social Links icons */}
           <div className="flex justify-center lg:justify-start gap-8 pt-4">
             {socialLinks.map((social, index) => {
-              const Icon = social.icon
+              const Icon = social.icon;
               return (
                 <a
                   key={index}
@@ -109,7 +110,7 @@ const Hero = () => {
                 >
                   <Icon />
                 </a>
-              )
+              );
             })}
           </div>
 
@@ -129,11 +130,9 @@ const Hero = () => {
               Download CV
             </motion.a>
           </div>
-
         </div>
-
       </div>
-    </section >
+    </section>
   );
 };
 

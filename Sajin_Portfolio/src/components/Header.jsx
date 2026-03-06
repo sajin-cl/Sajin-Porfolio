@@ -1,19 +1,17 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords, GiBarbedCoil } from "react-icons/gi";
 import { useState } from "react";
-import {navLinks} from '@/config/data'
+import { navLinks } from '@/config/data';
 
 const Header = () => {
-  
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-   <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm  z-50">
-
+    <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm z-50">
       <nav className="container mx-auto px-4 h-14 flex items-center justify-between">
-
-        <a className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer "
-        href="#hero"
+        <a
+          className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer"
+          href="#hero"
         >
           <GiBarbedCoil size={26} />
           <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">SAJIN</span>
@@ -25,7 +23,7 @@ const Header = () => {
             <a
               key={index}
               href={link.href}
-              className="text-gray-400 nav-glow font-medium transition "
+              className="text-gray-400 nav-glow font-medium transition"
               tabIndex={0}
             >
               {link.name}
@@ -37,16 +35,15 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-lime-400 "
+            className="text-lime-400"
           >
             {isOpen ? (
-              <GiCrossedSwords size={26} className=" drop-shadow-[0_0_10px_#0aff47]" />
+              <GiCrossedSwords size={26} className="drop-shadow-[0_0_10px_#0aff47]" />
             ) : (
               <RiMenu3Fill size={26} className="drop-shadow-[0_0_10px_#0aff47]" />
             )}
           </button>
         </div>
-
       </nav>
 
       {/* Mobile Dropdown */}

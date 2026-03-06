@@ -1,12 +1,9 @@
 @import "tailwindcss";
 
-
 @theme {
   --color-brand-green: #9de410;
   --font-poppins: "Poppins";
-
 }
-
 
 @layer base {
   html {
@@ -38,7 +35,7 @@
     display: none;
   }
 
-  /* avoid autofill backgroud color */
+  /* avoid autofill background color */
   input:-webkit-autofill,
   textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #0c0a09 inset;
@@ -74,14 +71,13 @@
 
   .nav-glow {
     transition: all 0.3s ease;
+  }
 
-    &:hover {
-      text-shadow: 0 0 10px #0aff47, 0 0 20px #0aff47;
-    }
+  .nav-glow:hover {
+    text-shadow: 0 0 10px #0aff47, 0 0 20px #0aff47;
   }
 
   .glow-effect {
     box-shadow: 0 4px 30px rgba(147, 0, 245, 0.5);
   }
-
 }
