@@ -2,6 +2,7 @@ import { projectsData } from '@/config/data';
 import { motion } from 'framer-motion';
 import { useRef, useLayoutEffect } from 'react';
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
+import Typewriter from "typewriter-effect";
 
 const Projects = () => {
   const carouselRef = useRef(null);
@@ -28,10 +29,22 @@ const Projects = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-semibold text-white mb-5 text-center"
+          className="text-3xl md:text-5xl font-semibold text-white  text-center"
         >
           PROJECTS
         </motion.h1>
+
+        <div className="text-lime-500 text-center mb-0 text-sm">
+          <Typewriter
+            options={{
+              strings: ["Insta clone is under development. Core structure is implemented, but features and UI are still being built.!"],
+              autoStart: true,
+              loop: true,
+              delay: 80,
+              deleteSpeed: 60,
+            }}
+          />
+        </div>
 
         {/* Carousel */}
         <div className="flex w-full max-w-6xl items-center relative">
