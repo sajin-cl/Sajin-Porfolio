@@ -13,7 +13,7 @@ const Leetcode = () => {
         <h1 className="text-xl md:text-6xl font-bold text-center bg-linear-to-r from-lime-400 via-lime-100 to-gray-500 bg-clip-text text-transparent">
           <Typewriter
             options={{
-              strings: ["50 DAYS LEETCODE CHALLENGE COMPLETED", "87 PROBLEMS SOLVED"],
+              strings: ["50 DAYS LEETCODE CHALLENGE COMPLETED", "88 PROBLEMS SOLVED"],
               autoStart: true,
               loop: true,
               delay: 75,
