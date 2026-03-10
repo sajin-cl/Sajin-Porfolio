@@ -132,6 +132,13 @@ export const certificationsData = [
     credential: null,
   },
   {
+    name: "Skill Competency Test in React",
+    issuer: "ARC 360 Jobs",
+    description: "Completed the React Intermediate Certification as part of the Full Stack Developer Skill Competency Test",
+    image: "/arc-intermediate-certificate.webp",
+    credential: null,
+  },
+  {
     name: "Digital Marketting Certificate",
     issuer: "First Success Technologies",
     description: "Completed a 2-day Online Digital Marketing Workshop conducted by Santhosh Kumar A, CEO of First Success Technologies.",
