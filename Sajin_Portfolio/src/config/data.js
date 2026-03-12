@@ -84,9 +84,25 @@ export const projectsData = [
     live: "https://power-house-ecommerce.vercel.app/",
   },
   {
+    name: "Insta Clone",
+    description: "A responsive Instagram clone built with React, TypeScript, and Tailwind CSS. Features include user stories, post feeds, likes & mobile-friendly UI",
+    image: "/project3.webp",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
+      { name: "Typescript", color: "#2965F1", icon: SiTypescript },
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
+
+    ],
+    github: "https://github.com/sajin-cl/Social_Media_Clone_with_VITE_React_and_TypeScript",
+    live: "https://social-media-clone-with-vite-react.vercel.app/",
+  },
+  {
     name: "Ecommerce Website",
     description: "Role-based e-commerce platform with separate admin and user panels, session authentication, and product management.",
-    image: "/project3.webp",
+    image: "/project4.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -98,22 +114,7 @@ export const projectsData = [
     github: "https://github.com/sajin-cl/Admin_and_User-based-Ecommerce",
     live: null,
   },
-  {
-    name: "Insta Clone",
-    description: "This project is under development. Core structure is implemented, but features and UI are still being built.",
-    image: "/project4.webp",
-    skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
-      { name: "React", color: "#61DAFB", icon: SiReact },
-      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
-      { name: "Typescript", color: "#2965F1", icon: SiTypescript },
-      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
 
-    ],
-    github: "https://github.com/sajin-cl/Social_Media_Clone_with_VITE_React_and_TypeScript",
-    live: null,
-  },
 ];
 
 export const certificationsData = [

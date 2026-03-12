@@ -30,7 +30,7 @@ const Hero = () => {
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
             <div className="text-4xl md:text-5xl font-bold">
-              3+
+              4+
             </div>
             <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
