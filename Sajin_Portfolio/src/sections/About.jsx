@@ -47,7 +47,7 @@ const About = () => {
           </motion.h2>
 
           <motion.p
-            className="text-white text-xl leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans text-center lg:text-left"
+            className="text-white text-base md:text-xl leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans text-center lg:text-left"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}

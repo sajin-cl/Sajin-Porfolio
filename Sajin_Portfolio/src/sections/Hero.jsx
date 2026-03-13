@@ -59,9 +59,9 @@ const Hero = () => {
 
         {/* LEFT SIDE: Text & Social Content */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-          <h1 className="justify-center lg:justify-normal text-sm text-lime-400 tracking-wide flex items-center gap-3 font-mono">
+          <h1 className=" text-sm text-lime-400 tracking-wide font-mono ">
             <span
-              className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
+              className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s] mr-2"
             >
             </span>
             AVAILABLE FOR WORK - TAMIL NADU | KERALA | BANGALORE
@@ -93,7 +93,7 @@ const Hero = () => {
             TURNING IDEAS INTO SCALABLE DIGITAL PRODUCTS
           </motion.p>
 
-          <h2 className="text-xl md:text-lg font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
+          <h2 className="text-sm md:text-lg font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
             <Typewriter
               options={{
                 strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN Stack Developer Intern – Logiprompt Techno Solutions, Trivandrum", "ACTIVE IN LINKEDIN"],
