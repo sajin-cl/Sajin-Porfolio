@@ -35,7 +35,7 @@ const Header = () => {
             className="bg-lime-400 font-semibold  px-5 py-2 inline-block transform skew-x-[-20deg] hover:bg-lime-300 transition"
           >
             <span className="block skew-x-[20deg] text-xs  -tracking-tight">
-              HIRE ME
+              HIRE ME ↗
             </span>
           </a>
         </div>

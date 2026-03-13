@@ -12,16 +12,18 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-white text-center"
         >
-          SKILLS & TECHNOLOGY
+          SKILLS <span className="text-gray-400"> &</span> <span className="text-lime-400">TECHNOLOGY</span>
         </motion.h1>
 
         <motion.p
-          className="text-lime-100 text-center px-2 mb-4 tracking-wide"
+          className="text-gray-400 text-center px-2 mb-4 tracking-wide font-inter"
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
         >
-          I specialize in the following technologies and frameworks to bring ideas to life through innovative solutions
+          <span className="text-white">I specialize in the following technologies </span>
+          <span className="font-bold">&</span>
+          <span className="text-lime-300"> frameworks to bring ideas to life through innovative solutions</span>
         </motion.p>
 
         <ScrollRow items={skillsData.tools} reverse={false} duration={15} />

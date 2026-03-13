@@ -59,7 +59,7 @@ const Hero = () => {
 
         {/* LEFT SIDE: Text & Social Content */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-          <h1 className="justify-center md:justify-normal text-sm text-lime-400 tracking-wide flex items-center gap-3 font-mono">
+          <h1 className="justify-center lg:justify-normal text-sm text-lime-400 tracking-wide flex items-center gap-3 font-mono">
             <span
               className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
             >
@@ -69,9 +69,9 @@ const Hero = () => {
 
             <h2 className="text-gray-100 text-5xl font-bold tracking-widest font-inter">SAJIN CL</h2>
 
-          <div className="min-h-10 md:min-h-18">
-            <h2 className="flex items-center gap-2 text-3xl md:text-4xl font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
-              <span className="inline-block text-gray-300">→</span>
+          <div className="min-h-10">
+            <h2 className="flex items-center justify-center lg:justify-normal gap-2 text-xl  font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
+              <span className="hidden lg:block text-gray-300">→</span>
               <Typewriter
                 options={{
                   strings: ["MERN STACK DEVELOPER", "REACT DEVELOPER", "NODE DEVELOPER"],
@@ -137,7 +137,7 @@ const Hero = () => {
               onClick={() => toast.success("CV Downloaded!")}
               className="whitespace-nowrap px-20 md:px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
             >
-              Download CV
+              ⬇ Download CV 
             </motion.a>
           </div>
         </div>

@@ -34,7 +34,7 @@ const Projects = () => {
           PROJECTS
         </motion.h1>
 
-        <div className="text-lime-500 text-center mb-0 text-sm">
+        <div className="text-lime-300 text-center mb-0 text-sm">
           <Typewriter
             options={{
               strings: ["A collection of things I've built, tested, and improved along the way"],

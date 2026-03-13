@@ -19,21 +19,29 @@ const About = () => {
         {/* Right side content */}
         <div className="w-full lg:w-1/2 text-center md:text-left p-3 relative">
           <motion.h1
-            className="h1 text-white py-3 text-center lg:text-left"
+            className="h1 text-white py-3 text-center lg:text-left border-b border-gray-800"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
           >
-            About Me
+            ABOUT <span className="text-gray-300">ME</span> →
           </motion.h1>
 
           <motion.h2
-            className="text-xl font-semibold text-lime-300 py-3 font-sans text-center lg:text-left"
+            className="text-sm font-semibold text-white py-3 font-sans text-center lg:text-left flex items-center lg:justify-normal justify-center gap-3"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
           >
-            MERN Stack Developer | React Developer | Node Developer
+            <span
+              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+            >MERN STACK DEVELOPER </span>
+            <span
+              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+            >REACT DEVELOPER </span>
+            <span
+              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+            >NODE DEVELOPER </span>
           </motion.h2>
 
           <motion.p

@@ -25,7 +25,7 @@ export const socialLinks = [
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.",
     name: 'sajincl222@gmail.com'
   },
-  { icon: MdOutlineWifiCalling3, href: "tel:+918056825814", name: 'call me' }
+  { icon: MdOutlineWifiCalling3, href: "tel:+918056825814", name: '+91 8056 8258 14' }
 ];
 
 export const skillsData = {
