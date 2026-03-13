@@ -8,11 +8,11 @@ import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
 export const navLinks = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "HOME", href: "#hero" },
+  { name: "ABOUT", href: "#about" },
+  { name: "SKILLS", href: "#skills" },
+  { name: "PROJECTS", href: "#projects" },
+  { name: "CONTACT", href: "#contact" },
 ];
 
 export const socialLinks = [
@@ -53,7 +53,7 @@ export const skillsData = {
 
 export const projectsData = [
   {
-    name: "Personal Website",
+    name: "PERSONAL WEBSITE",
     description: "A responsive developer portfolio showcasing projects, skills, and contact information, built with React, Tailwind CSS, and Vite.",
     image: "/project1.webp",
     skills: [
@@ -67,7 +67,7 @@ export const projectsData = [
     live: null,
   },
   {
-    name: "Multi Vendor Grocery Ecommerce",
+    name: "MULTI VENDOR GROCERY ECOMMERCE",
     description: "A multi-vendor grocery marketplace built with the MERN stack, allowing vendors to manage products and users to browse, add to cart, and place orders with JWT-based authentication.",
     image: "/project2.webp",
     skills: [
@@ -84,7 +84,7 @@ export const projectsData = [
     live: "https://power-house-ecommerce.vercel.app/",
   },
   {
-    name: "Instagram Clone UI",
+    name: "INSTAGRAM CLONE UI",
     description: "A responsive Instagram clone built with React, TypeScript, and Tailwind CSS. Features include user stories, post feeds, likes & mobile-friendly UI",
     image: "/project3.webp",
     skills: [
@@ -100,7 +100,7 @@ export const projectsData = [
     live: "https://social-media-clone-with-vite-react.vercel.app/",
   },
   {
-    name: "Ecommerce Website",
+    name: "ECOMMERCE WEBSITE",
     description: "Role-based e-commerce platform with separate admin and user panels, session authentication, and product management.",
     image: "/project4.webp",
     skills: [

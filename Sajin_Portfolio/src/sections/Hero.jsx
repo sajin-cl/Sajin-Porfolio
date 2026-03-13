@@ -67,7 +67,7 @@ const Hero = () => {
             AVAILABLE FOR WORK - TAMIL NADU | KERALA | BANGALORE
           </h1>
 
-            <h2 className="text-gray-100 text-5xl font-bold tracking-widest font-inter">SAJIN CL</h2>
+          <h2 className="text-gray-100 text-5xl font-bold tracking-widest font-inter">SAJIN CL</h2>
 
           <div className="min-h-10">
             <h2 className="flex items-center justify-center lg:justify-normal gap-2 text-xl  font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
@@ -85,7 +85,7 @@ const Hero = () => {
           </div>
 
           <motion.p
-            className="text-gray-400 text-base max-w-lg mx-auto lg:mx-0 leading-relaxed font-mono animate-pulse"
+            className="text-gray-400 text-xs max-w-lg mx-auto lg:mx-0 leading-relaxed font-mono animate-pulse"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
@@ -93,10 +93,12 @@ const Hero = () => {
             TURNING IDEAS INTO SCALABLE DIGITAL PRODUCTS
           </motion.p>
 
-          <h2 className="text-sm md:text-lg font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">
+          <h2
+            className="text-sm md:text-lg font-mono font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent"
+          >
             <Typewriter
               options={{
-                strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN Stack Developer Intern – Logiprompt Techno Solutions, Trivandrum", "ACTIVE IN LINKEDIN"],
+                strings: ["BE,COMPUTER SCIENCE ENGINEER", "MERN STACK DEVELOPER INTERN – LOGIPROMPT TECHNO SOLUTIONS, TRIVANDRUM"],
                 autoStart: true,
                 loop: true,
                 delay: 60,
@@ -116,9 +118,9 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={social.name}
-                  className="text-gray-400 hover:text-lime-400 hover:scale-125 transition-all duration-300 ease-out text-3xl"
+                  className="text-gray-400 hover:text-lime-400 hover:scale-125 transition-all duration-300 ease-out text-2xl"
                 >
-                  <Icon />
+                  <Icon/>
                 </a>
               );
             })}
@@ -137,7 +139,7 @@ const Hero = () => {
               onClick={() => toast.success("CV Downloaded!")}
               className="whitespace-nowrap px-20 md:px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
             >
-              ⬇ Download CV 
+              ⬇ Download CV
             </motion.a>
           </div>
         </div>

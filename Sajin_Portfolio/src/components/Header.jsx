@@ -24,7 +24,7 @@ const Header = () => {
             <a
               key={index}
               href={link.href}
-              className="text-gray-400 hover:text-lime-400 font-medium transition"
+              className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
               tabIndex={0}
             >
               {link.name}

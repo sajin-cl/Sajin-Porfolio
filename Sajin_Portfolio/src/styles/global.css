@@ -4,12 +4,14 @@
   --color-brand-green: #9de410;
   --font-poppins: "Poppins";
   --font-inter:"Inter";
+  --font-bebas-neue:"Bebas Neue"
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     @apply font-poppins;
+
   }
 
   html,
