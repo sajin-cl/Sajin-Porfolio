@@ -8,10 +8,12 @@ const About = () => {
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <video
             src="/world-video.mp4"
+            poster="/world-preview.webp"
             autoPlay
             loop
             muted
             playsInline
+            preload="auto"
             className="object-contain p-3 w-full max-w-[520px] h-auto mix-blend-lighten scale-125"
           ></video>
         </div>
