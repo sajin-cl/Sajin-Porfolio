@@ -4,22 +4,22 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen bg-stone-950 flex items-center justify-between overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-12 py-4">
-        {/* Left side image */}
-        <div className="w-full md:w-1/2">
-          <img
-            src="/working-avatar.webp"
-            alt="Developer avatar working on laptop"
-            width="520"
-            height="520"
-            loading="lazy"
-            className="object-contain p-3 w-full max-w-[520px] md:w-[520px] h-auto"
-          />
+        {/* Left side video */}
+        <div className="w-full md:w-1/2 flex justify-center items-center">
+          <video
+            src="/world-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-contain p-3 w-full max-w-[520px] h-auto mix-blend-lighten scale-125"
+          ></video>
         </div>
 
         {/* Right side content */}
         <div className="w-full lg:w-1/2 text-center md:text-left p-3 relative">
           <motion.h1
-            className="h1 text-white py-3 text-center lg:text-left border-b border-gray-800"
+            className="h1 text-white py-3 text-center lg:text-left "
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
