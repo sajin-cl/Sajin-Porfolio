@@ -34,18 +34,6 @@ const Projects = () => {
           PROJECTS
         </motion.h1>
 
-        <div className="text-lime-300 text-center mb-0 text-sm">
-          <Typewriter
-            options={{
-              strings: ["A collection of things I've built, tested, and improved along the way"],
-              autoStart: true,
-              loop: true,
-              delay: 80,
-              deleteSpeed: 60,
-            }}
-          />
-        </div>
-
         {/* Carousel */}
         <div className="flex w-full max-w-6xl items-center relative">
           {/* Left Arrow */}
@@ -124,9 +112,8 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${
-                        !project.live ? 'cursor-not-allowed' : ''
-                      }`}
+                      className={`px-4 py-2 text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] text-white rounded-full transition-all duration-300 ${!project.live ? 'cursor-not-allowed' : ''
+                        }`}
                     >
                       {project.live ? 'Live Demo' : 'Not available'}
                     </a>

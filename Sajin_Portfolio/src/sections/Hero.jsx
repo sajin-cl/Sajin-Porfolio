@@ -64,7 +64,7 @@ const Hero = () => {
               className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
             >
             </span>
-            AVAILABLE FOR WORK - BASED IN INDIA
+            AVAILABLE FOR WORK - TAMIL NADU | KERALA | BANGALORE
           </h1>
 
             <h2 className="text-gray-100 text-5xl font-bold tracking-widest font-inter">SAJIN CL</h2>
