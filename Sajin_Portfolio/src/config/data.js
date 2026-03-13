@@ -119,14 +119,14 @@ export const projectsData = [
 
 export const certificationsData = [
   {
-    name: "MERN Stack Intern Certificate",
+    name: "MERN STACK INTERN CERTIFICATE",
     issuer: "Logipromt Techno solutions (Trivandrum)",
     description: "Developed RESTful APIs using Nodejs and Express following MVC architecture. Developed responsive single-page applications using React with reusable components and efficient state management",
     image: "/mern_stack_intern_certificate.webp",
     credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
   },
   {
-    name: "UI UX 30Days Masterclass Certificate",
+    name: "UI/UX 30-Days Masterclass Certificate",
     issuer: "NoviTech R&D Pvt Ltd",
     description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.",
     image: "/ui-ux-certificate.webp",
