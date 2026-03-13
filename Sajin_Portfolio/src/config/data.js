@@ -84,7 +84,7 @@ export const projectsData = [
     live: "https://power-house-ecommerce.vercel.app/",
   },
   {
-    name: "Insta Clone",
+    name: "Instagram Clone UI",
     description: "A responsive Instagram clone built with React, TypeScript, and Tailwind CSS. Features include user stories, post feeds, likes & mobile-friendly UI",
     image: "/project3.webp",
     skills: [

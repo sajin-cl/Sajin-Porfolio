@@ -20,9 +20,10 @@ const Hero = () => {
             className="absolute text-lime-400 size-10 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
           />
           <MotionGit
+            title="23 Respositories"
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47]"
+            className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
           />
           <motion.div
             drag
@@ -58,13 +59,22 @@ const Hero = () => {
 
         {/* LEFT SIDE: Text & Social Content */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-          <h1 className="text-2xl md:text-3xl text-gray-400 font-medium tracking-tight">Hi There,</h1>
+          <h1 className="justify-center md:justify-normal text-sm text-lime-400 tracking-wide flex items-center gap-3 font-mono">
+            <span
+              className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
+            >
+            </span>
+            AVAILABLE FOR WORK - BASED IN INDIA
+          </h1>
 
-          <div className="min-h-16 md:min-h-32">
-            <h2 className="text-3xl md:text-6xl font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
+            <h2 className="text-gray-100 text-5xl font-bold tracking-widest font-inter">SAJIN CL</h2>
+
+          <div className="min-h-10 md:min-h-18">
+            <h2 className="flex items-center gap-2 text-3xl md:text-4xl font-bold bg-linear-to-r from-lime-400 via-lime-200 to-green-500 bg-clip-text text-transparent">
+              <span className="inline-block text-gray-300">→</span>
               <Typewriter
                 options={{
-                  strings: ["I'm Sajin CL", "I'm a MERN Stack Developer", "React Developer", "Node Developer"],
+                  strings: ["MERN STACK DEVELOPER", "REACT DEVELOPER", "NODE DEVELOPER"],
                   autoStart: true,
                   loop: true,
                   delay: 75,
@@ -75,12 +85,12 @@ const Hero = () => {
           </div>
 
           <motion.p
-            className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed"
+            className="text-gray-400 text-base max-w-lg mx-auto lg:mx-0 leading-relaxed font-mono animate-pulse"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
           >
-            Turning Ideas into Scalable Digital Products
+            TURNING IDEAS INTO SCALABLE DIGITAL PRODUCTS
           </motion.p>
 
           <h2 className="text-xl md:text-lg font-bold bg-linear-to-r from-lime-200 via-lime-100 to-whie-400 bg-clip-text text-transparent">

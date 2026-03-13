@@ -1,5 +1,5 @@
 import { RiMenu3Fill } from "react-icons/ri";
-import { GiCrossedSwords, GiBarbedCoil } from "react-icons/gi";
+import { GiCrossedSwords } from "react-icons/gi";
 import { useState } from "react";
 import { navLinks } from '@/config/data';
 
@@ -13,22 +13,31 @@ const Header = () => {
           className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer"
           href="#hero"
         >
-          <GiBarbedCoil size={26} />
-          <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">SAJIN</span>
+          {"<"}
+          <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">{"< SAJIN >"}</span>
+          {">"}
         </a>
 
         {/* Desktop Navbar */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className="text-gray-400 nav-glow font-medium transition"
+              className="text-gray-400 hover:text-lime-400 font-medium transition"
               tabIndex={0}
             >
               {link.name}
             </a>
           ))}
+          <a
+            href="#contact"
+            className="bg-lime-400 font-semibold  px-5 py-2 inline-block transform skew-x-[-20deg] hover:bg-lime-300 transition"
+          >
+            <span className="block skew-x-[20deg] text-xs  -tracking-tight">
+              HIRE ME
+            </span>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}

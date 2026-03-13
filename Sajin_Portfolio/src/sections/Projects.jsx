@@ -37,7 +37,7 @@ const Projects = () => {
         <div className="text-lime-500 text-center mb-0 text-sm">
           <Typewriter
             options={{
-              strings: ["Insta clone is under development. Core structure is implemented, but features and UI are still being built.!"],
+              strings: ["A collection of things I've built, tested, and improved along the way"],
               autoStart: true,
               loop: true,
               delay: 80,
@@ -83,7 +83,7 @@ const Projects = () => {
 
                 {/* Project Info */}
                 <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2 min-h-[3.8rem] leading-snug">
+                  <h3 className="text-xl lg:text-xl text-center font-semibold text-lime-100 mb-2 min-h-[3.8rem] leading-snug ">
                     {project.name}
                   </h3>
                   <p

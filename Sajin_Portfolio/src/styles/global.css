@@ -3,6 +3,7 @@
 @theme {
   --color-brand-green: #9de410;
   --font-poppins: "Poppins";
+  --font-inter:"Inter";
 }
 
 @layer base {
