@@ -37,6 +37,17 @@ const Certifications = () => {
           >
             CERTIFICATIONS
           </motion.h1>
+
+          <motion.p
+            className="text-gray-400 text-center tracking-wide font-mono"
+            initial={{ x: 20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+            viewport={{ once: true }}
+          >
+            <span className="text-gray-400 text-xs">
+              VERIFIED CERTIFICATIONS AND ACHIEVEMENTS
+            </span>
+          </motion.p>
         </div>
 
         {/* Carousel */}
@@ -93,11 +104,10 @@ const Certifications = () => {
                     href={cert?.credential}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`py-1 font-mono text-center w-full transition-all duration-300 ${
-                      cert?.credential
-                        ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
-                        : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
-                    }`}
+                    className={`py-1 font-mono text-center w-full transition-all duration-300 ${cert?.credential
+                      ? "outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] cursor-pointer text-white"
+                      : "outline outline-gray-700 text-gray-500 cursor-not-allowed"
+                      }`}
                   >
                     {cert?.credential ? "VIEW CREDENTIAL" : "NOT CREDENTIAL"}
                   </a>

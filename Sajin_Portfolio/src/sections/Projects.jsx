@@ -33,6 +33,17 @@ const Projects = () => {
         >
           PROJECTS
         </motion.h1>
+        <motion.p
+          className="text-gray-400 text-center tracking-wide font-mono"
+          initial={{ x: 20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+          viewport={{ once: true }}
+        >
+          <span className="text-gray-400 text-xs">
+           SELECTED PROJECTS SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY  
+           <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
+          </span>
+        </motion.p>
 
         {/* Carousel */}
         <div className="flex w-full max-w-6xl items-center relative">

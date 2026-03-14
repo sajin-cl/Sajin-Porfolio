@@ -17,14 +17,16 @@ const Skills = () => {
         </motion.h1>
 
         <motion.p
-          className="text-gray-400 text-center px-2 mb-4 tracking-wide font-inter"
+          className="text-gray-400 text-center mb-3 tracking-wide font-inter"
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
         >
-          <span className="text-gray-400">I specialize in the following technologies 
-        &
-          frameworks to bring ideas to life through innovative solutions</span>
+          <span
+            className="text-gray-400 text-xs"
+          >
+           I SPECIALIZE IN THE FOLLOWING TECHNOLOGIES & FRAMEWORKS TO BRING IDEAS TO LIFE THROUGH INNOVATIVE SOLUTIONS
+          </span>
         </motion.p>
 
         <ScrollRow items={skillsData.tools} isVisible={true} reverse={false} duration={15} />
@@ -39,7 +41,7 @@ const Skills = () => {
             <h2 className="text-lime-300 text-xs mb-5 font-mono">PROFICIENCY</h2>
             {proficiencyData.map((prof, idx) => (
               <div
-              key={idx}
+                key={idx}
                 className="proficiency-bar mb-2"
               >
                 <div className="flex justify-between items-center mb-2">
