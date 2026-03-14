@@ -21,7 +21,7 @@ const About = () => {
         {/* Right side content */}
         <div className="w-full lg:w-1/2 text-center md:text-left p-3 relative">
           <motion.h1
-            className="h1 text-white py-3 text-center lg:text-left "
+            className="h1 text-white py-3 text-center lg:text-left"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
@@ -47,15 +47,17 @@ const About = () => {
           </motion.h2>
 
           <motion.p
-            className="text-white text-base md:text-xl leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans text-center lg:text-left"
+            className="text-white text-base leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans text-center lg:text-left"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
           >
             Hello, I'm <span className="text-lime-300">Sajin CL</span>, a
-            <span className="text-lime-300"> MERN Stack Developer</span>. I enjoy building responsive, functional,
-            and scalable web applications, from mobile-friendly websites to full-featured desktop sites. I am passionate
-            about creating clean, efficient code and delivering seamless user experiences.
+            <span className="text-lime-300"> MERN Stack Developer</span>. who builds scalable and secure full-stack applications.
+            I work with React, Node.js, Express, and MongoDB to develop responsive
+            interfaces and powerful backend systems. I have built  <span className="text-lime-300">45+ RESTFUL APIs</span>,
+            implemented authentication using <span className="text-lime-300">JWT and bcrypt</span>, and developed role-based
+            ecommerce platforms with a focus on clean architecture and performance.
           </motion.p>
         </div>
       </div>
