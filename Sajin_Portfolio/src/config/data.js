@@ -2,11 +2,12 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
   SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
 } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
-import { color } from "framer-motion";
+
 
 export const navLinks = [
   { name: "HOME", href: "#hero" },
@@ -45,13 +46,15 @@ export const skillsData = {
     { name: "Tailwind CSS", color: "#06B6D4", type: 'Frontend', icon: SiTailwindcss, isVisible: true },
     { name: "JavaScript", color: "#F7DF1E", type: 'Frontend', icon: SiJavascript, isVisible: true },
     { name: "TypeScript", color: "#2965F1", type: 'Frontend', icon: SiTypescript, isVisible: true },
-    { name: "React", color: "#61DAFB", type: 'Frontend', icon: SiReact, isVisible: true },
-    { name: "Node", color: "#00FF00", type: 'Backend', icon: FaNodeJs, isVisible: true },
-    { name: "Express", color: "#FFF", type: 'Backend', icon: SiExpress, isVisible: true },
+    { name: "React.js", color: "#61DAFB", type: 'Frontend', icon: SiReact, isVisible: true },
+    { name: "Node.js", color: "#00FF00", type: 'Backend', icon: FaNodeJs, isVisible: true },
+    { name: "Express.js", color: "#FFF", type: 'Backend', icon: SiExpress, isVisible: true },
+    { name: "MySQL", color: "#00758F", type: 'Backend', icon: GrMysql, isVisible: true },
     { name: "MongoDB", color: "#47A248", type: 'Backend', icon: SiMongodb, isVisible: true },
     { name: "Mongoose", color: null, type: 'Backend', icon: null, isVisible: false },
     { name: "RESTful APIs", color: null, type: 'Backend', icon: null, isVisible: false },
     { name: "JWT Auth", color: null, type: 'Backend', icon: null, isVisible: false },
+    { name: "Session Auth", color: null, type: 'Backend', icon: null, isVisible: false },
   ]
 };
 
