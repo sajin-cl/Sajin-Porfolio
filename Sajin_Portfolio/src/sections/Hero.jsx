@@ -59,6 +59,7 @@ const Hero = () => {
 
         {/* LEFT SIDE: Text & Social Content */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+        <h1 className="text-gray-300 text-5xl font-bold hidden xl:block">FULL STACK DEVELOPER</h1>
           <h1 className=" text-sm text-lime-400 tracking-wide font-mono ">
             <span
               className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s] mr-2"

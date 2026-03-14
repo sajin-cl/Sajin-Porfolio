@@ -126,7 +126,8 @@ export const projectsData = [
       { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
       { name: "Node", color: "#00FF00", icon: FaNodeJs },
       { name: "Express", color: "#FFF", icon: SiExpress },
-      { name: "Handlebars", color: "#FF5733", icon: SiHandlebarsdotjs }
+      { name: "Handlebars", color: "#FF5733", icon: SiHandlebarsdotjs },
+      { name: "MongoDB", color: "#47A248", icon: SiMongodb },
     ],
     github: "https://github.com/sajin-cl/Admin_and_User-based-Ecommerce",
     live: null,
