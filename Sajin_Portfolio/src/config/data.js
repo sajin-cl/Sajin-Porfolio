@@ -1,11 +1,12 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
-  SiLeetcode, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
+  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
+import { color } from "framer-motion";
 
 export const navLinks = [
   { name: "HOME", href: "#hero" },
@@ -30,26 +31,39 @@ export const socialLinks = [
 
 export const skillsData = {
   tools: [
-    { name: "VS Code", color: "#007ACC", icon: VscVscode },
-    { name: "Postman", color: "#F24E1E", icon: SiFigma },
-    { name: "MongoDB", color: "#47A248", icon: SiMongodb },
-    { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
-    { name: "GitHub", color: "#FFFFFF", icon: SiGithub },
-    { name: "Figma", color: "#FF007F", icon: SiFigma },
-    { name: "Vercel", color: "#FFFFFF", icon: SiVercel },
+    { name: "VS Code", color: "#007ACC", icon: VscVscode, isVisible: true },
+    { name: "Postman", color: "#FF6C37", icon: SiPostman, isVisible: true },
+    { name: "Vite", color: "#FFFF00", icon: TbBrandVite, isVisible: true },
+    { name: "GitHub", color: "#FFFFFF", icon: SiGithub, isVisible: true },
+    { name: "Figma", color: "#FF007F", icon: SiFigma, isVisible: true },
+    { name: "Vercel", color: "#FFFFFF", icon: SiVercel, isVisible: true },
   ],
-  languages: [
-    { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-    { name: "CSS", color: "#2965F1", icon: SiCss3 },
-    { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
-    { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
-    { name: "JavaScript", color: "#F7DF1E", icon: SiJavascript },
-    { name: "TypeScript", color: "#2965F1", icon: SiTypescript },
-    { name: "React", color: "#61DAFB", icon: SiReact },
-    { name: "Node", color: "#00FF00", icon: FaNodeJs },
-    { name: "Express", color: "#FFF", icon: SiExpress },
+  techStack: [
+    { name: "HTML", color: "#FF5733", type: 'Frontend', icon: SiHtml5, isVisible: true },
+    { name: "CSS", color: "#2965F1", type: 'Frontend', icon: SiCss3, isVisible: true },
+    { name: "Bootstrap", color: "#7952B3", type: 'Frontend', icon: SiBootstrap, isVisible: true },
+    { name: "Tailwind CSS", color: "#06B6D4", type: 'Frontend', icon: SiTailwindcss, isVisible: true },
+    { name: "JavaScript", color: "#F7DF1E", type: 'Frontend', icon: SiJavascript, isVisible: true },
+    { name: "TypeScript", color: "#2965F1", type: 'Frontend', icon: SiTypescript, isVisible: true },
+    { name: "React", color: "#61DAFB", type: 'Frontend', icon: SiReact, isVisible: true },
+    { name: "Node", color: "#00FF00", type: 'Backend', icon: FaNodeJs, isVisible: true },
+    { name: "Express", color: "#FFF", type: 'Backend', icon: SiExpress, isVisible: true },
+    { name: "MongoDB", color: "#47A248", type: 'Backend', icon: SiMongodb, isVisible: true },
+    { name: "Mongoose", color: null, type: 'Backend', icon: null, isVisible: false },
+    { name: "RESTful APIs", color: null, type: 'Backend', icon: null, isVisible: false },
+    { name: "JWT Auth", color: null, type: 'Backend', icon: null, isVisible: false },
   ]
 };
+
+
+export const proficiencyData = [
+  { name: 'React.js', percentage: 82 },
+  { name: 'Node.js / Express.js', percentage: 80 },
+  { name: 'MongoDB', percentage: 85 },
+  { name: 'Tailwind CSS', percentage: 83 },
+  { name: 'TypeScript', percentage: 62 },
+];
+
 
 export const projectsData = [
   {
