@@ -7,7 +7,6 @@ const About = () => {
         {/* Left side video */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <video
-            src="/world-video.mp4"
             poster="/world-preview.webp"
             autoPlay
             loop
@@ -15,7 +14,9 @@ const About = () => {
             playsInline
             preload="auto"
             className="object-contain p-3 w-full max-w-[520px] h-auto mix-blend-lighten scale-125"
-          ></video>
+          >
+            <source src="/world-video.mp4" type="video/mp4" />
+          </video>
         </div>
 
         {/* Right side content */}
