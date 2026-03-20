@@ -11,13 +11,15 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Logo */}
-        <div className="text-white text-sm tracking-widest w-1/8 flex items-center justify-center">
+        <a
+        href="#hero"
+          className="text-white text-sm tracking-widest w-1/8 flex items-center justify-center">
           <img src="/logo.png" alt="logo" loading="lazy" className="h-10 block" />
           <div className="footer-logo-info">
             <p className="text-xl font-poppins">Sajin</p>
             <p className="text-xs text-lime-200">portfolio</p>
           </div>
-        </div>
+        </a>
 
         {/* Links */}
         <div className="text-white font-mono flex flex-wrap justify-center items-center gap-5 mx-auto">

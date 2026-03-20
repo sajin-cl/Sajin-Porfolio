@@ -21,7 +21,7 @@ function App() {
         fallback={
           <div className="animate-pulse text-lime-400 w-full min-h-screen flex flex-col justify-center items-center">
             <img src="/logo.png" alt="Loading logo" className="h-25 animate-spin transition" />
-            <p className="mt-4">Loading...</p>
+            <p className="mt-4">Welcome. Let me show you what I’ve built.</p>
           </div>
         }
       >
