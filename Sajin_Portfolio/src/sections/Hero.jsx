@@ -135,8 +135,8 @@ const Hero = () => {
               transition={{ duration: 1.2 }}
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(132,255,101,0.6)" }}
               whileTap={{ scale: 0.95 }}
-              href="/SajinCL_Mern_Stack_Developer_Resume.pdf"
-              download="SajinCL_Mern_Stack_Developer_Resume.pdf"
+              href="/SajinCL_MERN_Stack_Developer_Resume.pdf"
+              download="SajinCL_MERN_Stack_Developer_Resume.pdf"
               onClick={() => toast.success("CV Downloaded!")}
               className="whitespace-nowrap px-20 md:px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
             >
