@@ -151,14 +151,21 @@ export const certificationsData = [
     credential: null,
   },
   {
-    name: "Skill Competency Test in React",
+    name: "React Skill Competency Test",
     issuer: "ARC 360 Jobs",
     description: "Completed the React Intermediate Certification as part of the Full Stack Developer Skill Competency Test",
     image: "/React-Arc-Intermediate-Certificate.webp",
     credential: null,
   },
   {
-    name: "Skill Competency Test in CSS",
+    name: "HTML Skill Competency Test",
+    issuer: "ARC 360 Jobs",
+    description: "Completed the HTML Intermediate Certification as part of the Full Stack Developer Skill Competency Test",
+    image: "/HTML-Arc-Expert-Certificate.webp",
+    credential: null,
+  },
+  {
+    name: "CSS Skill Competency Test",
     issuer: "ARC 360 Jobs",
     description: "Completed the CSS Expert Certification as part of the Full Stack Developer Skill Competency Test",
     image: "/CSS-Arc-Expert-Certificate.webp",
