@@ -31,7 +31,7 @@ export const socialLinks = [
 
 
 export const codingProfileData = [
-  { title: 'LINKEDIN CONNECTIONS', count: 970 },
+  { title: 'LINKEDIN CONNECTIONS', count: 980 },
   { title: 'GITHUB REPOSITORY', count: 22 },
   { title: 'LEETCODE PROBLEMS', count: 90 },
   { title: 'TOTAL PROJECTS', count: 8 },
@@ -158,21 +158,21 @@ export const certificationsData = [
     credential: null,
   },
   {
-    name: "React Skill Competency Test",
+    name: "React Skill Competency Test CERTIFICATE",
     issuer: "ARC 360 Jobs",
     description: "Completed the React Intermediate Certification as part of the Full Stack Developer Skill Competency Test",
     image: "/React-Arc-Intermediate-Certificate.webp",
     credential: null,
   },
   {
-    name: "HTML Skill Competency Test",
+    name: "HTML Skill Competency Test CERTIFICATE",
     issuer: "ARC 360 Jobs",
     description: "Completed the HTML Intermediate Certification as part of the Full Stack Developer Skill Competency Test",
     image: "/HTML-Arc-Expert-Certificate.webp",
     credential: null,
   },
   {
-    name: "CSS Skill Competency Test",
+    name: "CSS Skill Competency Test CERTIFICATE",
     issuer: "ARC 360 Jobs",
     description: "Completed the CSS Expert Certification as part of the Full Stack Developer Skill Competency Test",
     image: "/CSS-Arc-Expert-Certificate.webp",
