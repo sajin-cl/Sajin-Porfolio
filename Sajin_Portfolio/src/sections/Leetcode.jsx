@@ -1,9 +1,16 @@
-import Typewriter from 'typewriter-effect';
+import Counter from "@/components/Counter";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Leetcode = () => {
+
+  const [start, setStart] = useState(false);//used for counter;
+
   return (
-    <section
+    <motion.section
       id="leetcode"
+      onViewportEnter={() => setStart(true)}
+      viewport={{ once: true, amount: 0.6 }}
       className="min-h-[400px] w-full flex justify-center items-center bg-stone-950"
     >
       <div className="w-full max-w-6xl flex flex-col md:flex-row justify-between items-center gap-10 px-6 relative">
@@ -18,7 +25,12 @@ const Leetcode = () => {
           </h1>
 
           <h2 className="text-sm md:text-lg font-mono text-gray-400">
-            SOLVED <span className="text-lime-300 font-inter ">90+</span> CODING PROBLEMS ON LEETCODE
+            SOLVED
+            <span
+              className="text-lime-300 font-inter mx-2">
+              <Counter value={90} start={start} />+
+            </span>
+            CODING PROBLEMS ON LEETCODE
           </h2>
         </div>
 
@@ -32,7 +44,7 @@ const Leetcode = () => {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 };
 

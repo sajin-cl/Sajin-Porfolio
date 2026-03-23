@@ -1,6 +1,7 @@
 import { socialLinks } from "@/config/data";
 import { LiaLaptopCodeSolid, LiaCodeBranchSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
+import Counter from "@/components/Counter";
 import Typewriter from "typewriter-effect";
 import toast from "react-hot-toast";
 
@@ -30,8 +31,8 @@ const Hero = () => {
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
-            <div className="text-4xl md:text-5xl font-bold">
-              4+
+            <div className="text-4xl md:text-5xl font-bold ">
+              <Counter value={4} start={true} />+
             </div>
             <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
@@ -59,7 +60,7 @@ const Hero = () => {
 
         {/* LEFT SIDE: Text & Social Content */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-        <h1 className="text-gray-300 text-5xl font-bold hidden xl:block">FULL STACK DEVELOPER</h1>
+          <h1 className="text-gray-300 text-5xl font-bold hidden xl:block">FULL STACK DEVELOPER</h1>
           <h1 className=" text-sm text-lime-400 tracking-wide font-mono ">
             <span
               className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s] mr-2"
@@ -121,7 +122,7 @@ const Hero = () => {
                   title={social.name}
                   className="text-gray-400 hover:text-lime-400 hover:scale-125 transition-all duration-300 ease-out text-2xl"
                 >
-                  <Icon/>
+                  <Icon />
                 </a>
               );
             })}
