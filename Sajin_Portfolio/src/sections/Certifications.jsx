@@ -87,7 +87,7 @@ const Certifications = () => {
 
                 {/* Certificate Info */}
                 <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl  font-mono font-bold text-white mb-2">
+                  <h3 className="text-xl  font-mono font-bold text-white mb-2 min-h-[3.4rem]">
                     {cert?.name.toUpperCase()}
                   </h3>
                   <p className="text-lime-400 mb-2 text-sm border-b pb-3 border-gray-800">

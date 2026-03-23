@@ -146,7 +146,7 @@ export const certificationsData = [
   {
     name: "UI/UX 30-Days Masterclass Certificate",
     issuer: "NoviTech R&D Pvt Ltd",
-    description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.",
+    description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.Learn about Figma fundamentals",
     image: "/ui-ux-certificate.webp",
     credential: null,
   },

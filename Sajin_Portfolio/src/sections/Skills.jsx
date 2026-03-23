@@ -1,6 +1,6 @@
 import { skillsData, proficiencyData } from "@/config/data";
 import ScrollRow from "@/components/ScrollView";
-import { motion } from 'framer-motion';
+import { delay, easeOut, motion } from 'framer-motion';
 
 const Skills = () => {
 
@@ -25,7 +25,7 @@ const Skills = () => {
           <span
             className="text-gray-400 text-xs"
           >
-           I SPECIALIZE IN THE FOLLOWING TECHNOLOGIES & FRAMEWORKS TO BRING IDEAS TO LIFE THROUGH INNOVATIVE SOLUTIONS
+            I SPECIALIZE IN THE FOLLOWING TECHNOLOGIES & FRAMEWORKS TO BRING IDEAS TO LIFE THROUGH INNOVATIVE SOLUTIONS
           </span>
         </motion.p>
 
@@ -50,7 +50,12 @@ const Skills = () => {
                 </div>
 
                 <div className="w-full bg-gray-700 h-1 rounded overflow-hidden">
-                  <div className="h-1 bg-lime-300" style={{ width: `${prof.percentage}%` }}></div>
+                  <motion.div
+                    className="h-1 bg-lime-300"
+                    initial={{ width: "0%" }}
+                    whileInView={{ width: `${prof.percentage}%` }}
+                    transition={{ duration: 1, delay: idx * 0.2 }}
+                  ></motion.div>
                 </div>
               </div>
             ))}
@@ -63,12 +68,16 @@ const Skills = () => {
               {skillsData.techStack
                 .filter((tech) => tech.type === "Frontend")
                 .map((tech, idx) => (
-                  <span
+                  <motion.span
                     key={idx}
+                    initial={{ y: -10, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.2, delay: idx * 0.1, ease: "easeOut" }}
+                    viewport={{ once: true }}
                     className="border border-gray-500 text-gray-400 text-xs py-1 px-2 cursor-context-menu hover:border-lime-300 hover:text-lime-300"
                   >
                     {tech.name}
-                  </span>
+                  </motion.span>
                 ))}
             </div>
           </div>
@@ -80,12 +89,16 @@ const Skills = () => {
               {skillsData.techStack
                 .filter((tech) => tech.type === "Backend")
                 .map((tech, idx) => (
-                  <span
+                  <motion.span
                     key={idx}
+                    initial={{ y: -10, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.2, delay: idx * 0.1, ease: "easeOut" }}
+                    viewport={{ once: true }}
                     className="border border-gray-500 text-gray-400 text-xs py-1 px-2 cursor-context-menu hover:border-lime-300 hover:text-lime-300"
                   >
                     {tech.name}
-                  </span>
+                  </motion.span>
                 ))}
             </div>
           </div>
@@ -95,12 +108,16 @@ const Skills = () => {
             <h2 className="text-lime-300 text-xs mb-5 font-mono">DEV TOOLS</h2>
             <div className="flex flex-wrap gap-2">
               {skillsData.tools.map((tool, idx) => (
-                <span
+                <motion.span
                   key={idx}
+                  initial={{ y: -10, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.2, delay: idx * 0.1, ease: "easeOut" }}
+                  viewport={{ once: true }}
                   className="border border-gray-500 text-gray-400 text-xs py-1 px-2 cursor-context-menu hover:border-lime-300 hover:text-lime-300"
                 >
                   {tool.name}
-                </span>
+                </motion.span>
               ))}
             </div>
           </div>
@@ -108,7 +125,7 @@ const Skills = () => {
         </div>
       </div>
 
-    </section>
+    </section >
   );
 };
 

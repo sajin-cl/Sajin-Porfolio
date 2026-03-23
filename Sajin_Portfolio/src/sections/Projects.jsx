@@ -82,7 +82,7 @@ const Projects = () => {
 
                 {/* Project Info */}
                 <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl font-mono text-center font-semibold text-lime-100 mb-2 min-h-[3.8rem] leading-snug">
+                  <h3 className="text-xl font-mono text-center font-semibold text-lime-100 mb-2 min-h-[3.5rem] leading-snug">
                     {project.name}
                   </h3>
                   <p
