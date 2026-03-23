@@ -21,7 +21,7 @@ const Hero = () => {
             className="absolute text-lime-400 size-10 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
           />
           <MotionGit
-            title="23 Respositories"
+            title="22 Respositories"
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
             className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
@@ -32,7 +32,7 @@ const Hero = () => {
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
             <div className="text-4xl md:text-5xl font-bold ">
-              <Counter value={4} start={true} />+
+              <Counter value={8} start={true} />+
             </div>
             <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS

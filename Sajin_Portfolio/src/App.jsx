@@ -2,8 +2,10 @@ import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from "@/components/Header";
 
+
 const Hero = lazy(() => import("@/sections/Hero"));
 const About = lazy(() => import("@/sections/About"));
+const CodingProfiles = lazy(() => import("@/sections/CodingProfiles"));
 const Skills = lazy(() => import("@/sections/Skills"));
 const Leetcode = lazy(() => import("@/sections/Leetcode"));
 const Projects = lazy(() => import("@/sections/Projects"));
@@ -27,6 +29,7 @@ function App() {
       >
         <main className="pt-16">
           <Hero />
+          <CodingProfiles />
           <About />
           <Skills />
           <Leetcode />

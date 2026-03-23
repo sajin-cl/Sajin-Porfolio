@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
 } from "react-icons/si";
@@ -20,7 +20,6 @@ export const navLinks = [
 export const socialLinks = [
   { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'sajin-cl' },
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'sajincl' },
-  { icon: FaInstagram, href: "https://www.instagram.com/sajin_cl/", name: '@sajin_cl' },
   { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'sajin-cl' },
   {
     icon: MdAttachEmail,
@@ -28,6 +27,14 @@ export const socialLinks = [
     name: 'sajincl222@gmail.com'
   },
   { icon: MdOutlineWifiCalling3, href: "tel:+918056825814", name: '+91 8056 8258 14' }
+];
+
+
+export const codingProfileData = [
+  { title: 'LINKEDIN CONNECTIONS', count: 970 },
+  { title: 'GITHUB REPOSITORY', count: 22 },
+  { title: 'LEETCODE PROBLEMS', count: 90 },
+  { title: 'TOTAL PROJECTS', count: 8 },
 ];
 
 export const skillsData = {

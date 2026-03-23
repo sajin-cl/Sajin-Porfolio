@@ -48,17 +48,17 @@ const About = () => {
           </motion.h2>
 
           <motion.p
-            className="text-white text-base leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-sans text-center lg:text-left"
+            className="text-white text-base leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-mono text-center lg:text-left"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
           >
-            Hello, I'm <span className="text-lime-300">Sajin CL</span>, a
-            <span className="text-lime-300"> MERN Stack Developer</span>. who builds scalable and secure full-stack applications.
-            I work with React, Node.js, Express, and MongoDB to develop responsive
-            interfaces and powerful backend systems. I have built  <span className="text-lime-300">45+ RESTFUL APIs</span>,
-            implemented authentication using <span className="text-lime-300">JWT and bcrypt</span>, and developed role-based
-            ecommerce platforms with a focus on clean architecture and performance.
+            HELLO, I'M <span className="text-lime-300">SAJIN CL</span>, A
+            <span className="text-lime-300"> MERN STACK DEVELOPER</span> WHO BUILDS SCALABLE AND SECURE FULL-STACK APPLICATIONS.
+            I WORK WITH REACT, NODE.JS, EXPRESS, AND MONGODB TO DEVELOP RESPONSIVE
+            INTERFACES AND POWERFUL BACKEND SYSTEMS. I HAVE BUILT <span className="text-lime-300">45+ RESTFUL APIS</span>,
+            IMPLEMENTED <span className="text-lime-300">JWT/SESSION AUTHENTICATION & BCRYPT PASSWORD HASHING</span> AND DEVELOPED ROLE-BASED
+            ECOMMERCE PLATFORMS WITH A FOCUS ON CLEAN ARCHITECTURE AND PERFORMANCE.
           </motion.p>
         </div>
       </div>

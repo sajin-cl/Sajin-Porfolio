@@ -45,7 +45,7 @@ const Certifications = () => {
             viewport={{ once: true }}
           >
             <span className="text-gray-400 text-xs">
-              VERIFIED CERTIFICATIONS AND ACHIEVEMENTS
+              VERIFIED CERTIFICATIONS AND ACHIEVEMENTS ( {certificationsData.length || 6} )
             </span>
           </motion.p>
         </div>

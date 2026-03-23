@@ -40,7 +40,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <span className="text-gray-400 text-xs">
-           SELECTED PROJECTS SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY  
+           SELECTED PROJECTS ({projectsData?.length}) SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY  
            <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
           </span>
         </motion.p>
