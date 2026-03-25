@@ -32,7 +32,7 @@ export const socialLinks = [
 
 export const codingProfileData = [
   { title: 'LINKEDIN CONNECTIONS', count: 980 },
-  { title: 'GITHUB REPOSITORY', count: 22 },
+  { title: 'GITHUB REPOSITORY', count: 20 },
   { title: 'LEETCODE PROBLEMS', count: 90 },
   { title: 'TOTAL PROJECTS', count: 8 },
 ];
