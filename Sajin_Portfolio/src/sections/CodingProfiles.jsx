@@ -5,7 +5,7 @@ import { codingProfileData } from '../config/data';
 
 function CodingProfiles() {
 
-  const [start, setStart] = useState(false);//used for counter;
+  const [start, setStart] = useState(false);//used for counter
 
   return (
     <motion.section
@@ -16,11 +16,13 @@ function CodingProfiles() {
     >
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-30">
         {codingProfileData.map((prof, idx) => (
-          <div className="linkedin-stats text-center">
+          <div key={idx} className="linkedin-stats text-center">
             <h1 className="text-gray-400 text-sm tracking-widest mb-3">
               {prof?.title}
             </h1>
-            <span className="text-lime-300 text-5xl font-bold"><Counter value={prof?.count} start={start} />+</span>
+            <span className="inline-block text-lime-300 text-5xl font-bold">
+              <Counter value={prof?.count} start={start} />+
+            </span>
           </div>
         ))}
 
