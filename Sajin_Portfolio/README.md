@@ -1,18 +1,53 @@
-# React + Vite
+# 👋 Hi, I'm SAJIN CL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💻 MERN STACK DEVELOPER 
+📍  Kanyakumari, Tamil Nadu
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About Me
 
-## React Compiler
+HELLO, I'M SAJIN CL, A MERN STACK DEVELOPER WHO BUILDS SCALABLE AND SECURE FULL-STACK APPLICATIONS. I WORK WITH REACT, NODE.JS, EXPRESS, AND MONGODB TO DEVELOP RESPONSIVE INTERFACES AND POWERFUL BACKEND SYSTEMS. I HAVE BUILT 45+ RESTFUL APIS, IMPLEMENTED JWT/SESSION AUTHENTICATION & BCRYPT PASSWORD HASHING AND DEVELOPED ROLE-BASED ECOMMERCE PLATFORMS WITH A FOCUS ON CLEAN ARCHITECTURE AND PERFORMANCE..
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+I don’t just learn — I build and test things practically.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* HTML
+* CSS
+* Tailwind CSS
+* React.js
+* Vite
+
+
+---
+
+
+### 🔹 PORTFOLIO
+
+* Short description of what it does
+* Tech used: React, CSS
+* GitHub: https://github.com/sajin-cl/Sajin-Porfolio
+
+---
+
+## 📈 What I'm Doing Now
+
+* Learning advanced React concepts
+* Building real-world projects
+* Improving Git workflow
+
+---
+
+## 📫 Contact Me
+
+* Email: [sajincl222@gmail.com](mailto:sajincl222@gmail.com)
+* GitHub: https://github.com/sajin-cl
+
+---
+
+## ⚡ Note
+
+Focused on becoming a strong full-stack developer.

@@ -167,7 +167,7 @@ export const certificationsData = [
   {
     name: "HTML Skill Competency Test CERTIFICATE",
     issuer: "ARC 360 Jobs",
-    description: "Completed the HTML Intermediate Certification as part of the Full Stack Developer Skill Competency Test",
+    description: "Completed the HTML Expert Certification as part of the Full Stack Developer Skill Competency Test",
     image: "/HTML-Arc-Expert-Certificate.webp",
     credential: null,
   },
