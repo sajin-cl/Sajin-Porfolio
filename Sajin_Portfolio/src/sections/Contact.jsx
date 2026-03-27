@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion';
+import { contactDetailsData } from "../config/data";
 
 const Contact = () => {
   const [message, setMessage] = useState("");
@@ -51,30 +52,69 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-stone-950 flex items-center justify-center p-4 mx-auto">
-      <div className="w-full max-w-lg  md:p-8 mx-auto">
-        <motion.h1
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
-          viewport={{ once: true }}
-          className="h1 text-white mb-5 text-center"
-        >
-          CONTACT US
-        </motion.h1>
+    <section id="contact" className="min-h-screen bg-stone-950 p-4">
+      <motion.h1
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+        viewport={{ once: true }}
+        className="h1 text-white mb-5 ml-12"
+      >
+        CONTACT US
+      </motion.h1>
 
-        <div className="text-white text-center mb-5 text-xs font-mono">
-          <Typewriter
-            options={{
-              strings: ["Currently seeking job opportunities. Reach out to connect!".toUpperCase()],
-              autoStart: true,
-              loop: true,
-              delay: 80,
-              deleteSpeed: 60,
-            }}
-          />
+      <div className="text-white mb-5 text-xs font-mono ml-14">
+        <Typewriter
+          options={{
+            strings: ["Currently seeking job opportunities. Reach out to connect!".toUpperCase()],
+            autoStart: true,
+            loop: true,
+            delay: 80,
+            deleteSpeed: 60,
+          }}
+        />
+      </div>
+
+      <div className="w-full md:p-8 mx-auto grid lg:grid-cols-2 gap-8">
+        
+        {/* Contact Details */}
+        <div className="contact-info order-2 lg:order-1 w-full p-5 flex flex-col justify-center">
+          {contactDetailsData.map((cont, idx) => {
+            const Icon = cont?.icon;
+            return (
+              <div
+                key={idx}
+                className="contact-details flex gap-5 mb-5"
+              >
+                <div className="contact-icon-box flex items-center">
+                  <Icon className="text-lime-300" />
+                </div>
+                <div className="contact-label-box flex flex-col">
+                  <span className="contact-label inline-block text-gray-400 text-xs font-mono mb-2">{cont?.label}</span>
+                  <span
+                    className="contact-href inline-block text-white text-sm font-mono hover:text-lime-300 hover:cursor-pointer"
+                  >
+                    {cont.href} ↗
+                  </span>
+                </div>
+              </div>
+            )
+          })}
+
+          <div className="point relative p-2 border border-lime-800 overflow-hidden">
+
+            <div className="absolute inset-0 border border-lime-400 opacity-30 animate-[spin_4s_linear_infinite]"></div>
+
+            <p className="relative text-xs text-lime-400 tracking-wide font-mono">
+              <span className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-[pulse_1s_linear_infinite] shadow-[0_0_8px_#84cc16] mr-2"></span>
+              AVAILABLE FOR WORK - FEEL FREE TO CONTACT ME
+            </p>
+          </div>
+
         </div>
 
-        <div className="border border-lime-300 shadow-xl px-3 w-full p-5">
+        {/* Form Container */}
+        <div className="border border-lime-500 order-1 lg:order-2 shadow-xl px-3 w-full p-5">
+
           <form
             onSubmit={submitForm}
             className="flex flex-col gap-3 p-3"
@@ -131,9 +171,8 @@ const Contact = () => {
 
           {message && (
             <div
-              className={`text-xs mt-3 text-center leading-relaxed tracking-wide flex items-start justify-center gap-1 max-w-sm mx-auto ${
-                status === "success" ? "text-green-500" : "text-red-600"
-              }`}
+              className={`text-xs mt-3 text-center leading-relaxed tracking-wide flex items-start justify-center gap-1 max-w-sm mx-auto ${status === "success" ? "text-green-500" : "text-red-600"
+                }`}
             >
               <FiAlertTriangle size={15} className="shrink-0 mt-0.5" />
               <span>{message}</span>
