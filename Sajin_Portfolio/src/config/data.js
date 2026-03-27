@@ -30,6 +30,14 @@ export const socialLinks = [
 ];
 
 
+export const contactDetailsData = [
+  { label: 'EMAIL', href: 'sajincl222@gmail.com', icon: MdAttachEmail },
+  { label: 'MOBILE NO', href: '+91 8056 8258 14', icon: MdOutlineWifiCalling3 },
+  { label: 'GITHUB', href: 'github.com/sajin-cl', icon: FaGithub },
+  { label: 'LINKEDIN', href: 'linkedin.com/in/sajincl', icon: FaLinkedin },
+];
+
+
 export const codingProfileData = [
   { title: 'LINKEDIN CONNECTIONS', count: 980 },
   { title: 'GITHUB REPOSITORY', count: 20 },
