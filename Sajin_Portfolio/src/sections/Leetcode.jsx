@@ -1,6 +1,7 @@
 import Counter from "@/components/Counter";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { leetcodeProblemsCount } from "@/config/data";
 
 const Leetcode = () => {
 
@@ -28,7 +29,7 @@ const Leetcode = () => {
             SOLVED
             <span
               className="text-lime-300 font-inter mx-2">
-              <Counter value={90} start={start} />+
+              <Counter value={leetcodeProblemsCount} start={start} />+
             </span>
             CODING PROBLEMS ON LEETCODE
           </h2>
