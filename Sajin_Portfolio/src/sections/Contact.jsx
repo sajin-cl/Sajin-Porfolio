@@ -57,12 +57,12 @@ const Contact = () => {
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
         viewport={{ once: true }}
-        className="h1 text-white mb-5 ml-12"
+        className="h2 text-white mb-5 px-6"
       >
         CONTACT US
       </motion.h1>
 
-      <div className="text-white mb-5 text-xs font-mono ml-14">
+      <div className="text-white mb-5 text-xs font-mono px-7 w-full">
         <Typewriter
           options={{
             strings: ["Currently seeking job opportunities. Reach out to connect!".toUpperCase()],
@@ -100,7 +100,7 @@ const Contact = () => {
             )
           })}
 
-          <div className="point relative p-2 border border-lime-800 overflow-hidden">
+          <div className="point relative p-2 border border-lime-800 overflow-hidden mt-14">
 
             <div className="absolute inset-0 border border-lime-400 opacity-30 animate-[spin_4s_linear_infinite]"></div>
 
@@ -113,7 +113,7 @@ const Contact = () => {
         </div>
 
         {/* Form Container */}
-        <div className="border border-lime-500 order-1 lg:order-2 shadow-xl px-3 w-full p-5">
+        <div className="order-1 lg:order-2 shadow-xl px-3 w-full p-5">
 
           <form
             onSubmit={submitForm}

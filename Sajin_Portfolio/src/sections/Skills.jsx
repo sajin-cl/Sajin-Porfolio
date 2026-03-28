@@ -11,7 +11,7 @@ const Skills = () => {
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-white text-center"
+          className="text-4xl  font-bold text-white text-center"
         >
           SKILLS <span className="text-gray-400"> &</span> <span className="text-lime-400">TECHNOLOGY</span>
         </motion.h1>
@@ -23,7 +23,7 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           <span
-            className="text-gray-400 text-xs"
+            className="text-gray-400 text-xs font-mono"
           >
             I SPECIALIZE IN THE FOLLOWING TECHNOLOGIES & FRAMEWORKS TO BRING IDEAS TO LIFE THROUGH INNOVATIVE SOLUTIONS
           </span>
