@@ -9,6 +9,7 @@ import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
 
+
 export const navLinks = [
   { name: "HOME", href: "#hero" },
   { name: "ABOUT", href: "#about" },
@@ -17,6 +18,8 @@ export const navLinks = [
   { name: "CONTACT", href: "#contact" },
 ];
 
+
+/* --------------------------------------------------Social Links------------------------------------------------------------------- */
 export const socialLinks = [
   { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'sajin-cl' },
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'sajincl' },
@@ -29,7 +32,7 @@ export const socialLinks = [
   { icon: MdOutlineWifiCalling3, href: "tel:+918056825814", name: '+91 8056 8258 14' }
 ];
 
-
+/* --------------------------------------------------Contact Details------------------------------------------------------------------- */
 export const contactDetailsData = [
   { label: 'EMAIL', href: 'sajincl222@gmail.com', icon: MdAttachEmail },
   { label: 'MOBILE NO', href: '+91 8056 8258 14', icon: MdOutlineWifiCalling3 },
@@ -38,13 +41,19 @@ export const contactDetailsData = [
 ];
 
 
+/* --------------------------------------------------Counting Details------------------------------------------------------------------- */
+export const projectCount = 9;
+export const leetcodeProblemsCount = 90;
+
 export const codingProfileData = [
   { title: 'LINKEDIN CONNECTIONS', count: 980 },
   { title: 'GITHUB REPOSITORY', count: 20 },
-  { title: 'LEETCODE PROBLEMS', count: 90 },
-  { title: 'TOTAL PROJECTS', count: 8 },
+  { title: 'LEETCODE PROBLEMS', count: leetcodeProblemsCount },
+  { title: 'TOTAL PROJECTS', count: projectCount },
 ];
 
+
+/* --------------------------------------------------Tech Stack------------------------------------------------------------------- */
 export const skillsData = {
   tools: [
     { name: "VS Code", color: "#007ACC", icon: VscVscode, isVisible: true },
@@ -83,6 +92,7 @@ export const proficiencyData = [
 ];
 
 
+/* --------------------------------------------------Project  Details------------------------------------------------------------------- */
 export const projectsData = [
   {
     name: "PERSONAL WEBSITE",
@@ -147,9 +157,27 @@ export const projectsData = [
     github: "https://github.com/sajin-cl/Admin_and_User-based-Ecommerce",
     live: null,
   },
+  {
+    name: "AK DECORATION SERVICE",
+    description: "This project is currently under development and not yet live",
+    image: "/project5.webp",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
+
+    ],
+    github: "https://github.com/sajin-cl/AK-Decoration-React-Vite-TailwindCSS",
+    live: null,
+  },
 
 ];
 
+
+
+/* --------------------------------------------------Certification Details------------------------------------------------------------------- */
 export const certificationsData = [
   {
     name: "MERN STACK INTERN CERTIFICATE",

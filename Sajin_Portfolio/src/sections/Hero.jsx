@@ -1,13 +1,15 @@
-import { socialLinks } from "@/config/data";
-import { SiReact,SiTailwindcss,SiMongodb } from "react-icons/si";
+import { socialLinks,projectCount } from "@/config/data";
+import { SiReact, SiTailwindcss, SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Counter from "@/components/Counter";
 import Typewriter from "typewriter-effect";
 import toast from "react-hot-toast";
 
+
 const Hero = () => {
 
+  
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-stone-950 pt-20 overflow-hidden">
@@ -19,15 +21,15 @@ const Hero = () => {
 
           {/* Floating UI Icons */}
           <SiReact
-          title="Library"
+            title="Library"
             className="absolute text-lime-400 size-12 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
           />
           <FaNodeJs
-          title="Lan"
+            title="Lan"
             className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
           />
           <SiTailwindcss
-          title="Framework"
+            title="Framework"
             className="absolute text-lime-400 size-10 bottom-20 right-5 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
           />
 
@@ -37,7 +39,7 @@ const Hero = () => {
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
             <div className="text-4xl md:text-5xl font-bold">
-              <Counter value={8} start={true} />+
+              <Counter value={projectCount} start={true} />+
             </div>
             <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
