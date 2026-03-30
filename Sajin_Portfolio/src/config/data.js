@@ -46,7 +46,7 @@ export const projectCount = 9;
 export const leetcodeProblemsCount = 90;
 
 export const codingProfileData = [
-  { title: 'LINKEDIN CONNECTIONS', count: 980 },
+  { title: 'LINKEDIN CONNECTIONS', count: 990 },
   { title: 'GITHUB REPOSITORY', count: 20 },
   { title: 'LEETCODE PROBLEMS', count: leetcodeProblemsCount },
   { title: 'TOTAL PROJECTS', count: projectCount },
