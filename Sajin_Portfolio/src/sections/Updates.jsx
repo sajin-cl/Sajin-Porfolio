@@ -31,10 +31,10 @@ function Updates({ visible }) {
           />
         </div>
         <div className="text-white font-mono text-sm">
-          <p className="text-lime-300 mb-2">
-            CURRENTLY IN DEVELOPMENT — BUILT USING REACT AND TAILWIND CSS:
+          <p className="text-lime-300 mb-2 font-bold">
+            CURRENTLY IN DEVELOPMENT — AK DECORATION DECORATION SERVICE WEBSITE
           </p>
-          <ul className="list-disc ml-5 space-y-1">
+          <ul className="list-disc  ml-5 space-y-1">
             <li>DESIGNING MODERN AND CLEAN USER INTERFACES</li>
             <li>BUILDING FULLY RESPONSIVE LAYOUTS</li>
             <li>FOCUSING ON PERFORMANCE AND SMOOTH UX</li>
