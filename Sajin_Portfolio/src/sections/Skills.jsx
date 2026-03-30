@@ -11,9 +11,10 @@ const Skills = () => {
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
-          className="text-4xl  font-bold text-white text-center"
+          className="text-4xl  font-bold text-white text-center group"
         >
-          SKILLS <span className="text-gray-400"> &</span> <span className="text-lime-400">TECHNOLOGY</span>
+          <span className="text-white group-hover:text-lime-400 transition duration-300">SKILLS</span>
+          <span className="text-gray-400"> &</span> <span className="text-lime-400 group-hover:text-white transition duration-300">TECHNOLOGY</span>
         </motion.h1>
 
         <motion.p

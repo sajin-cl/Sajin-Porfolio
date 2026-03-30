@@ -57,7 +57,7 @@ const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              src="/profile.webp"
+              src="https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/profile_isla2l.webp"
               alt="Sajin Profile"
               fetchPriority="high"
               className="w-full h-full scale-140 translate-y-10 object-contain"
