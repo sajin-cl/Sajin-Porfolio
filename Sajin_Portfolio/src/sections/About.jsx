@@ -15,7 +15,7 @@ const About = () => {
             preload="auto"
             className="object-contain p-3 w-full max-w-[520px] h-auto mix-blend-lighten scale-125"
           >
-            <source src="https://res.cloudinary.com/dpc9p1npw/video/upload/q_auto,f_auto,w_800/world-video_oong1k.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dpc9p1npw/video/upload/f_auto,q_auto/world-video_oong1k.mp4" type="video/mp4" />
           </video>
         </div>
 

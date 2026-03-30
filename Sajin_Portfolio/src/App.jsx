@@ -4,8 +4,9 @@ import Header from "@/components/Header";
 
 
 const Hero = lazy(() => import("@/sections/Hero"));
-const About = lazy(() => import("@/sections/About"));
 const CodingProfiles = lazy(() => import("@/sections/CodingProfiles"));
+const About = lazy(() => import("@/sections/About"));
+const Updates = lazy(() => import("@/sections/Updates"));
 const Skills = lazy(() => import("@/sections/Skills"));
 const Leetcode = lazy(() => import("@/sections/Leetcode"));
 const Projects = lazy(() => import("@/sections/Projects"));
@@ -31,6 +32,7 @@ function App() {
           <Hero />
           <CodingProfiles />
           <About />
+          <Updates visible={true}/>
           <Skills />
           <Leetcode />
           <Projects />
