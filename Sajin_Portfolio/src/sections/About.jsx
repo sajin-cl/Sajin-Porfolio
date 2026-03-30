@@ -15,7 +15,7 @@ const About = () => {
             preload="auto"
             className="object-contain p-3 w-full max-w-[520px] h-auto mix-blend-lighten scale-125"
           >
-            <source src="/world-video.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dpc9p1npw/video/upload/q_auto,f_auto,w_800/world-video_oong1k.mp4" type="video/mp4" />
           </video>
         </div>
 
@@ -49,8 +49,8 @@ const About = () => {
 
           <motion.p
             className="text-white text-base leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-mono text-center lg:text-left"
-            initial={{  opacity: 0 }}
-            whileInView={{  opacity: 1, transition: { duration: 1 } }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: true }}
           >
             HELLO, I'M <span className="text-lime-300">SAJIN CL</span>, A
