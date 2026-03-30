@@ -49,8 +49,8 @@ const About = () => {
 
           <motion.p
             className="text-white text-base leading-normal tracking-wide py-3 [word-spacing:0.25rem] md:[word-spacing:0.5rem] font-mono text-center lg:text-left"
-            initial={{  opacity: 0 }}
-            whileInView={{  opacity: 1, transition: { duration: 1 } }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: true }}
           >
             HELLO, I'M <span className="text-lime-300">SAJIN CL</span>, A
