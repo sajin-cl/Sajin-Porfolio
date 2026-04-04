@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion';
-import { contactDetailsData } from "../config/data";
+import { contactDetailsData } from "@/config/data";
 
 const Contact = () => {
   const [message, setMessage] = useState("");

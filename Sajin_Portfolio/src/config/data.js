@@ -46,7 +46,7 @@ export const projectCount = 9;
 export const leetcodeProblemsCount = 90;
 
 export const codingProfileData = [
-  { title: 'LINKEDIN CONNECTIONS', count: 990 },
+  { title: 'LINKEDIN CONNECTIONS', count: 1000 },
   { title: 'GITHUB REPOSITORY', count: 20 },
   { title: 'LEETCODE PROBLEMS', count: leetcodeProblemsCount },
   { title: 'TOTAL PROJECTS', count: projectCount },
@@ -97,7 +97,7 @@ export const projectsData = [
   {
     name: "PERSONAL WEBSITE",
     description: "A responsive developer portfolio showcasing projects, skills, and contact information, built with React, Tailwind CSS, and Vite.",
-    image: "/project1.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project1_xxd8yu.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -111,7 +111,7 @@ export const projectsData = [
   {
     name: "MULTI VENDOR GROCERY ECOMMERCE",
     description: "A multi-vendor grocery marketplace built with the MERN stack, allowing vendors to manage products and users to browse, add to cart, and place orders with JWT-based authentication.",
-    image: "/project2.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project2_pmfqti.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -128,7 +128,7 @@ export const projectsData = [
   {
     name: "INSTAGRAM CLONE UI",
     description: "A responsive Instagram clone built with React, TypeScript, and Tailwind CSS. Features include user stories, post feeds, likes & mobile-friendly UI",
-    image: "/project3.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project3_hzbt7d.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -142,9 +142,24 @@ export const projectsData = [
     live: "https://social-media-clone-with-vite-react.vercel.app/",
   },
   {
+    name: "AK DECORATION SERVICE",
+    description: "A modern and responsive decoration service website showcasing event planning and decoration services, featuring service listings, image galleries, and contact options for client inquiries.",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project5_faz4ak.webp",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
+
+    ],
+    github: "https://github.com/sajin-cl/AK-Decoration-React-Vite-TailwindCSS",
+    live: "https://ak-decoration.vercel.app/",
+  },
+  {
     name: "ECOMMERCE WEBSITE",
     description: "Role-based e-commerce platform with separate admin and user panels, session authentication, and product management.",
-    image: "/project4.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project4_kiebyu.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -155,21 +170,6 @@ export const projectsData = [
       { name: "MongoDB", color: "#47A248", icon: SiMongodb },
     ],
     github: "https://github.com/sajin-cl/Admin_and_User-based-Ecommerce",
-    live: null,
-  },
-  {
-    name: "AK DECORATION SERVICE",
-    description: "This project is currently under development and not yet live",
-    image: "/project5.webp",
-    skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
-      { name: "React", color: "#61DAFB", icon: SiReact },
-      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
-      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
-
-    ],
-    github: "https://github.com/sajin-cl/AK-Decoration-React-Vite-TailwindCSS",
     live: null,
   },
 

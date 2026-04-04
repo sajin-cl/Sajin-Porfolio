@@ -19,7 +19,8 @@ function Updates({ visible }) {
           </span>
         </h1>
 
-        <button className="text-lime-300 text-2xl hover:text-red-500 cursor-pointer absolute right-[0]" onClick={()=>setShowUpdates(false)}>X</button>
+        <button className="text-lime-300 text-2xl hover:text-red-500 cursor-pointer absolute right-[10] font-mono" onClick={() => setShowUpdates(false)}>X</button>
+
       </div>
       <div className="update-container border hover:border-lime-300 border-gray-500 p-8 flex gap-5 transform skew-x-[-20deg]">
         <div className="update-img">

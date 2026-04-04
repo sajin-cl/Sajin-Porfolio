@@ -32,7 +32,7 @@ function App() {
           <Hero />
           <CodingProfiles />
           <About />
-          <Updates visible={true}/>
+          <Updates visible={false}/>
           <Skills />
           <Leetcode />
           <Projects />
