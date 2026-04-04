@@ -73,8 +73,8 @@ const Projects = () => {
               >
                 {/* Project Image */}
                 <img
-                  src={project.image}
-                  alt={project.name}
+                  src={project?.image}
+                  alt={project?.name}
                   height={400}
                   width={200}
                   className="w-full h-48 object-cover"
@@ -83,13 +83,13 @@ const Projects = () => {
                 {/* Project Info */}
                 <div className="p-6 flex flex-col grow">
                   <h3 className="text-xl font-mono text-center font-semibold text-lime-100 mb-2 min-h-[3.5rem] leading-snug">
-                    {project.name}
+                    {project?.name}
                   </h3>
                   <p
                     className="text-gray-300 mb-4 flex-1 text-xs border-b border-gray-800 leading-loose tracking-wide pb-2"
-                    title={project.description}
+                    title={project?.description}
                   >
-                    {project.description}
+                    {project?.description}
                   </p>
 
                   {/* Skills icons */}
@@ -99,9 +99,9 @@ const Projects = () => {
                       return (
                         <Icon
                           key={idx}
-                          color={skill.color}
+                          color={skill?.color}
                           size={20}
-                          title={skill.name}
+                          title={skill?.name}
                           className="cursor-pointer hover:scale-110"
                         />
                       );
