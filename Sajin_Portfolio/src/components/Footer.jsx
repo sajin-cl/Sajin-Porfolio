@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="text-white/70 text-xs md:text-sm text-center py-4 border-t border-white/10 ">
-        © {new Date().getFullYear()} sajin-cl. All rights reserved.
+      <div className="text-white/70 text-xs  text-center py-4 border-t border-white/10 ">
+        © {new Date().getFullYear()} sajin-cl. all rights reserved.
       </div>
     </motion.footer>
   );
