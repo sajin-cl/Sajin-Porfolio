@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-stone-950 p-4">
+    <section id="contact" className="min-h-screen bg-stone-950 p-4 mt-6">
       <motion.h1
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}

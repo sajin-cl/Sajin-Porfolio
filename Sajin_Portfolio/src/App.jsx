@@ -1,6 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from "@/components/Header";
+import Testimonials from './components/Testimonials';
+import { testimonialsData } from './config/data';
 
 
 const Hero = lazy(() => import("@/sections/Hero"));
@@ -32,11 +34,12 @@ function App() {
           <Hero />
           <CodingProfiles />
           <About />
-          <Updates visible={false}/>
+          <Updates visible={false} />
           <Skills />
           <Leetcode />
           <Projects />
           <Certifications />
+          <Testimonials testimonials={testimonialsData} />
           <Contact />
         </main>
         <Footer />

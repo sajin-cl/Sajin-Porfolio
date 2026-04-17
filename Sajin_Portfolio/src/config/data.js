@@ -105,7 +105,7 @@ export const projectsData = [
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
     ],
-    github:null,
+    github: null,
     live: null,
   },
   {
@@ -221,4 +221,19 @@ export const certificationsData = [
     image: "/Digital-marketting-certificate.webp",
     credential: null,
   },
+];
+
+
+export const testimonialsData = [
+  {
+    quote: "The website you made for me is really useful. Now my clients can easily contact me, and I can clearly showcase my wedding decoration works. It has made things much easier for my business.",
+    name: "Ajith Kumar",
+    title: "AK Decoration Services",
+  },
+  {
+    quote: "The portfolio you built for me is really impressive. It helps highlight my skills and projects clearly, and makes it easy for others to explore my work. Thanks a lot, Sajin.",
+    name: "Sanjeev Kumar",
+    title: "UX/UI Designer",
+  }
+
 ];
