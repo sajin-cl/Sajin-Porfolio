@@ -19,7 +19,7 @@ function Testimonials({ testimonials }) {
     <section className="py-12">
 
       <h2 className="font-bold mb-14 text-center text-2xl md:text-4xl font-sans text-lime-300">
-        WHAT OUR <span className="text-white">CLIENTS SAY</span>
+        WHAT OUR <span className="text-white">CLIENTS SAYS</span>
       </h2>
 
       <div
