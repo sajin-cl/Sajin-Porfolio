@@ -105,7 +105,7 @@ export const projectsData = [
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
     ],
-    github: "https://github.com/sajin-cl/Sajin-Porfolio",
+    github:null,
     live: null,
   },
   {

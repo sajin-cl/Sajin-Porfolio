@@ -24,7 +24,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="flex min-h-screen justify-between items-center bg-stone-950">
-      <div className="w-full py-10 flex flex-col items-center gap-8">
+      <div className="w-full py-10 flex flex-col items-center gap-8 group">
         <motion.h1
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
@@ -77,7 +77,7 @@ const Projects = () => {
                   alt={project?.name}
                   height={400}
                   width={200}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover hover:scale-110 transition duration-700"
                 />
 
                 {/* Project Info */}
