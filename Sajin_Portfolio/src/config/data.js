@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
+  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
@@ -71,6 +71,8 @@ export const skillsData = {
     { name: "JavaScript", color: "#F7DF1E", type: 'Frontend', icon: SiJavascript, isVisible: true },
     { name: "TypeScript", color: "#2965F1", type: 'Frontend', icon: SiTypescript, isVisible: true },
     { name: "React.js", color: "#61DAFB", type: 'Frontend', icon: SiReact, isVisible: true },
+    { name: "Next.js", color: "#FFF", type: 'Frontend', icon: SiNextdotjs, isVisible: true },
+    { name: "Redux", color: null, type: 'Frontend', icon: null, isVisible: false },
     { name: "Node.js", color: "#00FF00", type: 'Backend', icon: FaNodeJs, isVisible: true },
     { name: "Express.js", color: "#FFF", type: 'Backend', icon: SiExpress, isVisible: true },
     { name: "MySQL", color: "#00758F", type: 'Backend', icon: GrMysql, isVisible: true },
@@ -85,10 +87,11 @@ export const skillsData = {
 
 export const proficiencyData = [
   { name: 'React.js', percentage: 82 },
+  { name: 'Next.js', percentage: 77 },
   { name: 'Node.js / Express.js', percentage: 80 },
   { name: 'MongoDB', percentage: 85 },
   { name: 'Tailwind CSS', percentage: 83 },
-  { name: 'TypeScript', percentage: 62 },
+  { name: 'TypeScript', percentage: 25 },
 ];
 
 
@@ -234,6 +237,6 @@ export const testimonialsData = [
     quote: "The portfolio you built for me is really impressive. It helps highlight my skills and projects clearly, and makes it easy for others to explore my work. Thanks a lot, Sajin.",
     name: "Sanjeev Kumar",
     title: "UX/UI Designer",
-  }
+  },
 
 ];

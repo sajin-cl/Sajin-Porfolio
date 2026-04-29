@@ -4,6 +4,8 @@ import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion';
 import { contactDetailsData } from "@/config/data";
 
+
+
 const Contact = () => {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(null);
