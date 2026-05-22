@@ -42,7 +42,7 @@ export const contactDetailsData = [
 
 
 /* --------------------------------------------------Counting Details------------------------------------------------------------------- */
-export const projectCount = 9;
+export const projectCount = 10;
 export const leetcodeProblemsCount = 90;
 
 export const codingProfileData = [
@@ -98,9 +98,9 @@ export const proficiencyData = [
 /* --------------------------------------------------Project  Details------------------------------------------------------------------- */
 export const projectsData = [
   {
-    name: "PERSONAL WEBSITE",
+    name: "PORTFOLIO WEBSITE FOR UX/UI DESIGNER",
     description: "A responsive developer portfolio showcasing projects, skills, and contact information, built with React, Tailwind CSS, and Vite.",
-    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project1_xxd8yu.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -109,7 +109,21 @@ export const projectsData = [
       { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
     ],
     github: null,
-    live: null,
+    live: "https://sanjeev-kumar-portfolio.vercel.app/",
+  },
+  {
+    name: "Cherry's Honey Ecommerce",
+    description: "PureBee – Premium Honey E-commerce Platform",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_xvg9zq.webp",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "Next.js", color: "#FFF", icon: SiNextdotjs },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
+      { name: "MongoDB", color: "#47A248", icon: SiMongodb },
+    ],
+    github: null,
+    live: "https://cherry-honey-ecommerce.vercel.app/",
   },
   {
     name: "MULTI VENDOR GROCERY ECOMMERCE",
@@ -237,6 +251,11 @@ export const testimonialsData = [
     quote: "The portfolio you built for me is really impressive. It helps highlight my skills and projects clearly, and makes it easy for others to explore my work. Thanks a lot, Sajin.",
     name: "Sanjeev Kumar",
     title: "UX/UI Designer",
+  },
+  {
+    quote: "The Cherry's Honey eCommerce website looks modern and smooth. The CRM and order management system were done really well, making it easy to manage customers and sales.",
+    name: "Sajin.D",
+    title: "Cherry's Honey Ecommerce Owner",
   },
 
 ];

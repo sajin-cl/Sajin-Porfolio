@@ -83,7 +83,7 @@ const Hero = () => {
               <span className="hidden lg:block text-gray-300">→</span>
               <Typewriter
                 options={{
-                  strings: ["MERN STACK DEVELOPER", "REACT DEVELOPER", "NODE DEVELOPER"],
+                  strings: ["MERN STACK DEVELOPER", "REACT DEVELOPER", "NODE DEVELOPER","Freelance Developer"],
                   autoStart: true,
                   loop: true,
                   delay: 75,
