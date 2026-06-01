@@ -10,7 +10,7 @@ import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
 
 
-export const navLinks = [
+export const NAV_LINKS = [
   { name: "HOME", href: "#hero" },
   { name: "ABOUT", href: "#about" },
   { name: "SKILLS", href: "#skills" },
@@ -20,7 +20,7 @@ export const navLinks = [
 
 
 /* --------------------------------------------------Social Links------------------------------------------------------------------- */
-export const socialLinks = [
+export const SOCIAL_LINKS = [
   { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'sajin-cl' },
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'sajincl' },
   { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'sajin-cl' },
@@ -33,7 +33,7 @@ export const socialLinks = [
 ];
 
 /* --------------------------------------------------Contact Details------------------------------------------------------------------- */
-export const contactDetailsData = [
+export const CONTACT_DETAILS_DATA = [
   { label: 'EMAIL', href: 'sajincl222@gmail.com', icon: MdAttachEmail },
   { label: 'MOBILE NO', href: '+91 8056 8258 14', icon: MdOutlineWifiCalling3 },
   { label: 'GITHUB', href: 'github.com/sajin-cl', icon: FaGithub },
@@ -42,19 +42,21 @@ export const contactDetailsData = [
 
 
 /* --------------------------------------------------Counting Details------------------------------------------------------------------- */
-export const projectCount = 10;
-export const leetcodeProblemsCount = 90;
+export const PROJECT_COUNT = 10;
+export const LEETCODE_PORBLEMS_COUNT = 90;
+export const FREELANCE_PROJECT_COUNT = 3;
 
-export const codingProfileData = [
+export const CODING_PROFILE_DATA = [
   { title: 'LINKEDIN CONNECTIONS', count: 1000 },
-  { title: 'GITHUB REPOSITORY', count: 20 },
-  { title: 'LEETCODE PROBLEMS', count: leetcodeProblemsCount },
-  { title: 'TOTAL PROJECTS', count: projectCount },
+  { title: 'GITHUB REPO', count: 20 },
+  { title: 'LEETCODE PROBLEMS', count: LEETCODE_PORBLEMS_COUNT },
+  { title: 'FREELANCE PROJECT', count: FREELANCE_PROJECT_COUNT },
+  { title: 'TOTAL PROJECTS', count: PROJECT_COUNT },
 ];
 
 
 /* --------------------------------------------------Tech Stack------------------------------------------------------------------- */
-export const skillsData = {
+export const SKILLS_DATA = {
   tools: [
     { name: "VS Code", color: "#007ACC", icon: VscVscode, isVisible: true },
     { name: "Postman", color: "#FF6C37", icon: SiPostman, isVisible: true },
@@ -62,6 +64,7 @@ export const skillsData = {
     { name: "GitHub", color: "#FFFFFF", icon: SiGithub, isVisible: true },
     { name: "Figma", color: "#FF007F", icon: SiFigma, isVisible: true },
     { name: "Vercel", color: "#FFFFFF", icon: SiVercel, isVisible: true },
+    { name: "Antigravity IDE", color: null, icon: null, isVisible: false },
   ],
   techStack: [
     { name: "HTML", color: "#FF5733", type: 'Frontend', icon: SiHtml5, isVisible: true },
@@ -85,35 +88,29 @@ export const skillsData = {
 };
 
 
-export const proficiencyData = [
+export const PROFICIENCY_DATA = [
   { name: 'React.js', percentage: 82 },
   { name: 'Next.js', percentage: 77 },
   { name: 'Node.js / Express.js', percentage: 80 },
-  { name: 'MongoDB', percentage: 85 },
+  { name: 'MongoDB / Mongoose ODM', percentage: 85 },
   { name: 'Tailwind CSS', percentage: 83 },
   { name: 'TypeScript', percentage: 25 },
 ];
 
 
 /* --------------------------------------------------Project  Details------------------------------------------------------------------- */
-export const projectsData = [
+export const PROJECTS_DATA = [
   {
-    name: "PORTFOLIO WEBSITE FOR UX/UI DESIGNER",
-    description: "A responsive developer portfolio showcasing projects, skills, and contact information, built with React, Tailwind CSS, and Vite.",
-    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
-    skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
-      { name: "React", color: "#61DAFB", icon: SiReact },
-      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
-      { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
+    name: "CHERRY'S HONEY ECOMMERCE",
+    description: "Premium honey e-commerce platform with secure payment integration, product catalog management, and responsive user experience.",
+    hashtags: [
+      "#Cloudinary",
+      "#JWT",
+      "#AdminDashboard",
+      "#OrderProcessing",
+      "#Cashfree",
+      "#Password Hashing",
     ],
-    github: null,
-    live: "https://sanjeev-kumar-portfolio.vercel.app/",
-  },
-  {
-    name: "Cherry's Honey Ecommerce",
-    description: "PureBee – Premium Honey E-commerce Platform",
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_xvg9zq.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
@@ -126,8 +123,36 @@ export const projectsData = [
     live: "https://cherry-honey-ecommerce.vercel.app/",
   },
   {
+    name: "PORTFOLIO WEBSITE FOR UX/UI DESIGNER",
+    description: "Modern portfolio website designed for a UX/UI designer, showcasing projects, services, and contact information with a responsive layout.",
+    hashtags: [
+      "#PortfolioWebsite",
+      "#ResponsiveDesign",
+    ],
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
+    skills: [
+      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
+    ],
+    github: null,
+    live: "https://sanjeev-kumar-portfolio.vercel.app/",
+  },
+  {
     name: "MULTI VENDOR GROCERY ECOMMERCE",
-    description: "A multi-vendor grocery marketplace built with the MERN stack, allowing vendors to manage products and users to browse, add to cart, and place orders with JWT-based authentication.",
+    description: "Multi-vendor grocery marketplace with vendor management, JWT authentication, shopping cart functionality, and order processing.",
+    hashtags: [
+      "#MERN",
+      "#JWT",
+      "#Authentication",
+      "#Authorization",
+      "#MultiVendor",
+      "#CartSystem",
+      "#OrderManagement",
+      "#RESTAPI",
+    ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project2_pmfqti.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
@@ -144,7 +169,12 @@ export const projectsData = [
   },
   {
     name: "INSTAGRAM CLONE UI",
-    description: "A responsive Instagram clone built with React, TypeScript, and Tailwind CSS. Features include user stories, post feeds, likes & mobile-friendly UI",
+    description: "Instagram-inspired social media interface featuring stories, post feeds, likes, and a fully responsive design.",
+    hashtags: [
+      "#SocialMediaUI",
+      "#ResponsiveDesign",
+      "#ComponentBasedArchitecture",
+    ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project3_hzbt7d.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
@@ -160,7 +190,12 @@ export const projectsData = [
   },
   {
     name: "AK DECORATION SERVICE",
-    description: "A modern and responsive decoration service website showcasing event planning and decoration services, featuring service listings, image galleries, and contact options for client inquiries.",
+    description: "Business website for event decoration services featuring service showcases, gallery sections, and customer inquiry options.",
+    hashtags: [
+      "#FreelanceProject",
+      "#GallerySection",
+      "#ResponsiveDesign",
+    ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project5_faz4ak.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
@@ -175,7 +210,14 @@ export const projectsData = [
   },
   {
     name: "ECOMMERCE WEBSITE",
-    description: "Role-based e-commerce platform with separate admin and user panels, session authentication, and product management.",
+    description: "Role-based e-commerce application with admin and user dashboards, session authentication, password hashing, and product management.",
+    hashtags: [
+      "#PasswordHashing",
+      "#SessionAuthentication",
+      "#RoleBasedAccess",
+      "#AdminDashboard",
+      "#ProductManagement",
+    ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project4_kiebyu.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
@@ -195,7 +237,7 @@ export const projectsData = [
 
 
 /* --------------------------------------------------Certification Details------------------------------------------------------------------- */
-export const certificationsData = [
+export const CERTIFICATIONS_DATA = [
   {
     name: "MERN STACK INTERN CERTIFICATE",
     issuer: "Logipromt Techno solutions (Trivandrum)",
@@ -241,7 +283,7 @@ export const certificationsData = [
 ];
 
 
-export const testimonialsData = [
+export const TESTIMONIALS_DATA = [
   {
     quote: "The website you made for me is really useful. Now my clients can easily contact me, and I can clearly showcase my wedding decoration works. It has made things much easier for my business.",
     name: "Ajith Kumar",

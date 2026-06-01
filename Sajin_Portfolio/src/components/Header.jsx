@@ -1,7 +1,7 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords } from "react-icons/gi";
 import { useState } from "react";
-import { navLinks } from '@/config/data';
+import { NAV_LINKS } from '@/config/data';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
 
         {/* Desktop Navbar */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link, index) => (
+          {NAV_LINKS.map((link, index) => (
             <a
               key={index}
               href={link.href}
@@ -58,7 +58,7 @@ const Header = () => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-stone-950 border-t border-stone-800">
-          {navLinks.map((link, index) => (
+          {NAV_LINKS.map((link, index) => (
             <a
               key={index}
               href={link.href}

@@ -1,4 +1,4 @@
-import { socialLinks,projectCount } from "@/config/data";
+import { SOCIAL_LINKS,PROJECT_COUNT } from "@/config/data";
 import { SiReact, SiTailwindcss, SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import { motion } from "framer-motion";
@@ -39,7 +39,7 @@ const Hero = () => {
             className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border-y-2 border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
             <div className="text-4xl md:text-5xl font-bold">
-              <Counter value={projectCount} start={true} />+
+              <Counter value={PROJECT_COUNT} start={true} />+
             </div>
             <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
               ProjectS
@@ -118,7 +118,7 @@ const Hero = () => {
 
           {/* Social Links icons */}
           <div className="flex justify-center lg:justify-start gap-8 pt-4">
-            {socialLinks.map((social, index) => {
+            {SOCIAL_LINKS.map((social, index) => {
               const Icon = social.icon;
               return (
                 <a

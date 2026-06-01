@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion';
-import { contactDetailsData } from "@/config/data";
+import { CONTACT_DETAILS_DATA } from "@/config/data";
 
 
 
@@ -80,7 +80,7 @@ const Contact = () => {
         
         {/* Contact Details */}
         <div className="contact-info order-2 lg:order-1 w-full p-5 flex flex-col justify-center">
-          {contactDetailsData.map((cont, idx) => {
+          {CONTACT_DETAILS_DATA.map((cont, idx) => {
             const Icon = cont?.icon;
             return (
               <div

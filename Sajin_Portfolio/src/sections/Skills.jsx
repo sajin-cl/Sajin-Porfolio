@@ -1,4 +1,4 @@
-import { skillsData, proficiencyData } from "@/config/data";
+import { SKILLS_DATA, PROFICIENCY_DATA } from "@/config/data";
 import ScrollRow from "@/components/ScrollView";
 import { delay, easeOut, motion } from 'framer-motion';
 
@@ -30,9 +30,9 @@ const Skills = () => {
           </span>
         </motion.p>
 
-        <ScrollRow items={skillsData.tools} isVisible={true} reverse={false} duration={15} />
+        <ScrollRow items={SKILLS_DATA.tools} isVisible={true} reverse={false} duration={15} />
 
-        <ScrollRow items={skillsData.techStack} isVisible={true} reverse={true} duration={15} />
+        <ScrollRow items={SKILLS_DATA.techStack} isVisible={true} reverse={true} duration={15} />
 
         {/* Skills Explore */}
         <div className="skills-explore grid grid-cols-1 lg:grid-cols-3  mt-20 mb-5">
@@ -40,7 +40,7 @@ const Skills = () => {
           {/* Proficiency */}
           <div className="proficiecy-container px-5 py-2">
             <h2 className="text-lime-300 text-xs mb-5 font-mono">PROFICIENCY</h2>
-            {proficiencyData.map((prof, idx) => (
+            {PROFICIENCY_DATA.map((prof, idx) => (
               <div
                 key={idx}
                 className="proficiency-bar mb-2"
@@ -66,7 +66,7 @@ const Skills = () => {
           <div className="frontend-skills-container px-5 py-2">
             <h2 className="text-lime-300 text-xs mb-5 font-mono">FRONTEND</h2>
             <div className="flex flex-wrap gap-2">
-              {skillsData.techStack
+              {SKILLS_DATA.techStack
                 .filter((tech) => tech.type === "Frontend")
                 .map((tech, idx) => (
                   <motion.span
@@ -87,7 +87,7 @@ const Skills = () => {
           <div className="backend-skills-container px-5 py-2">
             <h2 className="text-lime-300 text-xs mb-5 font-mono">BACKEND</h2>
             <div className="flex flex-wrap gap-2">
-              {skillsData.techStack
+              {SKILLS_DATA.techStack
                 .filter((tech) => tech.type === "Backend")
                 .map((tech, idx) => (
                   <motion.span
@@ -108,7 +108,7 @@ const Skills = () => {
           <div className="dev-tools-container px-5 py-2">
             <h2 className="text-lime-300 text-xs mb-5 font-mono">DEV TOOLS</h2>
             <div className="flex flex-wrap gap-2">
-              {skillsData.tools.map((tool, idx) => (
+              {SKILLS_DATA.tools.map((tool, idx) => (
                 <motion.span
                   key={idx}
                   initial={{ y: -10, opacity: 0 }}

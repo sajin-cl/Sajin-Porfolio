@@ -1,4 +1,4 @@
-import { certificationsData } from '@/config/data';
+import { CERTIFICATIONS_DATA } from '@/config/data';
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { useLayoutEffect, useRef } from "react";
@@ -45,7 +45,7 @@ const Certifications = () => {
             viewport={{ once: true }}
           >
             <span className="text-gray-400 text-xs">
-              VERIFIED CERTIFICATIONS AND ACHIEVEMENTS ( {certificationsData.length || 6} )
+              VERIFIED CERTIFICATIONS AND ACHIEVEMENTS ( {CERTIFICATIONS_DATA.length || 6} )
             </span>
           </motion.p>
         </div>
@@ -71,7 +71,7 @@ const Certifications = () => {
             ref={carouselRef}
             className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 py-10 carousel-scrollbar-hide"
           >
-            {certificationsData.map((cert, index) => (
+            {CERTIFICATIONS_DATA.map((cert, index) => (
               <div
                 key={index}
                 className="carousel-card shrink-0 w-full md:w-1/2 lg:w-1/3 bg-stone-950 overflow-hidden flex flex-col outline outline-gray-900 hover:outline-lime-900 hover:shadow-[0_0_10px_rgba(0,255,0,0.3)]"

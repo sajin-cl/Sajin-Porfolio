@@ -1,4 +1,4 @@
-import { navLinks, socialLinks } from "@/config/data";
+import { NAV_LINKS, SOCIAL_LINKS } from "@/config/data";
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
 
         {/* Links */}
         <div className="text-white font-mono flex flex-wrap justify-center items-center gap-5 mx-auto">
-          {navLinks.map((link, idx) => (
+          {NAV_LINKS.map((link, idx) => (
             <a key={idx} href={link.href} className="hover:text-lime-300 transition">
               {link.name}
             </a>
@@ -32,7 +32,7 @@ const Footer = () => {
 
         {/* Social */}
         <div className="text-white text-xl flex gap-3">
-          {socialLinks.map((social, idx) => {
+          {SOCIAL_LINKS.map((social, idx) => {
             const Icon = social.icon;
             return (
               <a

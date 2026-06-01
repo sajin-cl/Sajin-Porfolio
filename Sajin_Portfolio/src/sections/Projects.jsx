@@ -1,4 +1,4 @@
-import { projectsData } from '@/config/data';
+import { PROJECTS_DATA } from '@/config/data';
 import { motion } from 'framer-motion';
 import { useRef, useLayoutEffect } from 'react';
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
@@ -40,8 +40,8 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <span className="text-gray-400 text-xs">
-           SELECTED PROJECTS ({projectsData?.length}) SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY  
-           <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
+            SELECTED PROJECTS ({PROJECTS_DATA?.length}) SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY
+            <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
           </span>
         </motion.p>
 
@@ -66,7 +66,7 @@ const Projects = () => {
             ref={carouselRef}
             className="flex gap-4 w-full py-10 px-10 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide"
           >
-            {projectsData.map((project, index) => (
+            {PROJECTS_DATA.map((project, index) => (
               <div
                 key={index}
                 className="carousel-card flex flex-col w-full md:w-1/2 xl:w-1/3 shrink-0  overflow-hidden bg-stone-950 outline outline-gray-900 hover:outline-lime-900 hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
@@ -82,18 +82,26 @@ const Projects = () => {
 
                 {/* Project Info */}
                 <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl font-mono text-center font-semibold text-lime-100 mb-2 min-h-[3.5rem] leading-snug">
+                  <h3 className="text-xl font-mono text-center font-semibold text-lime-100 mb-2 min-h-[3.4rem] leading-snug">
                     {project?.name}
                   </h3>
+                  {/* Descrription */}
                   <p
-                    className="text-gray-300 mb-4 flex-1 text-xs border-b border-gray-800 leading-loose tracking-wide pb-2"
+                    className="text-gray-300  text-xs leading-loose tracking-wide h-20 overflow-hidden text-ellipsis"
                     title={project?.description}
                   >
                     {project?.description}
                   </p>
+                  <div className='my-2 pb-2 flex flex-wrap gap-x-2 gap-y-1'>
+                    {project?.hashtags?.map((tag, idx) => (
+                      <span key={idx} className='border-b border-gray-800 hover:border-lime-300 hover:cursor-default px-2 py-1 text-xs italic font-mono text-gray-500 rounded-full'>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
                   {/* Skills icons */}
-                  <div className="flex justify-center mb-4 gap-4">
+                  <div className="flex justify-center mb-4 gap-4 mt-auto pt-4 border-t border-gray-800">
                     {project?.skills.map((skill, idx) => {
                       const Icon = skill.icon;
                       return (
@@ -109,7 +117,7 @@ const Projects = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 items-center">
+                  <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                     <a
                       href={project.github}
                       target="_blank"
