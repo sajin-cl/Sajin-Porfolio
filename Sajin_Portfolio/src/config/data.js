@@ -120,7 +120,7 @@ export const PROJECTS_DATA = [
       { name: "MongoDB", color: "#47A248", icon: SiMongodb },
     ],
     github: null,
-    live: "https://cherry-honey-ecommerce.vercel.app/",
+    live: "https://www.cherryshoney.com/",
   },
   {
     name: "PORTFOLIO WEBSITE FOR UX/UI DESIGNER",
