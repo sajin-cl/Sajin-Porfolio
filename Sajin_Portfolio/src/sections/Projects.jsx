@@ -92,9 +92,9 @@ const Projects = () => {
                   >
                     {project?.description}
                   </p>
-                  <div className='my-2 pb-2 flex flex-wrap gap-x-2 gap-y-1'>
+                  <div className='my-2 pb-2 text-center'>
                     {project?.hashtags?.map((tag, idx) => (
-                      <span key={idx} className='border-b border-gray-800 hover:border-lime-300 hover:cursor-default px-2 py-1 text-xs italic font-mono text-gray-500 rounded-full'>
+                      <span key={idx} className='border-t border-gray-800 hover:border-lime-300 hover:cursor-default px-2 py-1 text-xs italic font-mono text-gray-500 rounded-full w-full'> 
                         {tag}
                       </span>
                     ))}

@@ -101,15 +101,10 @@ export const PROFICIENCY_DATA = [
 /* --------------------------------------------------Project  Details------------------------------------------------------------------- */
 export const PROJECTS_DATA = [
   {
-    name: "CHERRY'S HONEY ECOMMERCE",
+    name: "CHERRYS HONEY ECOMMERCE",
     description: "Premium honey e-commerce platform with secure payment integration, product catalog management, and responsive user experience.",
     hashtags: [
-      "#Cloudinary",
-      "#JWT",
-      "#AdminDashboard",
-      "#OrderProcessing",
-      "#Cashfree",
-      "#Password Hashing",
+      "https://cherryshoney.com",
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_xvg9zq.webp",
     skills: [
@@ -120,14 +115,13 @@ export const PROJECTS_DATA = [
       { name: "MongoDB", color: "#47A248", icon: SiMongodb },
     ],
     github: null,
-    live: "https://www.cherryshoney.com/",
+    live: "https://www.cherryshoney.com",
   },
   {
     name: "PORTFOLIO WEBSITE FOR UX/UI DESIGNER",
     description: "Modern portfolio website designed for a UX/UI designer, showcasing projects, services, and contact information with a responsive layout.",
     hashtags: [
-      "#PortfolioWebsite",
-      "#ResponsiveDesign",
+      "https://sanjeev-kumar-portfolio.vercel.app",
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
     skills: [
@@ -144,14 +138,7 @@ export const PROJECTS_DATA = [
     name: "MULTI VENDOR GROCERY ECOMMERCE",
     description: "Multi-vendor grocery marketplace with vendor management, JWT authentication, shopping cart functionality, and order processing.",
     hashtags: [
-      "#MERN",
-      "#JWT",
-      "#Authentication",
-      "#Authorization",
-      "#MultiVendor",
-      "#CartSystem",
-      "#OrderManagement",
-      "#RESTAPI",
+      "https://power-house-ecommerce.vercel.app",
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project2_pmfqti.webp",
     skills: [
@@ -171,9 +158,7 @@ export const PROJECTS_DATA = [
     name: "INSTAGRAM CLONE UI",
     description: "Instagram-inspired social media interface featuring stories, post feeds, likes, and a fully responsive design.",
     hashtags: [
-      "#SocialMediaUI",
-      "#ResponsiveDesign",
-      "#ComponentBasedArchitecture",
+      "https://social-media-clone-with-vite-react.vercel.app",
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project3_hzbt7d.webp",
     skills: [
@@ -192,9 +177,7 @@ export const PROJECTS_DATA = [
     name: "AK DECORATION SERVICE",
     description: "Business website for event decoration services featuring service showcases, gallery sections, and customer inquiry options.",
     hashtags: [
-      "#FreelanceProject",
-      "#GallerySection",
-      "#ResponsiveDesign",
+      "https://ak-decoration.vercel.app",
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project5_faz4ak.webp",
     skills: [
@@ -212,11 +195,7 @@ export const PROJECTS_DATA = [
     name: "ECOMMERCE WEBSITE",
     description: "Role-based e-commerce application with admin and user dashboards, session authentication, password hashing, and product management.",
     hashtags: [
-      "#PasswordHashing",
-      "#SessionAuthentication",
-      "#RoleBasedAccess",
-      "#AdminDashboard",
-      "#ProductManagement",
+      "",
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project4_kiebyu.webp",
     skills: [
