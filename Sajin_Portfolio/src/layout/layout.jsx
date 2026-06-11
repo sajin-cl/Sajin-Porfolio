@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import ScrollToHash from '@/components/ScrollToHash';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
+import CustomCursor from '@/components/CustomCursor';
 
 const loader = (
   <div className="animate-pulse text-lime-400 w-full min-h-screen flex flex-col justify-center items-center">
@@ -16,6 +17,7 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col scroll-smooth">
       <Header />
       <main className="flex-1 pt-16">
+        <CustomCursor />
         <ScrollToHash />
         <Suspense fallback={loader}>
           <Outlet />
