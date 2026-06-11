@@ -1,11 +1,12 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords } from "react-icons/gi";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS } from '@/config/data';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const isHashLink = (href) => href.startsWith("/#") || href.startsWith("#");
 
@@ -14,6 +15,16 @@ const Header = () => {
       const targetHref = href.startsWith("/") ? href : `/${href}`;
       window.location.href = targetHref;
     }
+  };
+
+  const getLinkClasses = (href) => {
+    if (isHashLink(href)) {
+      return "text-gray-400 hover:text-lime-400 font-mono font-medium transition";
+    }
+
+    return location.pathname === href
+      ? "text-lime-400 font-mono font-medium transition"
+      : "text-gray-400 hover:text-lime-400 font-mono font-medium transition";
   };
 
   return (
@@ -43,7 +54,7 @@ const Header = () => {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
+                className={getLinkClasses(link.href)}
                 tabIndex={0}
               >
                 {link.name}
@@ -52,7 +63,7 @@ const Header = () => {
               <Link
                 key={index}
                 to={link.href}
-                className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
+                className={getLinkClasses(link.href)}
               >
                 {link.name}
               </Link>
@@ -109,7 +120,7 @@ const Header = () => {
                 key={index}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-6 py-3 text-gray-400 nav-glow transition"
+                className={getLinkClasses(link.href) + " block px-6 py-3 nav-glow transition"}
               >
                 {link.name}
               </Link>
