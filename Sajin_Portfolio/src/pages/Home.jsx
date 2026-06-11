@@ -3,6 +3,8 @@ import { Toaster } from 'react-hot-toast';
 import Testimonials from '@/components/Testimonials';
 import { TESTIMONIALS_DATA } from '@/config/data';
 
+
+const BackToTop = lazy(() => import("@/components/BackToTop"));
 const Hero = lazy(() => import("@/sections/Hero"));
 const CodingProfiles = lazy(() => import("@/sections/CodingProfiles"));
 const About = lazy(() => import("@/sections/About"));
@@ -23,10 +25,12 @@ const loader = (
 export default function Home() {
   return (
     <>
+
       <Toaster position="bottom-right" toastOptions={{ style: { width: "250px" } }} />
       <Suspense fallback={loader}>
         <Hero />
         <CodingProfiles />
+        <BackToTop />
         <About />
         <Updates visible={false} />
         <Skills />

@@ -11,7 +11,7 @@ import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
 
 export const NAV_LINKS = [
-  { name: "HOME", href: "#hero" },
+  { name: "HOME", href: "/" },
   { name: "ABOUT", href: "#about" },
   { name: "SKILLS", href: "#skills" },
   { name: "PROJECTS", href: "#projects" },
