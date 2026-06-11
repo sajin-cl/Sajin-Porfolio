@@ -1,14 +1,19 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords } from "react-icons/gi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { NAV_LINKS } from '@/config/data';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isHashLink = (href) => href.startsWith("/#") || href.startsWith("#");
+
   const handleNavClick = (href) => {
-    const targetHref = href.startsWith("/") ? href : `/${href}`;
-    window.location.href = targetHref;
+    if (isHashLink(href)) {
+      const targetHref = href.startsWith("/") ? href : `/${href}`;
+      window.location.href = targetHref;
+    }
   };
 
   return (
@@ -30,20 +35,28 @@ const Header = () => {
         {/* Desktop Navbar */}
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              onClick={(e) => {
-                if (link.href.startsWith("/#") || link.href.startsWith("#")) {
+            isHashLink(link.href) ? (
+              <a
+                key={index}
+                href={link.href}
+                onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(link.href);
-                }
-              }}
-              className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
-              tabIndex={0}
-            >
-              {link.name}
-            </a>
+                }}
+                className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
+                tabIndex={0}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={index}
+                to={link.href}
+                className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
           <a
             href="/#contact"
@@ -78,20 +91,29 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-stone-950 border-t border-stone-800">
           {NAV_LINKS.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              onClick={(e) => {
-                if (link.href.startsWith("/#") || link.href.startsWith("#")) {
+            isHashLink(link.href) ? (
+              <a
+                key={index}
+                href={link.href}
+                onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(link.href);
-                }
-                setIsOpen(false);
-              }}
-              className="block px-6 py-3 text-gray-400 nav-glow transition"
-            >
-              {link.name}
-            </a>
+                  setIsOpen(false);
+                }}
+                className="block px-6 py-3 text-gray-400 nav-glow transition"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={index}
+                to={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-6 py-3 text-gray-400 nav-glow transition"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
       )}
