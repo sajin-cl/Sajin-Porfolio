@@ -84,3 +84,15 @@
     box-shadow: 0 4px 30px rgba(147, 0, 245, 0.5);
   }
 }
+
+/* Disable pointer cursor on touch devices (mobile) */
+@media (pointer: coarse) {
+  /* Tailwind's `cursor-pointer` utility and anchors/buttons */
+  .cursor-pointer {
+    cursor: auto !important;
+  }
+
+  a, button {
+    cursor: auto;
+  }
+}
