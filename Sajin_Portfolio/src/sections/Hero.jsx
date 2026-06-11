@@ -22,7 +22,7 @@ const Hero = () => {
           {/* Floating UI Icons */}
           <SiReact
             title="Library"
-            className="absolute text-lime-400 size-12 top-0 right-10 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
+            className="absolute text-lime-400 size-12 top-0 right-10 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
           />
           <FaNodeJs
             title="Lan"
@@ -30,18 +30,18 @@ const Hero = () => {
           />
           <SiTailwindcss
             title="Framework"
-            className="absolute text-lime-400 size-10 bottom-20 right-5 animate-bounce drop-shadow-[0_0_10px_#0aff47]"
+            className="absolute text-lime-400 size-10 bottom-20 right-5 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
           />
 
           <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-bounce border-y-2 border-lime-300 p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
+            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-[bounce_2s_infinite] border-y-2 border-lime-300 p-4 md:p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
-            <div className="text-4xl md:text-5xl font-bold">
+            <div className="text-3xl md:text-5xl font-bold">
               <Counter value={PROJECT_COUNT} start={true} />+
             </div>
-            <div className="text-md -mt-1" style={{ fontFamily: "Inter" }}>
+            <div className="text-xs md:text-md mt-1 text-center" style={{ fontFamily: "Inter" }}>
               ProjectS
             </div>
           </motion.div>
@@ -54,11 +54,12 @@ const Hero = () => {
               transition={{
                 repeat: Infinity,
                 repeatType: "mirror",
-                duration: 3,
+                duration: 5,
                 ease: "easeInOut",
               }}
               src="https://res.cloudinary.com/dpc9p1npw/image/upload/v1774855802/profile_isla2l.webp"
               alt="Sajin Profile"
+              size={400}
               fetchPriority="high"
               className="w-full h-full scale-140 translate-y-10 object-contain"
             />

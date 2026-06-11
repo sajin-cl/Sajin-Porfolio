@@ -43,16 +43,16 @@ const About = () => {
             viewport={{ once: true }}
           >
             <span
-              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+              className="hidden md:block text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
             >MERN STACK DEVELOPER </span>
             <span
-              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+              className="hidden md:block text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
             >REACT DEVELOPER </span>
             <span
-              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+              className="hidden md:block text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
             >NODE DEVELOPER </span>
             <span
-              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+              className="hidden md:block text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
             >FREELANCER </span>
           </motion.h2>
 
@@ -89,7 +89,7 @@ const About = () => {
       </span>
       <span className="group text-gray-100 text-4xl text-end block tracking-widest px-4 md:px-20 mb-20">
         <span className="group-hover:text-lime-300 duration-500">JUST</span>
-        <Link to="#contact" className="text-lime-300 cursor-pointer group-hover:text-gray-100 duration-500 animate-pulse ml-2 group-hover:ml-3">CONTACT NOW</Link>
+        <Link to="#contact" className="text-lime-300 cursor-pointer group-hover:text-gray-100 duration-200 animate-pulse ml-2 group-hover:ml-3 group-hover:font-bold">CONTACT NOW</Link>
       </span>
 
 
