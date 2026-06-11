@@ -6,12 +6,21 @@ import { NAV_LINKS } from '@/config/data';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleNavClick = (href) => {
+    const targetHref = href.startsWith("/") ? href : `/${href}`;
+    window.location.href = targetHref;
+  };
+
   return (
     <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm z-50">
-      <nav className="container mx-auto px-4 h-14 flex items-center justify-between">
+      <nav className="container mx-auto px-2 h-14 flex items-center justify-between">
         <a
           className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer"
-          href="#hero"
+          href="/#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick("/#hero");
+          }}
         >
           {"<"}
           <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">{"< SAJIN >"}</span>
@@ -24,6 +33,12 @@ const Header = () => {
             <a
               key={index}
               href={link.href}
+              onClick={(e) => {
+                if (link.href.startsWith("/#") || link.href.startsWith("#")) {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }
+              }}
               className="text-gray-400 hover:text-lime-400 font-mono font-medium transition"
               tabIndex={0}
             >
@@ -31,10 +46,14 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick("/#contact");
+            }}
             className="bg-lime-400 font-semibold  px-5 py-2 inline-block transform skew-x-[-20deg] hover:bg-lime-300 transition"
           >
-            <span className="block skew-x-[20deg] text-xs  -tracking-tight">
+            <span className="block skew-x-20 text-xs  -tracking-tight">
               HIRE ME ↗
             </span>
           </a>
@@ -62,7 +81,13 @@ const Header = () => {
             <a
               key={index}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                if (link.href.startsWith("/#") || link.href.startsWith("#")) {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }
+                setIsOpen(false);
+              }}
               className="block px-6 py-3 text-gray-400 nav-glow transition"
             >
               {link.name}

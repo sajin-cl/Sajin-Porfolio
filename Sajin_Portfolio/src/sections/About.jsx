@@ -45,6 +45,9 @@ const About = () => {
             <span
               className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
             >NODE DEVELOPER </span>
+            <span
+              className="text-white rounded-full px-4 py-1 text-xs outline outline-lime-500 hover:bg-lime-400 hover:text-black cursor-pointer"
+            >FREELANCER </span>
           </motion.h2>
 
           <motion.p

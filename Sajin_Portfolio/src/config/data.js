@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs
+  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs,SiSubstack 
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
@@ -15,15 +15,17 @@ export const NAV_LINKS = [
   { name: "ABOUT", href: "#about" },
   { name: "SKILLS", href: "#skills" },
   { name: "PROJECTS", href: "#projects" },
+  { name: "BLOG", href: "/blog" },
   { name: "CONTACT", href: "#contact" },
 ];
 
 
 /* --------------------------------------------------Social Links------------------------------------------------------------------- */
 export const SOCIAL_LINKS = [
-  { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'sajin-cl' },
-  { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'sajincl' },
-  { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'sajin-cl' },
+  { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'Github' },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'Linkedin' },
+  { icon: SiSubstack , href: "https://sajincl.substack.com/p/looking-for-a-freelance-web-developer", name: 'Substack Blog' },
+  { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'Leetcode' },
   {
     icon: MdAttachEmail,
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.",
@@ -276,7 +278,7 @@ export const TESTIMONIALS_DATA = [
   {
     quote: "The Cherry's Honey eCommerce website looks modern and smooth. The CRM and order management system were done really well, making it easy to manage customers and sales.",
     name: "Sajin.D",
-    title: "Cherry's Honey Ecommerce Owner",
+    title: "Cherrys Honey Ecommerce Owner",
   },
 
 ];
