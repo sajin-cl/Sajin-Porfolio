@@ -22,15 +22,15 @@ const Hero = () => {
           {/* Floating UI Icons */}
           <SiReact
             title="Library"
-            className="absolute text-lime-400 size-12 top-0 right-10 md:right-20 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
+            className="absolute text-lime-400 size-12 top-0 right-10 md:right-15 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
           />
           <FaNodeJs
             title="Lan"
-            className="absolute text-lime-400 size-10 bottom-10 left-10 md:left-35 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
+            className="absolute text-lime-400 size-10 bottom-10 left-10 md:left-20 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
           />
           <SiTailwindcss
             title="Framework"
-            className="absolute text-lime-400 size-10 bottom-20 right-0 md:right-10 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
+            className="absolute text-lime-400 size-10 bottom-20 right-0 md:right-15 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
           />
 
           <motion.div
