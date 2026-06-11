@@ -1,10 +1,12 @@
+@import url('https://googleapis.com');
+
 @import "tailwindcss";
 
 @theme {
   --color-brand-green: #9de410;
-  --font-poppins: "Poppins";
-  --font-inter:"Inter";
-  --font-bebas-neue:"Bebas Neue"
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
 }
 
 @layer base {
@@ -87,12 +89,14 @@
 
 /* Disable pointer cursor on touch devices (mobile) */
 @media (pointer: coarse) {
+
   /* Tailwind's `cursor-pointer` utility and anchors/buttons */
   .cursor-pointer {
     cursor: auto !important;
   }
 
-  a, button {
+  a,
+  button {
     cursor: auto;
   }
 }

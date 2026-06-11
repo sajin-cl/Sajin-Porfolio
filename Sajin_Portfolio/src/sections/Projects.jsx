@@ -108,7 +108,7 @@ const Projects = () => {
                     {project?.category}
                   </h2>
 
-                  <h3 className="text-2xl font-mono text-start font-semibold text-gray-100 mb-2 leading-snug uppercase">
+                  <h3 className="text-2xl font-bebas text-start font-semibold text-gray-100 mb-2 leading-snug uppercase">
                     {project?.name}
                   </h3>
                   {/* Descrription */}
