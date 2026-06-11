@@ -55,14 +55,14 @@ const Certifications = () => {
           {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
             size={40}
-            className="absolute z-10 left-2 md:left-4 lg:left-0 cursor-pointer text-lime-300"
+            className="absolute z-10 left-2 md:left-4 lg:left-0 cursor-pointer text-lime-300 hidden md:block"
             onClick={() => scroll("left")}
           />
 
           {/* Right Arrow */}
           <MdKeyboardDoubleArrowRight
             size={40}
-            className="absolute z-10 right-2 md:right-4 lg:right-0 cursor-pointer text-lime-300"
+            className="absolute z-10 right-2 md:right-4 lg:right-0 cursor-pointer text-lime-300 hidden md:block"
             onClick={() => scroll("right")}
           />
 
