@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
+import Counter from "@/components/Counter";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
+
+  const [start, setStart] = useState(false);//used for counter
+
   return (
-    <section id="about" className="min-h-screen bg-stone-950 flex items-center justify-between overflow-hidden">
+    <section id="about" className="min-h-screen bg-stone-950 mt-20 ">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-12 py-4">
         {/* Left side video */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
@@ -57,14 +63,36 @@ const About = () => {
             viewport={{ once: true }}
           >
             HELLO, I'M <span className="text-lime-300">SAJIN CL</span>, A
-            <span className="text-lime-300"> MERN STACK DEVELOPER</span> WHO BUILDS SCALABLE AND SECURE FULL-STACK APPLICATIONS.
-            I WORK WITH REACT, NODE.JS, EXPRESS, AND MONGODB TO DEVELOP RESPONSIVE
-            INTERFACES AND POWERFUL BACKEND SYSTEMS. I HAVE BUILT <span className="text-lime-300">45+ RESTFUL APIS</span>,
+            <span className="text-lime-300"> FREELANCE MERN STACK DEVELOPER</span> WHO BUILDS SCALABLE AND SECURE FULL-STACK APPLICATIONS.
+            I WORK WITH REACT.JS, NEXT.JS, NODE.JS, EXPRESS, AND MONGODB TO DEVELOP RESPONSIVE
+            INTERFACES, POWERFUL BACKEND SYSTEMS, AND <span className="text-lime-300">SEO & SPEED OPTIMIZATION</span>. I HAVE BUILT <span className="text-lime-300">50+ RESTFUL APIS</span>,
             IMPLEMENTED <span className="text-lime-300">JWT/SESSION AUTHENTICATION & BCRYPT PASSWORD HASHING</span> AND DEVELOPED ROLE-BASED
             ECOMMERCE PLATFORMS WITH A FOCUS ON CLEAN ARCHITECTURE AND PERFORMANCE.
           </motion.p>
         </div>
       </div>
+      {/* Happy Clients */}
+      <motion.div
+        onViewportEnter={() => setStart(true)}
+        viewport={{ once: true, amount: 0.6 }}
+        className="happy-clients text-start my-20 px-4 md:px-20 flex flex-wrap items-center justify-center md:justify-self-start gap-10">
+        <h1 className="text-6xl font-bold text-white tracking-wide">
+          <span className="text-white block">HAPPY</span>  <span className="text-lime-400 ">CLIENTS</span>
+        </h1>
+        <span className="inline-block text-lime-300 text-9xl font-bold">
+          <Counter value={3} start={start} />
+        </span>
+      </motion.div>
+      <span className="text-gray-100  text-4xl text-end block tracking-widest px-4 md:px-20 mt-20 mb-5">
+        <span className="text-7xl">D</span>O YOU
+        <span className="text-lime-300"> HAVE WEBSITE?</span>
+      </span>
+      <span className="group text-gray-100 text-4xl text-end block tracking-widest px-4 md:px-20 mb-20">
+        <span className="group-hover:text-lime-300 duration-500">JUST</span>
+        <Link to="#contact" className="text-lime-300 cursor-pointer group-hover:text-gray-100 duration-500 animate-pulse ml-2 group-hover:ml-3">CONTACT NOW</Link>
+      </span>
+
+
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs,SiSubstack 
+  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs, SiSubstack
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
@@ -24,7 +24,7 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   { icon: FaGithub, href: "https://github.com/sajin-cl", name: 'Github' },
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'Linkedin' },
-  { icon: SiSubstack , href: "https://sajincl.substack.com/p/looking-for-a-freelance-web-developer", name: 'Substack Blog' },
+  { icon: SiSubstack, href: "https://sajincl.substack.com/p/looking-for-a-freelance-web-developer", name: 'Substack Blog' },
   { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'Leetcode' },
   {
     icon: MdAttachEmail,
@@ -83,9 +83,6 @@ export const SKILLS_DATA = {
     { name: "MySQL", color: "#00758F", type: 'Backend', icon: GrMysql, isVisible: true },
     { name: "MongoDB", color: "#47A248", type: 'Backend', icon: SiMongodb, isVisible: true },
     { name: "Mongoose", color: null, type: 'Backend', icon: null, isVisible: false },
-    { name: "RESTful APIs", color: null, type: 'Backend', icon: null, isVisible: false },
-    { name: "JWT Auth", color: null, type: 'Backend', icon: null, isVisible: false },
-    { name: "Session Auth", color: null, type: 'Backend', icon: null, isVisible: false },
   ]
 };
 
@@ -97,6 +94,17 @@ export const PROFICIENCY_DATA = [
   { name: 'MongoDB / Mongoose ODM', percentage: 85 },
   { name: 'Tailwind CSS', percentage: 83 },
   { name: 'TypeScript', percentage: 25 },
+];
+
+export const SERVICE_INTEGRATIONS_DATA = [
+  { id: 1, name: 'Bcrypt ( Hashing )' },
+  { id: 2, name: 'JWT Auth' },
+  { id: 3, name: 'Session Auth' },
+  { id: 4, name: 'Restful APIs' },
+  { id: 5, name: 'Cloudinary ( Image Storage )' },
+  { id: 6, name: 'Cashfree ( Payment )' },
+  { id: 7, name: 'Hostinger ( Domain )' },
+  { id: 8, name: 'Vercel ( Hosting )' },
 ];
 
 

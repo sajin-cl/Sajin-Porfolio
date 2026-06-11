@@ -1,4 +1,4 @@
-import { SKILLS_DATA, PROFICIENCY_DATA } from "@/config/data";
+import { SKILLS_DATA, PROFICIENCY_DATA, SERVICE_INTEGRATIONS_DATA } from "@/config/data";
 import ScrollRow from "@/components/ScrollView";
 import { delay, easeOut, motion } from 'framer-motion';
 
@@ -101,6 +101,25 @@ const Skills = () => {
                     {tech.name}
                   </motion.span>
                 ))}
+            </div>
+          </div>
+
+          {/* SERVICES & INTEGRATIONS */}
+          <div className="service-integrations-container px-5 py-2">
+            <h2 className="text-lime-300 text-xs mb-5 font-mono">SERVICES & INTEGRATIONS</h2>
+            <div className="flex flex-wrap gap-2">
+              {SERVICE_INTEGRATIONS_DATA.map((service, idx) => (
+                <motion.span
+                  key={idx}
+                  initial={{ y: -10, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.2, delay: idx * 0.1, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="border border-gray-500 text-gray-400 text-xs py-1 px-2 cursor-context-menu hover:border-lime-300 hover:text-lime-300"
+                >
+                  {service?.name}
+                </motion.span>
+              ))}
             </div>
           </div>
 
