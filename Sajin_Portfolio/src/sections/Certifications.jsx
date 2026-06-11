@@ -28,18 +28,18 @@ const Certifications = () => {
     >
       <div className="w-full py-10 flex flex-col items-center gap-8 relative">
         {/* Title */}
-        <div className="text-center">
+        <div className="certifications-headings w-full px-4 md:px-20 flex flex-col flex-wrap items-start gap-2">
           <motion.h1
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-semibold text-white mb-5"
+            className="text-4xl md:text-5xl font-semibold text-white"
           >
             CERTIFICATIONS
           </motion.h1>
 
           <motion.p
-            className="text-gray-400 text-center tracking-wide font-mono"
+            className="text-gray-400 text-xs tracking-wide font-mono"
             initial={{ x: 20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
@@ -51,7 +51,7 @@ const Certifications = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative w-full max-w-6xl flex items-center">
+        <div className="relative w-full max-w-full flex items-center">
           {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
             size={40}
@@ -69,12 +69,12 @@ const Certifications = () => {
           {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 py-10 carousel-scrollbar-hide"
+            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 md:px-10 xl:px-15 py-10 carousel-scrollbar-hide"
           >
             {CERTIFICATIONS_DATA.map((cert, index) => (
               <div
                 key={index}
-                className="carousel-card shrink-0 w-full md:w-1/2 lg:w-1/3 bg-stone-950 overflow-hidden flex flex-col outline outline-gray-900 hover:outline-lime-900 hover:shadow-[0_0_10px_rgba(0,255,0,0.3)]"
+                className="carousel-card shrink-0 w-full md:w-1/2 lg:w-1/3 bg-stone-950 overflow-hidden flex flex-col outline outline-gray-900 hover:outline-lime-900 "
               >
                 {/* Certificate Image */}
                 <img

@@ -10,7 +10,7 @@ const Projects = () => {
 
   useLayoutEffect(() => {
     const card = carouselRef.current?.querySelector('.carousel-card');
-    if (card) scrollAmountRef.current = card.clientWidth + 16;
+    if (card) scrollAmountRef.current = card.clientWidth + 10;
   }, []);
 
   const scroll = (direction) => {
@@ -24,81 +24,100 @@ const Projects = () => {
 
   return (
     <section id="projects" className="flex min-h-screen justify-between items-center bg-stone-950">
-      <div className="w-full py-10 flex flex-col items-center gap-8 group">
-        <motion.h1
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
-          viewport={{ once: true }}
-          className="text-2xl md:text-4xl font-semibold text-white  text-center"
-        >
-          PROJECTS
-        </motion.h1>
-        <motion.p
-          className="text-gray-400 text-center tracking-wide font-mono"
-          initial={{ x: 20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
-          viewport={{ once: true }}
-        >
-          <span className="text-gray-400 text-xs">
-            SELECTED PROJECTS ({PROJECTS_DATA?.length}) SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY
-            <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
-          </span>
-        </motion.p>
+      <div className="w-full py-10 flex flex-col items-center gap-2">
+
+        <div className="project-headings w-full px-4 md:px-20 flex flex-col flex-wrap items-end gap-2">
+          <motion.h1
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-semibold text-white "
+          >
+            PROJECTS
+          </motion.h1>
+          <motion.p
+            className="text-gray-400  tracking-wide font-mono text-end"
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+            viewport={{ once: true }}
+          >
+            <span className="text-gray-400 text-xs">
+              SELECTED PROJECTS ({PROJECTS_DATA?.length}) SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY
+              <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
+            </span>
+          </motion.p>
+        </div>
 
         {/* Carousel */}
-        <div className="flex w-full max-w-6xl items-center relative">
+        <div className="flex w-full max-w-full items-center relative">
           {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
             size={40}
             onClick={() => scroll('left')}
-            className="absolute z-50 left-2 md:left-4 lg:left-0 text-lime-300 cursor-pointer"
+            className="absolute z-30 left-2 md:left-4 lg:left-0  text-lime-300 cursor-pointer"
           />
 
           {/* Right Arrow */}
           <MdKeyboardDoubleArrowRight
             size={40}
             onClick={() => scroll('right')}
-            className="absolute z-50 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer"
+            className="absolute z-30 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer"
           />
 
           {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex gap-4 w-full py-10 px-10 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide"
+            className="flex gap-4 w-full py-10 px-10 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide "
           >
             {PROJECTS_DATA.map((project, index) => (
               <div
                 key={index}
-                className="carousel-card flex flex-col w-full md:w-1/2 xl:w-1/3 shrink-0  overflow-hidden bg-stone-950 outline outline-gray-900 hover:outline-lime-900 hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
+                className="group carousel-card flex flex-col w-full md:w-1/2 shrink-0 overflow-hidden bg-stone-950 outline outline-gray-900 hover:outline-lime-900 "
               >
                 {/* Project Image */}
-                <img
+                {/* <img
                   src={project?.image}
                   alt={project?.name}
                   height={400}
                   width={200}
                   className="w-full h-48 object-cover hover:scale-110 transition duration-700"
-                />
+                />  */}
+
+                {/* Project Banner */}
+                <div className="w-full relative h-48 bg-[#0b0b01] flex items-center justify-center px-2">
+                  <div className="absolute top-5 left-5 text-5xl text-gray-300 font-sans font-bold opacity-20">
+                    {project?.no}
+                  </div>
+                  <div className="text-lime-300 text-2xl md:text-3xl font-popins font-bold text-center group-hover:scale-110 duration-1000 transition">
+                    {project?.bannerName}
+                  </div>
+                  <div
+                    className="absolute bottom-3 right-5 text-xs text-gray-500 font-mono border-x border-gray-700 px-3 py-1 group-hover:text-lime-300 transition-colors duration-700"
+                  >
+                    {project?.timeline}
+                  </div>
+                </div>
+
 
                 {/* Project Info */}
                 <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl font-mono text-center font-semibold text-lime-100 mb-2 min-h-[3.4rem] leading-snug">
+                  <h2 className="text-xs font-mono text-start font-semibold text-lime-300 mb-2 leading-snug uppercase">
+                    <span
+                      className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s] mr-2"
+                    ></span>
+                    {project?.category}
+                  </h2>
+
+                  <h3 className="text-2xl font-mono text-start font-semibold text-gray-100 mb-2 leading-snug uppercase">
                     {project?.name}
                   </h3>
                   {/* Descrription */}
                   <p
-                    className="text-gray-300  text-xs leading-loose tracking-wide h-20 overflow-hidden text-ellipsis"
-                    title={project?.description}
+                    className="text-gray-500 text-xs leading-loose tracking-wide h-20 overflow-hidden text-ellipsis"
                   >
                     {project?.description}
                   </p>
-                  <div className='my-2 pb-2 text-center'>
-                    {project?.hashtags?.map((tag, idx) => (
-                      <span key={idx} className='border-t border-gray-800 hover:border-lime-300 hover:cursor-default px-2 py-1 text-xs italic font-mono text-gray-500 rounded-full w-full'> 
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+
 
                   {/* Skills icons */}
                   <div className="flex justify-center mb-4 gap-4 mt-auto pt-4 border-t border-gray-800">
@@ -122,7 +141,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm border font-mono flex items-center justify-center gap-2 border-lime-400 text-white tracking-wide  w-full hover:text-lime-300 transition-colors text-center py-1"
+                      className="text-sm border font-mono flex items-center justify-center gap-2 border-lime-400 text-white tracking-wide  w-full hover:text-lime-300 transition-colors text-center py-2"
                     >
                       <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
@@ -134,7 +153,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={` py-1 font-mono text-sm text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] transition-all duration-300 ${!project.live ? 'cursor-not-allowed' : ''
+                      className={` py-2 font-mono text-sm text-center w-full outline outline-lime-400 bg-lime-600 hover:bg-lime-500 hover:shadow-[0_0_15px_#84ff00] transition-all duration-300 ${!project.live ? 'cursor-not-allowed' : ''
                         }`}
                     >
                       {project.live ? 'VISIT ↗' : 'NO LIVE'}

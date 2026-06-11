@@ -11,7 +11,7 @@ import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
 
 
 export const NAV_LINKS = [
-  { name: "HOME", href: "/" },
+  { name: "HOME", href: "/#hero" },
   { name: "ABOUT", href: "#about" },
   { name: "SKILLS", href: "#skills" },
   { name: "PROJECTS", href: "#projects" },
@@ -26,7 +26,7 @@ export const SOCIAL_LINKS = [
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'Linkedin' },
   { icon: SiSubstack, href: "https://sajincl.substack.com/p/looking-for-a-freelance-web-developer", name: 'Substack Blog' },
   { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'Leetcode' },
-  { icon: FaWhatsapp , href: "https://wa.me/918056825814", name: 'WhatsApp' },
+  { icon: FaWhatsapp, href: "https://wa.me/918056825814", name: 'WhatsApp' },
   {
     icon: MdAttachEmail,
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.",
@@ -112,12 +112,16 @@ export const SERVICE_INTEGRATIONS_DATA = [
 /* --------------------------------------------------Project  Details------------------------------------------------------------------- */
 export const PROJECTS_DATA = [
   {
-    name: "CHERRYS HONEY ECOMMERCE",
+    no: "01",
+    bannerName: "Cherrys Honey",
+    name: "Cherrys Honey E-commerce",
+    category: "Freelance Project",
+    timeline: "May 2026 - May 2026",
     description: "Premium honey e-commerce platform with secure payment integration, product catalog management, and responsive user experience.",
     hashtags: [
       "https://cherryshoney.com",
     ],
-    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_xvg9zq.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_xvg9zq.web",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
       { name: "CSS", color: "#2965F1", icon: SiCss3 },
@@ -129,7 +133,11 @@ export const PROJECTS_DATA = [
     live: "https://www.cherryshoney.com",
   },
   {
-    name: "PORTFOLIO WEBSITE FOR UX/UI DESIGNER",
+    no: "02",
+    bannerName: "Portfolio",
+    name: "PORTFOLIO WEBSITE",
+    category: "Freelance Project",
+    timeline: "Apr 2026 - Apr 2026",
     description: "Modern portfolio website designed for a UX/UI designer, showcasing projects, services, and contact information with a responsive layout.",
     hashtags: [
       "https://sanjeev-kumar-portfolio.vercel.app",
@@ -144,9 +152,13 @@ export const PROJECTS_DATA = [
     ],
     github: null,
     live: "https://sanjeev-kumar-portfolio.vercel.app/",
-  },
+  }, 
   {
+    no: "03",
+    bannerName: "Power House",
     name: "MULTI VENDOR GROCERY ECOMMERCE",
+    category: "MERN Stack Project",
+    timeline: "Jan 2026 - jan 2026",
     description: "Multi-vendor grocery marketplace with vendor management, JWT authentication, shopping cart functionality, and order processing.",
     hashtags: [
       "https://power-house-ecommerce.vercel.app",
@@ -166,7 +178,11 @@ export const PROJECTS_DATA = [
     live: "https://power-house-ecommerce.vercel.app/",
   },
   {
+    no: "04",
+    bannerName: "Instagram",
     name: "INSTAGRAM CLONE UI",
+    category: "Frontend Project",
+    timeline: "Mar 2026 - Mar 2026",
     description: "Instagram-inspired social media interface featuring stories, post feeds, likes, and a fully responsive design.",
     hashtags: [
       "https://social-media-clone-with-vite-react.vercel.app",
@@ -174,7 +190,7 @@ export const PROJECTS_DATA = [
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project3_hzbt7d.webp",
     skills: [
       { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
+      { name: "CSS", color: "#2965F1", icon: SiCss3 }, 
       { name: "React", color: "#61DAFB", icon: SiReact },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "Typescript", color: "#2965F1", icon: SiTypescript },
@@ -185,7 +201,11 @@ export const PROJECTS_DATA = [
     live: "https://social-media-clone-with-vite-react.vercel.app/",
   },
   {
+    no: "05",
+    bannerName: "AK Decoration",
     name: "AK DECORATION SERVICE",
+    category: "Freelance Project",
+    timeline: "Mar 2026 - Mar 2026",
     description: "Business website for event decoration services featuring service showcases, gallery sections, and customer inquiry options.",
     hashtags: [
       "https://ak-decoration.vercel.app",
@@ -203,7 +223,11 @@ export const PROJECTS_DATA = [
     live: "https://ak-decoration.vercel.app/",
   },
   {
+    no: "06",
+    bannerName: "E-commerce",
     name: "ECOMMERCE WEBSITE",
+    category: "full stack project",
+    timeline: "Oct 2025 - Oct 2025",
     description: "Role-based e-commerce application with admin and user dashboards, session authentication, password hashing, and product management.",
     hashtags: [
       "",

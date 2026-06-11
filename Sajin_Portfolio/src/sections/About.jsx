@@ -71,22 +71,44 @@ const About = () => {
           </motion.p>
         </div>
       </div>
+
       {/* Happy Clients */}
       <motion.div
         onViewportEnter={() => setStart(true)}
         viewport={{ once: true, amount: 0.6 }}
         className="happy-clients text-start my-20 px-4 md:px-20 flex flex-wrap items-center justify-center md:justify-self-start gap-10">
-        <h1 className="text-6xl font-bold text-white tracking-wide">
-          <span className="text-white block">HAPPY</span>  <span className="text-lime-400 ">CLIENTS</span>
+        <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
+          <motion.span
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+            viewport={{ once: true }}
+            className="text-white block">HAPPY</motion.span>
+          <motion.span
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+            viewport={{ once: true }}
+            className="text-lime-400 ">CLIENTS</motion.span>
         </h1>
-        <span className="inline-block text-lime-300 text-9xl font-bold">
+        <motion.span
+          initial={{ y: -80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+          viewport={{ once: true }}
+          className="inline-block text-lime-300 text-9xl font-bold">
           <Counter value={3} start={start} />
-        </span>
+        </motion.span>
       </motion.div>
-      <span className="text-gray-100  text-4xl text-end block tracking-widest px-4 md:px-20 mt-20 mb-5">
+
+      {/* Contact Call to Action */}
+      <motion.span
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+        viewport={{ once: true }}
+        className="text-gray-100  text-4xl text-end block tracking-widest px-4 md:px-20 mt-20 mb-5"
+      >
         <span className="text-7xl">D</span>O YOU
         <span className="text-lime-300"> HAVE WEBSITE?</span>
-      </span>
+      </motion.span>
+
       <span className="group text-gray-100 text-4xl text-end block tracking-widest px-4 md:px-20 mb-20">
         <span className="group-hover:text-lime-300 duration-500">JUST</span>
         <Link to="#contact" className="text-lime-300 cursor-pointer group-hover:text-gray-100 duration-200 animate-pulse ml-2 group-hover:ml-3 group-hover:font-bold">CONTACT NOW</Link>

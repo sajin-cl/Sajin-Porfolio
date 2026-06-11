@@ -6,19 +6,19 @@ const Skills = () => {
 
   return (
     <section id="skills" className="min-h-screen bg-stone-950 flex justify-center items-center">
-      <div className="container w-full py-10 flex flex-col gap-8">
+      <div className="container w-full  py-10 flex flex-col gap-4 md:gap-8">
         <motion.h1
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}
-          className="text-4xl  font-bold text-white text-center group"
+          className="text-4xl md:text-5xl font-bold text-white group px-4 md:px-10"
         >
           <span className="text-white group-hover:text-lime-400 transition duration-300">SKILLS</span>
           <span className="text-gray-400"> &</span> <span className="text-lime-400 group-hover:text-white transition duration-300">TECHNOLOGY</span>
         </motion.h1>
 
         <motion.p
-          className="text-gray-400 text-center mb-3 tracking-wide font-inter"
+          className="text-gray-400 mb-3 tracking-wide font-inter px-4 md:px-10"
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
           viewport={{ once: true }}

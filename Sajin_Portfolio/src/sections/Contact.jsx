@@ -56,15 +56,15 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen bg-stone-950 p-4 mt-6">
       <motion.h1
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
         viewport={{ once: true }}
-        className="h2 text-white mb-5 px-6"
+        className="text-4xl md:text-5xl font-bold text-white mb-5"
       >
-        CONTACT US
+        CONTACT <span className="text-lime-300">US</span>
       </motion.h1>
 
-      <div className="text-white mb-5 text-xs font-mono px-7 w-full">
+      <div className="text-white mb-5 text-xs font-mono w-full">
         <Typewriter
           options={{
             strings: ["Currently seeking job opportunities. Reach out to connect!".toUpperCase()],
@@ -115,7 +115,7 @@ const Contact = () => {
         </div>
 
         {/* Form Container */}
-        <div className="order-1 lg:order-2 shadow-xl px-3 w-full p-5">
+        <div className="order-1 lg:order-2 shadow-xl  w-full">
 
           <form
             onSubmit={submitForm}

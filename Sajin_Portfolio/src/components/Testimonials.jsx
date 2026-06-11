@@ -18,9 +18,13 @@ function Testimonials({ testimonials }) {
   return (
     <section className="py-12">
 
-      <h2 className="font-bold mb-14 text-center text-2xl md:text-4xl font-sans text-lime-300">
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+        viewport={{ once: true }}
+        className="font-bold mb-14 text-center text-4xl md:text-5xl font-sans text-lime-300">
         WHAT OUR <span className="text-white">CLIENTS SAYS</span>
-      </h2>
+      </motion.h2>
 
       <div
         onMouseEnter={() => controls.stop()}
