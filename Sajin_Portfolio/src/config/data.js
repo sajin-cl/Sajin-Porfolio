@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import {
   SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs, SiSubstack
 } from "react-icons/si";
@@ -26,6 +26,7 @@ export const SOCIAL_LINKS = [
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/sajincl/", name: 'Linkedin' },
   { icon: SiSubstack, href: "https://sajincl.substack.com/p/looking-for-a-freelance-web-developer", name: 'Substack Blog' },
   { icon: SiLeetcode, href: "https://leetcode.com/u/sajin-cl/", name: 'Leetcode' },
+  { icon: FaWhatsapp , href: "https://wa.me/918056825814", name: 'WhatsApp' },
   {
     icon: MdAttachEmail,
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.",
