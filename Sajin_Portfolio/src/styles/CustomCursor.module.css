@@ -9,7 +9,7 @@
   left: 0;
   width: 8px;
   height: 8px;
-  background-color: #a2e635e7; 
+  background-color: #a2e635c2; 
 }
 
 .curRing {
@@ -23,7 +23,7 @@
   left: 0;
   width: 32px;
   height: 32px;
-  border: 2px solid #a2e635e7; /* lime-400 */
+  border: 2px solid #a2e635c2; /* lime-400 */
   transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
 

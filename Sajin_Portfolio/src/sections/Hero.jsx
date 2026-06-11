@@ -22,21 +22,21 @@ const Hero = () => {
           {/* Floating UI Icons */}
           <SiReact
             title="Library"
-            className="absolute text-lime-400 size-12 top-0 right-10 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
+            className="absolute text-lime-400 size-12 top-0 right-20 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
           />
           <FaNodeJs
             title="Lan"
-            className="absolute text-lime-400 size-10 bottom-10 left-10 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
+            className="absolute text-lime-400 size-10 bottom-10 left-20 animate-pulse drop-shadow-[0_0_20px_#0aff47] cursor-pointer"
           />
           <SiTailwindcss
             title="Framework"
-            className="absolute text-lime-400 size-10 bottom-20 right-5 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
+            className="absolute text-lime-400 size-10 bottom-20 right-14 animate-[bounce_3s_infinite] drop-shadow-[0_0_10px_#0aff47]"
           />
 
           <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-            className="absolute top-10 left-0 -rotate-18 text-lime-400 font-bold animate-[bounce_2s_infinite] border-y-2 border-lime-300 p-4 md:p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
+            className="absolute top-10 left-10 -rotate-18 text-lime-400 font-bold animate-[bounce_2s_infinite] border-y-2 border-lime-300 p-4 md:p-6 rounded-full drop-shadow-[0_0_15px_#84ff65]"
           >
             <div className="text-3xl md:text-5xl font-bold">
               <Counter value={PROJECT_COUNT} start={true} />+
