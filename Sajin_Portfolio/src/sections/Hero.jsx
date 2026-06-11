@@ -118,7 +118,7 @@ const Hero = () => {
           </h2>
 
           {/* Social Links icons */}
-          <div className="flex justify-center lg:justify-start gap-8 pt-4">
+          <div className="flex justify-center lg:justify-start gap-4 md:gap-8 pt-4">
             {SOCIAL_LINKS.map((social, index) => {
               const Icon = social.icon;
               return (

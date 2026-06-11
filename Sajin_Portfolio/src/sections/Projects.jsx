@@ -24,9 +24,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="flex min-h-screen justify-between items-center bg-stone-950">
-      <div className="w-full py-10 flex flex-col items-center gap-2">
+      <div className="w-full py-10 flex flex-col items-center gap-2 ">
 
-        <div className="project-headings w-full px-4 md:px-20 flex flex-col flex-wrap items-end gap-2">
+        <div className="project-headings w-full flex flex-col flex-wrap items-end gap-2 mr-4 md:mr-20">
           <motion.h1
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
