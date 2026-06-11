@@ -33,3 +33,11 @@
   height: 48px;
   background-color: rgba(163, 230, 53, 0.1);
 }
+
+/* Hide cursor on mobile devices */
+@media (hover: none), (pointer: coarse) {
+  .curDot,
+  .curRing {
+    display: none;
+  }
+}
