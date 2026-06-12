@@ -118,7 +118,7 @@ const About = () => {
           className="text-gray-100  text-4xl text-end block tracking-widest px-4 md:px-20 mt-20 mb-5"
         >
           <span className="text-7xl">D</span>O YOU
-          <span className="text-lime-300"> HAVE WEBSITE?</span>
+          <span className="text-lime-300"> WANT A WEBSITE?</span>
         </motion.span>
 
         <span className="group text-gray-100 text-4xl text-end block tracking-widest px-4 md:px-20 mb-20">
