@@ -123,8 +123,6 @@ export const PROJECTS_DATA = [
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_xvg9zq.web",
     skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
       { name: "Next.js", color: "#FFF", icon: SiNextdotjs },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "MongoDB", color: "#47A248", icon: SiMongodb },
@@ -144,15 +142,13 @@ export const PROJECTS_DATA = [
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
     skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
       { name: "React", color: "#61DAFB", icon: SiReact },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
     ],
     github: null,
     live: "https://sanjeev-kumar-portfolio.vercel.app/",
-  }, 
+  },
   {
     no: "03",
     bannerName: "Power House",
@@ -165,8 +161,6 @@ export const PROJECTS_DATA = [
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project2_pmfqti.webp",
     skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
       { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
       { name: "React", color: "#61DAFB", icon: SiReact },
       { name: "Node", color: "#00FF00", icon: FaNodeJs },
@@ -189,8 +183,6 @@ export const PROJECTS_DATA = [
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project3_hzbt7d.webp",
     skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 }, 
       { name: "React", color: "#61DAFB", icon: SiReact },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "Typescript", color: "#2965F1", icon: SiTypescript },
@@ -212,8 +204,6 @@ export const PROJECTS_DATA = [
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project5_faz4ak.webp",
     skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
       { name: "React", color: "#61DAFB", icon: SiReact },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
       { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
@@ -234,8 +224,6 @@ export const PROJECTS_DATA = [
     ],
     image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project4_kiebyu.webp",
     skills: [
-      { name: "HTML", color: "#FF5733", icon: SiHtml5 },
-      { name: "CSS", color: "#2965F1", icon: SiCss3 },
       { name: "Bootstrap", color: "#7952B3", icon: SiBootstrap },
       { name: "Node", color: "#00FF00", icon: FaNodeJs },
       { name: "Express", color: "#FFF", icon: SiExpress },

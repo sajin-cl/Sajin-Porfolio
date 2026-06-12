@@ -121,7 +121,7 @@ const Projects = () => {
 
                   {/* Skills icons */}
                   <div className="flex  items-center  gap-4 mt-auto py-5 border-t border-gray-800">
-                    <div className="border border-gray-600 px-2 py-0">
+                    <div className="border border-gray-600 px-2 py-0 hidden md:block">
                       <span
                         className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
                       ></span>
