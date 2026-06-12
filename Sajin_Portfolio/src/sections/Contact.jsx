@@ -55,29 +55,37 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-screen bg-stone-950 p-4 mt-6">
-      <motion.h1
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
-        viewport={{ once: true }}
-        className="text-4xl md:text-5xl font-bold text-white mb-5"
-      >
-        CONTACT <span className="text-lime-300">US</span>
-      </motion.h1>
+      <div className="cotact-page-heading relative">
 
-      <div className="text-white mb-5 text-xs font-mono w-full">
-        <Typewriter
-          options={{
-            strings: ["Currently seeking job opportunities. Reach out to connect!".toUpperCase()],
-            autoStart: true,
-            loop: true,
-            delay: 80,
-            deleteSpeed: 60,
-          }}
-        />
+        <span
+          className="absolute -top-5 right-10 text-gray-400 text-7xl font-bebas font-bold  opacity-10 pointer-events-none select-none hidden lg:block">
+          GET IN TOUCH
+          <span className="block text-3xl leading-tight tracking-[0.3em] text-center">FEEL FREE TO TALK</span>
+        </span>
+        <motion.h1
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-white mb-5"
+        >
+          CONTACT <span className="text-lime-300">US</span>
+        </motion.h1>
+
+        <div className="text-white mb-5 text-xs font-mono w-full">
+          <Typewriter
+            options={{
+              strings: ["Currently seeking job opportunities. Reach out to connect!".toUpperCase()],
+              autoStart: true,
+              loop: true,
+              delay: 80,
+              deleteSpeed: 60,
+            }}
+          />
+        </div>
       </div>
 
       <div className="w-full md:p-8 mx-auto grid lg:grid-cols-2 gap-8">
-        
+
         {/* Contact Details */}
         <div className="contact-info order-2 lg:order-1 w-full p-5 flex flex-col justify-center">
           {CONTACT_DETAILS_DATA.map((cont, idx) => {
