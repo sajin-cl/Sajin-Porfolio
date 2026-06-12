@@ -120,14 +120,20 @@ const Projects = () => {
 
 
                   {/* Skills icons */}
-                  <div className="flex justify-center mb-4 gap-4 mt-auto pt-4 border-t border-gray-800">
+                  <div className="flex  items-center  gap-4 mt-auto py-5 border-t border-gray-800">
+                    <div className="border border-gray-600 px-2 py-0">
+                      <span
+                        className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
+                      ></span>
+                      <span className="text-gray-400 font-mono ml-2">stack → </span>
+                    </div>
                     {project?.skills.map((skill, idx) => {
                       const Icon = skill.icon;
                       return (
                         <Icon
                           key={idx}
                           color={skill?.color}
-                          size={20}
+                          size={22}
                           title={skill?.name}
                           className="cursor-pointer hover:scale-110"
                         />
