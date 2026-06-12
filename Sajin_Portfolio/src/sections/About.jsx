@@ -79,8 +79,9 @@ const About = () => {
           QUALITY <span className="block text-3xl leading-tight tracking-[1em] text-center">FIRST</span>
         </span>
 
-        <span className="absolute top-11/12 left-15  transform -translate-y-1/2 text-gray-400 text-9xl font-extrabold opacity-10 pointer-events-none select-none font-popins hidden xl:block">
+        <span className="absolute top-10/12 left-15   text-gray-400 text-9xl font-extrabold opacity-10 pointer-events-none select-none font-popins hidden xl:block">
           100 %  SPEED
+          <span className="block text-3xl leading-tight tracking-[1em] text-center">RUN LIKE A HORSE</span>
         </span>
 
         {/* Happy Clients */}
