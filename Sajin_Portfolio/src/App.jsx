@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from "@/components/Header";
 import Testimonials from './components/Testimonials';
-import { TESTIMONIALS_DATA } from './config/data';
+import { TESTIMONIALS_DATA } from '@/config/data';
 
 
 const Hero = lazy(() => import("@/sections/Hero"));

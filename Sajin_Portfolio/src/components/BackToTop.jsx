@@ -33,4 +33,4 @@ export default function BackToTop() {
       <span className="inline-block skew-x-[8deg] font-extrabold">↑</span>
     </button>
   );
-}
+};
