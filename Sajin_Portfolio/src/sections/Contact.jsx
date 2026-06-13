@@ -58,10 +58,11 @@ const Contact = () => {
       <div className="cotact-page-heading relative">
 
         <span
-          className="absolute -top-5 right-10 text-gray-400 text-7xl font-bebas font-bold  opacity-10 pointer-events-none select-none hidden lg:block">
+          className="absolute -top-5 right-10 text-gray-400 text-7xl font-bebas font-bold  opacity-20 pointer-events-none select-none hidden lg:block">
           GET IN TOUCH
-          <span className="block text-3xl leading-tight tracking-[0.3em] text-center">FEEL FREE TO TALK</span>
+          <span className="block text-2xl leading-tight tracking-[0.3em] text-center">FEEL FREE TO TALK</span>
         </span>
+
         <motion.h1
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}

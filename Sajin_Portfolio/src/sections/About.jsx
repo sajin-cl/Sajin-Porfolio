@@ -75,11 +75,11 @@ const About = () => {
       {/* FAQ DETAILS COMTAINER */}
       <div className="faq-section relative ">
 
-        <span className="absolute top-1/12 right-15 transform -translate-y-1/2 text-gray-400 text-9xl font-bold opacity-10 pointer-events-none select-none hidden lg:block">
+        <span className="absolute top-1/12 right-15 transform -translate-y-1/2 text-gray-400 text-9xl font-bold opacity-20 pointer-events-none select-none hidden lg:block">
           QUALITY <span className="block text-3xl leading-tight tracking-[1em] text-center">FIRST</span>
         </span>
 
-        <span className="absolute top-10/12 left-15   text-gray-400 text-9xl font-extrabold opacity-10 pointer-events-none select-none font-popins hidden xl:block">
+        <span className="absolute top-10/12 left-15   text-gray-400 text-9xl font-extrabold opacity-20 pointer-events-none select-none font-popins hidden xl:block">
           100 %  SPEED
           <span className="block text-3xl leading-tight tracking-[1em] text-center">RUN LIKE A HORSE</span>
         </span>

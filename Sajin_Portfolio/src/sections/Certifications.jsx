@@ -82,7 +82,7 @@ const Certifications = () => {
                   alt={cert?.name}
                   width={400}
                   height={200}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-60 object-cover"
                 />
 
                 {/* Certificate Info */}
@@ -93,13 +93,7 @@ const Certifications = () => {
                   <p className="text-lime-400 mb-2 text-sm border-b pb-3 border-gray-800">
                     {cert?.issuer}
                   </p>
-                  <ul className="text-gray-300 mb-4 flex-1 leading-relaxed text-sm list-disc list-inside space-y-1">
-                    {cert?.description &&
-                      cert.description
-                        .split(".")
-                        .filter((item) => item.trim() !== "")
-                        .map((point, i) => <li key={i}>{point.trim()}</li>)}
-                  </ul>
+                
                   <a
                     href={cert?.credential}
                     target="_blank"
