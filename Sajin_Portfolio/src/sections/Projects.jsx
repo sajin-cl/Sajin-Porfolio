@@ -23,7 +23,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="flex min-h-screen justify-between items-center bg-stone-950 overflow-x-hidden">
+    <section id="projects" className="flex min-h-screen justify-between items-center pt-5 bg-stone-950 overflow-x-hidden">
       <div className="w-full py-10 flex flex-col items-center gap-2 ">
 
         <div className="project-headings w-full flex flex-col flex-wrap items-end gap-2 mr-4 md:mr-20">
