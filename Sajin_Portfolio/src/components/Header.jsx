@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm z-50">
+    <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm z-50 overflow-x-hidden">
       <nav className="container mx-auto px-2 h-14 flex items-center justify-between">
         <a
           className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer"

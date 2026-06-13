@@ -24,7 +24,7 @@ const Certifications = () => {
   return (
     <section
       id="certifications"
-      className="flex min-h-screen justify-between items-center bg-stone-950"
+      className="flex min-h-screen justify-between items-center bg-stone-950 overflow-x-hidden"
     >
       <div className="w-full py-10 flex flex-col items-center gap-8 relative">
         {/* Title */}

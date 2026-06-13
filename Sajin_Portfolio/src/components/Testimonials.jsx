@@ -16,7 +16,7 @@ function Testimonials({ testimonials }) {
   };
 
   return (
-    <section className="py-12">
+    <section className="py-12 overflow-x-hidden">
 
       <motion.h2
         initial={{ y: 50, opacity: 0 }}

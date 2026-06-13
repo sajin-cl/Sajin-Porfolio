@@ -8,7 +8,7 @@ const About = () => {
   const [start, setStart] = useState(false);//used for counter
 
   return (
-    <section id="about" className="min-h-screen bg-stone-950 mt-20 ">
+    <section id="about" className="min-h-screen bg-stone-950 mt-20 overflow-x-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-12 py-4">
         {/* Left side video */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
