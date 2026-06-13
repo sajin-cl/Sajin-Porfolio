@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-stone-950 p-4 mt-6">
+    <section id="contact" className="min-h-screen bg-stone-950 px-4 pt-20 mt-2">
       <div className="cotact-page-heading relative">
 
         <span

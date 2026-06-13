@@ -5,7 +5,7 @@ import { delay, easeOut, motion } from 'framer-motion';
 const Skills = () => {
 
   return (
-    <section id="skills" className="min-h-screen bg-stone-950 flex justify-center items-center">
+    <section id="skills" className="min-h-screen bg-stone-950 pt-5 flex justify-center items-center">
       <div className="container w-full  py-10 flex flex-col gap-4">
         <motion.h1
           initial={{ x: -50, opacity: 0 }}
