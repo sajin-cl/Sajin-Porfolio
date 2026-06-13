@@ -4,7 +4,7 @@ import styles from "@/styles/Testimonials.module.css";
 function Testimonials({ testimonials }) {
 
   return (
-    <section className="py-12 overflow-x-hidden">
+    <section className="py-2 md:py-10 overflow-x-hidden">
 
       <motion.h2
         initial={{ y: 50, opacity: 0 }}

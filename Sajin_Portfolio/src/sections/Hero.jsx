@@ -12,7 +12,7 @@ const Hero = () => {
   
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-stone-950 pt-20 overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-stone-950 pt- overflow-hidden">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
         {/* RIGHT SIDE: Animated Image & Floating Icons */}
         <div className="relative flex justify-center items-center w-full lg:w-1/2">
@@ -137,7 +137,7 @@ const Hero = () => {
           </div>
 
           {/* Download CV button */}
-          <div className="mt-13 mb-10 flex justify-center lg:justify-start">
+          <div className="mb-10 flex justify-center lg:justify-start">
             <motion.a
               initial={{ opacity: 0, filter: "blur(15px)" }}
               whileInView={{ opacity: 1, filter: "blur(0px)" }}

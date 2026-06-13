@@ -248,7 +248,7 @@ export const CERTIFICATIONS_DATA = [
     credential: "https://www.logipromptproacademy.com/certificate/LPA112100813",
   },
   {
-    name: "UI/UX 30-Days Masterclass",
+    name: "UI/UX 30-Days Webinar",
     issuer: "NoviTech R&D Pvt Ltd",
     description: "Mastered end-to-end design workflows: User Research, Wireframing, and High-Fidelity Prototyping.Learn about Figma fundamentals",
     image: "/ui-ux-certificate.webp",

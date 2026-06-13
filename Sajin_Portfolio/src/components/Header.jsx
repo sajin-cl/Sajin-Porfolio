@@ -84,7 +84,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden px-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-lime-400"

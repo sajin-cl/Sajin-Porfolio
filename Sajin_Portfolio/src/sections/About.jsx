@@ -33,7 +33,8 @@ const About = () => {
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
             viewport={{ once: true }}
           >
-            ABOUT <span className="text-lime-300">ME</span> →
+            ABOUT <span className="text-lime-300">ME </span>
+            <span className="hidden md:inline-block">→</span>
           </motion.h1>
 
           <motion.h2

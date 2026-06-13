@@ -12,7 +12,7 @@ function CodingProfiles() {
       id="coding-profiles"
       onViewportEnter={() => setStart(true)}
       viewport={{ once: true, amount: 0.6 }}
-      className="w-full min-h-[100px] px-6 flex items-center justify-center xl:justify-normal xl:ml-10 md:mb-0 mt-6 mb-5"
+      className="w-full min-h-[100px] px-6 flex items-center justify-center xl:justify-normal xl:ml-10 md:mb-0 mt- mb-5"
     >
       <div className="flex flex-col md:flex-row flex-wrap items-center gap-10 lg:gap-20">
         {CODING_PROFILE_DATA.map((prof, idx) => (

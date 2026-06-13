@@ -54,14 +54,14 @@ const Projects = () => {
           <MdKeyboardDoubleArrowLeft
             size={40}
             onClick={() => scroll('left')}
-            className="absolute z-30 left-2 md:left-4 lg:left-0  text-lime-300 cursor-pointer hidden md:block"
+            className="absolute z-30 left-2 md:left-4 lg:left-0  text-lime-300 cursor-pointer hidden sm:block"
           />
 
           {/* Right Arrow */}
           <MdKeyboardDoubleArrowRight
             size={40}
             onClick={() => scroll('right')}
-            className="absolute z-30 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer hidden md:block"
+            className="absolute z-30 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer hidden sm:block"
           />
 
           {/* Scrollable container */}
