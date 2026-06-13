@@ -1,5 +1,5 @@
 import { SKILLS_DATA, PROFICIENCY_DATA, SERVICE_INTEGRATIONS_DATA } from "@/config/data";
-import ScrollRow from "@/components/ScrollView";
+import SkillsMarque from "@/components/SkillsMarque";
 import { delay, easeOut, motion } from 'framer-motion';
 
 const Skills = () => {
@@ -30,9 +30,10 @@ const Skills = () => {
           </span>
         </motion.p>
 
-        <ScrollRow items={SKILLS_DATA.tools} isVisible={true} reverse={false} duration={15} />
-
-        <ScrollRow items={SKILLS_DATA.techStack} isVisible={true} reverse={true} duration={15} />
+        {/* ------ Skills Marques section start------ */}
+        <SkillsMarque items={SKILLS_DATA.tools} reverse={false} duration={15} />
+        <SkillsMarque items={SKILLS_DATA.techStack} reverse={true} duration={15} />
+        {/* ------ Skills Marques section end   ----- */}
 
         {/* Skills Explore */}
         <div className="skills-explore grid grid-cols-1 lg:grid-cols-3  mt-20 mb-5">
@@ -62,7 +63,7 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Frontend */}
+          {/* Frontend skills*/}
           <div className="frontend-skills-container px-5 py-2">
             <h2 className="text-lime-300 text-xs mb-5 font-mono">FRONTEND</h2>
             <div className="flex flex-wrap gap-2">
@@ -83,7 +84,7 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Backend */}
+          {/* Backend skills*/}
           <div className="backend-skills-container px-5 py-2">
             <h2 className="text-lime-300 text-xs mb-5 font-mono">BACKEND</h2>
             <div className="flex flex-wrap gap-2">

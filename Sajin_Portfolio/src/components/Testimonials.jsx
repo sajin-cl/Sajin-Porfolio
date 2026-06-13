@@ -1,19 +1,7 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import styles from "@/styles/Testimonials.module.css";
 
 function Testimonials({ testimonials }) {
-
-  const controls = useAnimation();
-
-  const startAnimation = () => {
-    controls.start({
-      x: [0, -testimonials.length * 320],
-      transition: {
-        repeat: Infinity,
-        duration: 10,
-        ease: "linear"
-      }
-    });
-  };
 
   return (
     <section className="py-12 overflow-x-hidden">
@@ -27,17 +15,13 @@ function Testimonials({ testimonials }) {
       </motion.h2>
 
       <div
-        onMouseEnter={() => controls.stop()}
-        onMouseLeave={startAnimation}
         className="overflow-hidden relative"
       >
 
 
         {/* Testimonials */}
         <motion.div
-          className="flex gap-5"
-          animate={controls}
-          onViewportEnter={startAnimation}
+          className={`flex gap-5 ${styles.marquee}`}
         >
           {[...testimonials, ...testimonials, ...testimonials].map((item, index) => (
             <div
