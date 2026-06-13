@@ -26,7 +26,7 @@ const Certifications = () => {
       id="certifications"
       className="flex min-h-screen justify-between items-center bg-stone-950 overflow-x-hidden"
     >
-      <div className="w-full py-10 flex flex-col items-center gap-8 relative">
+      <div className="w-full py-10 flex flex-col items-center gap-1 relative">
         {/* Title */}
         <div className="certifications-headings w-full px-4 md:px-20 flex flex-col flex-wrap items-start gap-2">
           <motion.h1
@@ -87,13 +87,16 @@ const Certifications = () => {
 
                 {/* Certificate Info */}
                 <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl  font-mono font-bold text-white mb-2 min-h-[3.4rem]">
+                  <h3 className="text-lg font-mono font-bold text-white mb-2 min-h-[2rem]">
                     {cert?.name.toUpperCase()}
                   </h3>
-                  <p className="text-lime-400 mb-2 text-sm border-b pb-3 border-gray-800">
-                    {cert?.issuer}
+                  <p className="text-lime-400 mb-2 text-xs border-b pb-3 border-gray-800">
+                    <span
+                      className="inline-block w-2 h-2 mr-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
+                    ></span>
+                    <span>{cert?.issuer}</span>
                   </p>
-                
+
                   <a
                     href={cert?.credential}
                     target="_blank"
