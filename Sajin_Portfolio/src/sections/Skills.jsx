@@ -6,7 +6,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="min-h-screen bg-stone-950 flex justify-center items-center">
-      <div className="container w-full  py-10 flex flex-col gap-4 md:gap-8">
+      <div className="container w-full  py-10 flex flex-col gap-4">
         <motion.h1
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
