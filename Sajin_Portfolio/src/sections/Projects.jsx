@@ -67,7 +67,7 @@ const Projects = () => {
           {/* Scrollable container */}
           <div
             ref={carouselRef}
-            className="flex gap-4 w-full py-10 px-4 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide "
+            className="flex gap-4 w-full py-1 px-4 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide "
           >
             {PROJECTS_DATA.map((project, index) => (
               <div

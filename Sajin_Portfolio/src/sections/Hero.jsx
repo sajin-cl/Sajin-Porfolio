@@ -9,8 +9,6 @@ import toast from "react-hot-toast";
 
 const Hero = () => {
 
-  
-
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-stone-950 pt- overflow-hidden">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
