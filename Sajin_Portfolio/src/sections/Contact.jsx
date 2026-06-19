@@ -9,6 +9,7 @@ import { CONTACT_DETAILS_DATA } from "@/config/data";
 const Contact = () => {
 
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +31,7 @@ const Contact = () => {
   /* Form Submit Code -------->*/
   const submitForm = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_FORMSUBMIT_TOKEN}`,
@@ -65,12 +67,14 @@ const Contact = () => {
     } catch (error) {
       setStatus("error");
       setMessage("Something went wrong");
+    } finally {
+      setLoading(false);
     }
 
     setTimeout(() => { setMessage("") }, 3000);
   };
 
- console.log('token ---TOKEN:',import.meta.env.VITE_FORMSUBMIT_TOKEN);
+  console.log('token ---TOKEN:', import.meta.env.VITE_FORMSUBMIT_TOKEN);
 
   return (
     <section id="contact" className="min-h-screen bg-stone-950 px-4 pt-20 mt-2">
@@ -194,10 +198,11 @@ const Contact = () => {
             </div>
 
             <button
+              disabled={loading}
               type="submit"
               className="w-full bg-lime-400 font-mono  text-black py-2  hover:shadow-[0_0_15px_#84ff00] transition duration-200  cursor-pointer"
             >
-              SEND MESSAGE
+              {loading ? 'SENDING...' : 'SEND MESSAGE'}
             </button>
           </form>
 
