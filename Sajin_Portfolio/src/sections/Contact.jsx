@@ -7,6 +7,7 @@ import { CONTACT_DETAILS_DATA } from "@/config/data";
 
 
 const Contact = () => {
+
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(null);
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ const Contact = () => {
     message: ""
   });
 
+
+  /* Handle Change function --------> */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -23,35 +26,51 @@ const Contact = () => {
     }));
   };
 
+
+  /* Form Submit Code -------->*/
   const submitForm = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_FORMSUBMIT_TOKEN}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            _subject: "Portfolio Contact Form Message",
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
 
-      const data = await res.json();
+      const result = await response.json();
 
-      if (res.ok) {
-        setStatus('success');
+      if (response.ok) {
+        setStatus("success");
         setMessage("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setMessage(""), 3000);
-      } else {
-        setStatus('error');
-        setMessage(data.message);
-        setTimeout(() => setMessage(""), 3000);
+        setFormData({ name: "", email: "", message: "", });
       }
-    } catch (err) {
-      setStatus('error');
+      else {
+        setStatus("error");
+        setMessage(result.message || "Failed to send message");
+      }
+
+    } catch (error) {
+      setStatus("error");
       setMessage("Something went wrong");
-      setTimeout(() => setMessage(""), 3000);
     }
+
+    setTimeout(() => { setMessage("") }, 3000);
   };
+
+ console.log('token ---TOKEN:',import.meta.env.VITE_FORMSUBMIT_TOKEN);
 
   return (
     <section id="contact" className="min-h-screen bg-stone-950 px-4 pt-20 mt-2">
@@ -137,6 +156,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
+                required
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
@@ -151,6 +171,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
+                required
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your@gmail.com"
