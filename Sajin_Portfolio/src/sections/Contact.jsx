@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion';
 import { CONTACT_DETAILS_DATA } from "@/config/data";
+import { AUTO_RESPONSE } from "@/config/mail_template/autoResponseMail";
 
 
 
 const Contact = () => {
+
+  const formRef = useRef(null);
 
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -34,57 +37,43 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_FORMSUBMIT_TOKEN}`,
+
+      const formDataToSend = new FormData(formRef.current);
+
+      formDataToSend.append("_subject", "Portfolio Inquiry Confirmation | SAJIN CL");
+      formDataToSend.append("_template", "table");
+      formDataToSend.append("_captcha", "false");
+
+      formDataToSend.append("_replyto", formData?.email);
+      formDataToSend.append("_autoresponse", AUTO_RESPONSE(formData?.name));
+
+
+      const response = await fetch(`https://formsubmit.co/${import.meta.env.VITE_FORMSUBMIT_TOKEN}`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name: formData?.name,
-            email: formData?.email,
-            message: formData?.message,
-
-            _subject: "Portfolio Inquiry Confirmation | SAJIN CL",
-            _template: "table",
-            _captcha: "false",
-
-            _replyto: formData?.email,
-            _autoresponse: `Hi ${formData.name},
-
-Thank you for reaching out through my portfolio website.
-
-I have received your message and will contact you shortly.
-`
-
-          }),
+          body: formDataToSend,
         }
       );
 
-      const result = await response.json();
 
       if (response.ok) {
         setStatus("success");
         setMessage("Message sent successfully!");
+        formRef.current.reset();
         setFormData({ name: "", email: "", message: "", });
-      }
-      else {
-        setStatus("error");
-        setMessage(result.message || "Failed to send message");
       }
 
     } catch (error) {
       setStatus("error");
       setMessage("Something went wrong");
-    } finally {
+    }
+    finally {
       setLoading(false);
+      setTimeout(() => { setMessage("") }, 3000);
     }
 
-    setTimeout(() => { setMessage("") }, 3000);
   };
 
-  console.log('token ---TOKEN:', import.meta.env.VITE_FORMSUBMIT_TOKEN);
 
   return (
     <section id="contact" className="min-h-screen bg-stone-950 px-4 pt-20 mt-2">
@@ -160,6 +149,7 @@ I have received your message and will contact you shortly.
         <div className="order-1 lg:order-2 shadow-xl  w-full">
 
           <form
+            ref={formRef}
             onSubmit={submitForm}
             className="flex flex-col gap-3 p-3"
           >
@@ -170,7 +160,7 @@ I have received your message and will contact you shortly.
               <input
                 type="text"
                 name="name"
-                autoComplete="new-name"
+                autoComplete="off"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -186,7 +176,7 @@ I have received your message and will contact you shortly.
               <input
                 type="email"
                 name="email"
-                autoComplete="new-email"
+                autoComplete="off"
                 required
                 value={formData.email}
                 onChange={handleChange}
