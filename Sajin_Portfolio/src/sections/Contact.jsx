@@ -42,12 +42,22 @@ const Contact = () => {
             Accept: "application/json",
           },
           body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-            _subject: "Portfolio Contact Form Message",
+            name: formData?.name,
+            email: formData?.email,
+            message: formData?.message,
+
+            _subject: "Portfolio Inquiry Confirmation | SAJIN CL",
             _template: "table",
             _captcha: "false",
+
+            _replyto: formData?.email,
+            _autoresponse: `Hi ${formData.name},
+
+Thank you for reaching out through my portfolio website.
+
+I have received your message and will contact you shortly.
+`
+
           }),
         }
       );
@@ -160,6 +170,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
+                autoComplete="new-name"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -175,6 +186,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
+                autoComplete="new-email"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -190,6 +202,7 @@ const Contact = () => {
               <textarea
                 rows="4"
                 name="message"
+                autoComplete="off"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message..."
