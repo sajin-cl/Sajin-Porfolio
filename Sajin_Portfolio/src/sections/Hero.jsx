@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Counter from "@/components/Counter";
 import Typewriter from "typewriter-effect";
 import toast from "react-hot-toast";
+import { GrDownload } from "react-icons/gr";
 
 
 const Hero = () => {
@@ -145,9 +146,9 @@ const Hero = () => {
               href="/SajinCL_Mern_Stack_Developer_Resume.pdf"
               download="SajinCL_Mern_Stack_Developer_Resume.pdf"
               onClick={() => toast.success("CV Downloaded!")}
-              className="whitespace-nowrap px-20 md:px-30 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
+              className="whitespace-nowrap px-16 md:px-28 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
             >
-              ⬇ Download CV
+             <span className="flex gap-3 items-center"> <GrDownload/> DOWNLOAD CV</span>
             </motion.a>
           </div>
         </div>

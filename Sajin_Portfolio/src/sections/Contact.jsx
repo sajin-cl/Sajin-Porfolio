@@ -17,7 +17,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    inquiryType: "",
+    message: "",
   });
 
 
@@ -60,7 +61,7 @@ const Contact = () => {
         setStatus("success");
         setMessage("Message sent successfully!");
         formRef.current.reset();
-        setFormData({ name: "", email: "", message: "", });
+        setFormData({ name: "", email: "",inquiryType: "", message: "", });
       }
 
     } catch (error) {
@@ -133,16 +134,12 @@ const Contact = () => {
             )
           })}
 
-          <div className="point relative p-2 border border-lime-800 overflow-hidden mt-14">
 
-            <div className="absolute inset-0 border border-lime-400 opacity-30 animate-[spin_4s_linear_infinite]"></div>
-
-            <p className="relative text-xs text-lime-400 tracking-wide font-mono">
+            <p className="relative text-xs text-lime-400 tracking-wide font-mono mt-5">
               <span className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-[pulse_1s_linear_infinite] shadow-[0_0_8px_#84cc16] mr-2"></span>
               AVAILABLE FOR WORK - FEEL FREE TO CONTACT ME
             </p>
-          </div>
-
+       
         </div>
 
         {/* Form Container */}
@@ -183,6 +180,28 @@ const Contact = () => {
                 placeholder="your@gmail.com"
                 className="w-full border text-gray-300 py-4 text-xs border-gray-800 px-4 focus:outline-none focus:ring-2 focus:ring-lime-400"
               />
+            </div>
+
+            <div>
+              <label className="block text-xs text-lime-200 mb-1">
+                INQUIRY TYPE :
+              </label>
+
+              <select
+                name="inquiryType"
+                required
+                value={formData?.inquiryType}
+                onChange={handleChange}
+                className="w-full border text-gray-500 py-3 text-sm border-gray-800 px-3 bg-stone-950 focus:outline-none focus:ring-2 focus:ring-lime-400"
+              >
+                <option value="">Select an option</option>
+                <option value="HR / Recruitment">
+                  HR / Recruitment
+                </option>
+                <option value="Client / Project Inquiry">
+                  Client / Project Inquiry
+                </option>
+              </select>
             </div>
 
             <div>
