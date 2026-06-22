@@ -230,7 +230,7 @@ const Contact = () => {
 
           {message && (
             <div
-              className={`text-xs mt-3 text-center leading-relaxed tracking-wide flex items-start justify-center gap-1 max-w-sm mx-auto ${status === "success" ? "text-green-500" : "text-red-600"
+              className={`text-xs mt-3 text-center leading-relaxed tracking-wide flex items-start justify-center gap-1 max-w-sm mx-auto ${status === "success" ? "text-lime-400" : "text-red-600"
                 }`}
             >
               <FiAlertTriangle size={15} className="shrink-0 mt-0.5" />
