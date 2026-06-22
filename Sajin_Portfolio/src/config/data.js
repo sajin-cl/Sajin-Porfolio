@@ -89,12 +89,12 @@ export const SKILLS_DATA = {
 
 
 export const PROFICIENCY_DATA = [
-  { name: 'React.js', percentage: 82 },
-  { name: 'Next.js', percentage: 77 },
+  { name: 'React.js / Next.js', percentage: 82 },
   { name: 'Node.js / Express.js', percentage: 80 },
   { name: 'MongoDB / Mongoose ODM', percentage: 85 },
   { name: 'Tailwind CSS', percentage: 83 },
-  { name: 'TypeScript', percentage: 25 },
+  { name: 'SEO Optimization', percentage: 53 },
+  { name: 'TypeScript', percentage: 24 },
 ];
 
 export const SERVICE_INTEGRATIONS_DATA = [
