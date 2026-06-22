@@ -132,22 +132,22 @@ export const PROJECTS_DATA = [
   },
   {
     no: "02",
-    bannerName: "Portfolio",
-    name: "PORTFOLIO WEBSITE",
+    bannerName: "AK Decoration",
+    name: "AK DECORATION SERVICE",
     category: "Freelance Project",
-    timeline: "Apr 2026 - Apr 2026",
-    description: "Modern portfolio website designed for a UX/UI designer, showcasing projects, services, and contact information with a responsive layout.",
+    timeline: "Mar 2026 - Mar 2026",
+    description: "Business website for event decoration services featuring service showcases, gallery sections, and customer inquiry options.",
     hashtags: [
-      "https://sanjeev-kumar-portfolio.vercel.app",
+      "https://ak-decoration.vercel.app",
     ],
-    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project5_faz4ak.webp",
     skills: [
-      { name: "React", color: "#61DAFB", icon: SiReact },
+      { name: "Nextjs", color: "#fff", icon: SiNextdotjs },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
-      { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
+
     ],
-    github: null,
-    live: "https://sanjeev-kumar-portfolio.vercel.app/",
+    github: "https://github.com/sajin-cl/AK-Decoration-NextJS",
+    live: "https://ak-decoration.vercel.app/",
   },
   {
     no: "03",
@@ -194,23 +194,22 @@ export const PROJECTS_DATA = [
   },
   {
     no: "05",
-    bannerName: "AK Decoration",
-    name: "AK DECORATION SERVICE",
+    bannerName: "Portfolio",
+    name: "PORTFOLIO WEBSITE",
     category: "Freelance Project",
-    timeline: "Mar 2026 - Mar 2026",
-    description: "Business website for event decoration services featuring service showcases, gallery sections, and customer inquiry options.",
+    timeline: "Apr 2026 - Apr 2026",
+    description: "Modern portfolio website designed for a UX/UI designer, showcasing projects, services, and contact information with a responsive layout.",
     hashtags: [
-      "https://ak-decoration.vercel.app",
+      "https://sanjeev-kumar-portfolio.vercel.app",
     ],
-    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/project5_faz4ak.webp",
+    image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/Thumbnail_1_glhjbu.webp",
     skills: [
       { name: "React", color: "#61DAFB", icon: SiReact },
       { name: "Tailwind CSS", color: "#06B6D4", icon: SiTailwindcss },
-      { name: "Vite", color: "#FFFF00", icon: TbBrandVite },
-
+      { name: "Vite", color: "#FFFF00", icon: TbBrandVite }
     ],
-    github: "https://github.com/sajin-cl/AK-Decoration-React-Vite-TailwindCSS",
-    live: "https://ak-decoration.vercel.app/",
+    github: null,
+    live: "https://sanjeev-kumar-portfolio.vercel.app/",
   },
   {
     no: "06",
