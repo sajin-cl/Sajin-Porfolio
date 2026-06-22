@@ -14,7 +14,7 @@ const Footer = () => {
         <a
         href="#hero"
           className="text-white text-sm tracking-widest w-1/8 flex  justify-center">
-          <img src="/web-icon-v1.png" alt="logo" loading="lazy" className="h-12 w-auto object-contain" />
+          <img src="/web-icon-v2.png" alt="logo" loading="lazy" className="h-12 w-auto object-contain" />
           <div className="footer-logo-info ml-3">
             <p className="text-xl font-poppins">Sajin</p>
             <p className="text-xs text-lime-200">portfolio</p>

@@ -17,7 +17,7 @@ const Contact = lazy(() => import("@/sections/Contact"));
 
 const loader = (
   <div className="animate-pulse text-lime-400 w-full min-h-screen flex flex-col justify-center items-center">
-    <img src="/logo.png" alt="Loading logo" className="h-56 animate-pulse transition" />
+    <img src="/logo.png" alt="Loading logo" className="h-40 animate-pulse transition" />
     <p className="mt-4 font-mono text-center">WELCOME. LET ME SHOW YOU WHAT I’VE BUILT.</p>
   </div>
 );
