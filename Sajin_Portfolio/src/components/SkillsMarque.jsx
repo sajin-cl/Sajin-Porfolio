@@ -43,7 +43,7 @@ const SkillsMarque = ({ items, reverse = false, duration = 15 }) => {
                 className="flex flex-col items-center justify-center min-w-[100px] cursor-pointer hover:scale-110 transition-all duration-300"
               >
                 <Icon size={30} color={item.color} />
-                <span className="mt-2 text-white text-xs">
+                <span className="mt-2 text-gray-400 text-xs uppercase">
                   {item.name}
                 </span>
               </div>
