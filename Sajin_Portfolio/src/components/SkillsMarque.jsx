@@ -40,10 +40,10 @@ const SkillsMarque = ({ items, reverse = false, duration = 15 }) => {
             return (
               <div
                 key={`${idx}-${i}`}
-                className="flex flex-col items-center justify-center min-w-[100px] cursor-pointer hover:scale-110 transition-all duration-300"
+                className="flex gap-2 items-center justify-center min-w-[150px] cursor-pointer hover:scale-110 transition-all duration-300"
               >
                 <Icon size={30} color={item.color} />
-                <span className="mt-2 text-gray-400 text-xs uppercase">
+                <span className="text-gray-400 text-sm uppercase font-mono tracking-wider font-bold">
                   {item.name}
                 </span>
               </div>
