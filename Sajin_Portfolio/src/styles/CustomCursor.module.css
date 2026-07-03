@@ -16,14 +16,14 @@
   position: fixed;
   pointer-events: none;
   z-index: 99998;
-  padding: 25px;
+  padding: 17px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   top: 0;
   left: 0;
   width: 32px;
   height: 32px;
-  border: 2px solid #a2e635c2; /* lime-400 */
+  border: 1px solid #a2e635c2; /* lime-400 */
   transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
 
