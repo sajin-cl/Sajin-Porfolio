@@ -347,7 +347,7 @@ export const FAQ_DATA = [
     <>
       You can reach me through the{" "}
       <a href="#contact" className="text-lime-400 hover:underline">
-        Contact
+        Contact Form
       </a>
       , LinkedIn, or email. I usually respond within 24 hours.
     </>
