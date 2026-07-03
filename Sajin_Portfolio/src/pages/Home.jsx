@@ -14,6 +14,7 @@ const Leetcode = lazy(() => import("@/sections/Leetcode"));
 const Projects = lazy(() => import("@/sections/Projects"));
 const Certifications = lazy(() => import("@/sections/Certifications"));
 const Contact = lazy(() => import("@/sections/Contact"));
+const FAQ = lazy(() => import("@/sections/FAQ"));
 
 const loader = (
   <div className="animate-pulse text-lime-400 w-full min-h-screen flex flex-col justify-center items-center">
@@ -38,6 +39,7 @@ export default function Home() {
         <Projects />
         <Certifications />
         <Testimonials testimonials={TESTIMONIALS_DATA} />
+        <FAQ/>
         <Contact />
       </Suspense>
     </>

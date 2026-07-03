@@ -302,3 +302,55 @@ export const TESTIMONIALS_DATA = [
   },
 
 ];
+
+/* --------------------------------------------------FAQ Details------------------------------------------------------------------- */
+export const FAQ_DATA = [
+  {
+    q: "Are you available for immediate joining?",
+    a: "Yes. I am available to join immediately and open to full-time opportunities."
+  },
+  {
+    q:"What technologies do you specialize in?",
+    a:"I primarily work with React.js, Next.js, Node.js, Express.js, MongoDB, TypeScript, JavaScript, Tailwind CSS, and REST APIs."
+  },
+  {
+    q:"Do you have industry experience?",
+    a:"Yes. I completed a 6-month internship as a MERN Stack Developer and have also delivered freelance projects for clients."
+  },
+  {
+    q:"What type of roles are you looking for?",
+    a:"I am seeking Frontend Developer, Backend Developer, React Developer, MERN Stack Developer, or Full Stack Developer roles."
+  },
+  {
+    q:"Are your projects live?",
+    a:"Yes. Most of my projects are deployed and include both live demos and source code for review."
+  },
+  {
+    q:"Do you work with Git and GitHub?",
+    a:"Yes. I use Git and GitHub for version control, project management, and collaboration for testing purposes."
+  },
+  {
+    q:"Can you work with existing codebases?",
+    a:"Yes. I will take the time to understand the existing codebase, learn the project structure, and contribute by fixing issues and implementing new features."
+  },
+  {
+    q:"Are you open to remote or onsite opportunities?",
+    a:"Yes. I am open to remote, hybrid, and onsite opportunities."
+  },
+  {
+    q:"Why should we hire you?",
+    a:"I focus on writing clean, maintainable code, building responsive user interfaces, and delivering practical full-stack solutions. I am eager to learn, adapt quickly, and contribute effectively from day one."
+  },
+ {
+  q: "How can I contact you?",
+  a: (
+    <>
+      You can reach me through the{" "}
+      <a href="#contact" className="text-lime-400 hover:underline">
+        Contact
+      </a>
+      , LinkedIn, or email. I usually respond within 24 hours.
+    </>
+  ),
+}
+];
