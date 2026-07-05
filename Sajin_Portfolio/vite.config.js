@@ -14,8 +14,7 @@ export default defineConfig({
       },
     }),
     sitemap({
-      hostname: 'https://sajincl-porfolio.vercel.app/',
-      dynamicRoutes: ['/', '/blog']
+      hostname: 'https://sajincl-porfolio.vercel.app'
     }),
   ],
   resolve: {
