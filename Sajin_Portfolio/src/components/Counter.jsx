@@ -2,9 +2,9 @@ import { useSpring, animated } from '@react-spring/web';
 
 function Counter({ value, start }) {
 
-  const { number } = useSpring({
-    from: { number: 1 },
-    number: start ? value : 1,
+  const { count } = useSpring({
+    from: { count: 1 },
+    to: { count: start ? value : 1 },
     delay: 200,
     config: {
       duration: 500,
@@ -14,7 +14,7 @@ function Counter({ value, start }) {
 
   return (
     <animated.span>
-      {number.to(value => Math.floor(value))}
+      {count.to(value => Math.floor(value))}
     </animated.span>
   );
 };

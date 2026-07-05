@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 
+
 <head class="dark">
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/web-icon-v2.png" />
@@ -27,7 +28,10 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- canonical for seo -->
+  <link rel="canonical" href="https://sajincl-porfolio.vercel.app/" />
+
+  <!-- Google tag for Google Analytics (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1PEX3VTR4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -45,13 +49,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Load Inter and Poppins -->
+  <!-- Google Fonts -->
+  <!-- Inter & Poppins -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <meta name="theme-color" content="#0f172a" />
+
+  <!-- SEO : Schema.org Person -->
+  <!-- JSON-LD Structured Data -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://sajincl-porfolio.vercel.app/#person",
+  "name": "Sajin CL",
+  "jobTitle": "MERN Stack Developer",
+  "description": "MERN Stack Developer specializing in React.js, Next.js, Node.js, Express.js, MongoDB, Tailwind CSS and GSAP.",
+  "url": "https://sajincl-porfolio.vercel.app/",
+  "image": "https://sajincl-porfolio.vercel.app/profile.webp",
+  "email": "mailto:sajincl222@gmail.com",
+  "sameAs": [
+    "https://github.com/sajin-cl",
+    "https://www.linkedin.com/in/sajincl/"
+  ],
+  "knowsAbout": [
+    "React.js",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "GSAP",
+    "Tailwind CSS"
+  ]
+}
+</script>
+
 </head>
+
 
 <body class="overflow-x-hidden">
   <div id="root"></div>
