@@ -53,7 +53,7 @@ function Projects() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-semibold text-white "
           >
-            PROJECTS
+            PRO<span className="text-lime-400">JECTS</span>
           </motion.h1>
           <motion.p
             className="text-gray-400  tracking-wide font-mono text-end"

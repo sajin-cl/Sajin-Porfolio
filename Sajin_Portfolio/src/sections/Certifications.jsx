@@ -51,7 +51,7 @@ const Certifications = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-semibold text-white"
           >
-            CERTIFICATIONS
+            CERTI<span className="text-lime-400">FICATIONS</span>
           </motion.h1>
 
           <motion.p

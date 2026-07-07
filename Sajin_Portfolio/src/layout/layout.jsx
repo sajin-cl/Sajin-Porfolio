@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import ScrollToHash from '@/components/ScrollToHash';
 import { Outlet } from 'react-router-dom';
 import CustomCursor from '@/components/CustomCursor';
+import ScrollProgress from '@/components/ScrollProgress';
 
 
 
@@ -14,7 +15,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col scroll-smooth">
       <Header />
-
+      <ScrollProgress />
       <main className="flex-1 pt-16">
         <CustomCursor />
         <ScrollToHash />
