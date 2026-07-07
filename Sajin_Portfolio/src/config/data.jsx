@@ -1,12 +1,15 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import {
-  SiLeetcode, SiPostman, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs, SiSubstack
+  SiLeetcode, SiPostman, SiHtml5, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs, SiSubstack,SiGsap
 } from "react-icons/si";
+import { IoLogoCss3 } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
+
+
 
 
 
@@ -71,9 +74,10 @@ export const SKILLS_DATA = {
   ],
   techStack: [
     { name: "HTML", color: "#FF5733", type: 'Frontend', icon: SiHtml5, isVisible: true },
-    { name: "CSS", color: "#2965F1", type: 'Frontend', icon: SiCss3, isVisible: true },
+    { name: "CSS", color: "#2965F1", type: 'Frontend', icon: IoLogoCss3, isVisible: true },
     { name: "Bootstrap", color: "#7952B3", type: 'Frontend', icon: SiBootstrap, isVisible: true },
     { name: "Tailwind CSS", color: "#06B6D4", type: 'Frontend', icon: SiTailwindcss, isVisible: true },
+    { name: "GSAP", color: "#88CE02", type: 'Frontend', icon: SiGsap, isVisible: true },
     { name: "JavaScript", color: "#F7DF1E", type: 'Frontend', icon: SiJavascript, isVisible: true },
     { name: "TypeScript", color: "#2965F1", type: 'Frontend', icon: SiTypescript, isVisible: true },
     { name: "React.js", color: "#61DAFB", type: 'Frontend', icon: SiReact, isVisible: true },
@@ -310,47 +314,47 @@ export const FAQ_DATA = [
     a: "Yes. I am available to join immediately and open to full-time opportunities."
   },
   {
-    q:"What technologies do you specialize in?",
-    a:"I primarily work with React.js, Next.js, Node.js, Express.js, MongoDB, TypeScript, JavaScript, Tailwind CSS, and REST APIs."
+    q: "What technologies do you specialize in?",
+    a: "I primarily work with React.js, Next.js, Node.js, Express.js, MongoDB, TypeScript, JavaScript, Tailwind CSS, and REST APIs."
   },
   {
-    q:"Do you have industry experience?",
-    a:"Yes. I completed a 6-month internship as a MERN Stack Developer and have also delivered freelance projects for clients."
+    q: "Do you have industry experience?",
+    a: "Yes. I completed a 6-month internship as a MERN Stack Developer and have also delivered freelance projects for clients."
   },
   {
-    q:"What type of roles are you looking for?",
-    a:"I am seeking Frontend Developer, Backend Developer, React Developer, MERN Stack Developer, or Full Stack Developer roles."
+    q: "What type of roles are you looking for?",
+    a: "I am seeking Frontend Developer, Backend Developer, React Developer, MERN Stack Developer, or Full Stack Developer roles."
   },
   {
-    q:"Are your projects live?",
-    a:"Yes. Most of my projects are deployed and include both live demos and source code for review."
+    q: "Are your projects live?",
+    a: "Yes. Most of my projects are deployed and include both live demos and source code for review."
   },
   {
-    q:"Do you work with Git and GitHub?",
-    a:"Yes. I use Git and GitHub for version control, project management, and collaboration for testing purposes."
+    q: "Do you work with Git and GitHub?",
+    a: "Yes. I use Git and GitHub for version control, project management, and collaboration for testing purposes."
   },
   {
-    q:"Can you work with existing codebases?",
-    a:"Yes. I will take the time to understand the existing codebase, learn the project structure, and contribute by fixing issues and implementing new features."
+    q: "Can you work with existing codebases?",
+    a: "Yes. I will take the time to understand the existing codebase, learn the project structure, and contribute by fixing issues and implementing new features."
   },
   {
-    q:"Are you open to remote or onsite opportunities?",
-    a:"Yes. I am open to remote, hybrid, and onsite opportunities."
+    q: "Are you open to remote or onsite opportunities?",
+    a: "Yes. I am open to remote, hybrid, and onsite opportunities."
   },
   {
-    q:"Why should we hire you?",
-    a:"I focus on writing clean, maintainable code, building responsive user interfaces, and delivering practical full-stack solutions. I am eager to learn, adapt quickly, and contribute effectively from day one."
+    q: "Why should we hire you?",
+    a: "I focus on writing clean, maintainable code, building responsive user interfaces, and delivering practical full-stack solutions. I am eager to learn, adapt quickly, and contribute effectively from day one."
   },
- {
-  q: "How can I contact you?",
-  a: (
-    <>
-      You can reach me through the{" "}
-      <a href="#contact" className="text-lime-400 hover:underline">
-        Contact Form
-      </a>
-      , LinkedIn, or email. I usually respond within 24 hours.
-    </>
-  ),
-}
+  {
+    q: "How can I contact you?",
+    a: (
+      <>
+        You can reach me through the{" "}
+        <a href="#contact" className="text-lime-400 hover:underline">
+          Contact Form
+        </a>
+        , LinkedIn, or email. I usually respond within 24 hours.
+      </>
+    ),
+  }
 ];
