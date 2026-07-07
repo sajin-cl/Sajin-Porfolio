@@ -1,29 +1,49 @@
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { PROJECTS_DATA } from '@/config/data';
 import { motion } from 'framer-motion';
 import { useRef, useLayoutEffect } from 'react';
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
 
+gsap.registerPlugin(ScrollTrigger);
 
-const Projects = () => {
-  const carouselRef = useRef(null);
-  const scrollAmountRef = useRef(0);
+function Projects() {
 
-  useLayoutEffect(() => {
-    const card = carouselRef.current?.querySelector('.carousel-card');
-    if (card) scrollAmountRef.current = card.clientWidth + 10;
-  }, []);
+  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
 
-  const scroll = (direction) => {
-    if (!carouselRef.current || !scrollAmountRef.current) return;
+  useGSAP(() => {
 
-    carouselRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmountRef.current : scrollAmountRef.current,
-      behavior: 'smooth',
+    if (!containerRef.current || !sectionRef.current) return;
+
+    const section = sectionRef?.current;
+    const container = containerRef?.current;
+
+    const totalWidth = container.scrollWidth;
+    const scrollDistance = totalWidth - window.innerWidth;
+
+    gsap.to(container, {
+      x: -scrollDistance,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top top',
+        end: () => `+=${scrollDistance}`,
+        scrub: 1,
+        pin: true,
+        invalidateOnRefresh: true,
+      }
     });
-  };
+
+  }, { scope: sectionRef });
+
+
 
   return (
-    <section id="projects" className="flex min-h-screen justify-between items-center pt-5 bg-stone-950 overflow-x-hidden">
+    <section
+      ref={sectionRef}
+      id="projects" className="flex min-h-screen justify-between items-center pt-5 bg-stone-950 overflow-hidden">
       <div className="w-full py-10 flex flex-col items-center gap-2 ">
 
         <div className="project-headings w-full flex flex-col flex-wrap items-end gap-2 mr-4 md:mr-20">
@@ -41,7 +61,7 @@ const Projects = () => {
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
             viewport={{ once: true }}
           >
-            <span className="text-gray-400 text-xs">
+            <span className="text-gray-400 text-xs hidden md:inline-block">
               SELECTED PROJECTS ({PROJECTS_DATA?.length}) SHOWCASING MY WORK. ADDITIONAL PROJECTS ARE AVAILABLE ON MY
               <a href="https://github.com/sajin-cl" className='text-lime-500 hover:underline ml-1'>GITHUB</a>.
             </span>
@@ -50,38 +70,15 @@ const Projects = () => {
 
         {/* Carousel */}
         <div className="flex w-full max-w-full items-center relative">
-          {/* Left Arrow */}
-          <MdKeyboardDoubleArrowLeft
-            size={40}
-            onClick={() => scroll('left')}
-            className="absolute z-30 left-2 md:left-4 lg:left-0  text-lime-300 cursor-pointer hidden sm:block"
-          />
-
-          {/* Right Arrow */}
-          <MdKeyboardDoubleArrowRight
-            size={40}
-            onClick={() => scroll('right')}
-            className="absolute z-30 right-2 md:right-4 lg:right-0 text-lime-300 cursor-pointer hidden sm:block"
-          />
-
-          {/* Scrollable container */}
           <div
-            ref={carouselRef}
-            className="flex gap-4 w-full py-1 px-4 md:px-10 xl:px-15 overflow-x-auto scroll-smooth carousel-scrollbar-hide "
+            ref={containerRef}
+            className="flex gap-4 w-full py-1 px-4 md:px-10 xl:px-15 scroll-smooth carousel-scrollbar-hide "
           >
             {PROJECTS_DATA.map((project, index) => (
               <div
                 key={index}
                 className="group carousel-card flex flex-col w-full md:w-1/2 shrink-0 overflow-hidden bg-stone-950 outline outline-gray-900 hover:outline-lime-900 "
               >
-                {/* Project Image */}
-                {/* <img
-                  src={project?.image}
-                  alt={project?.name}
-                  height={400}
-                  width={200}
-                  className="w-full h-48 object-cover hover:scale-110 transition duration-700"
-                />  */}
 
                 {/* Project Banner */}
                 <div className="w-full relative h-48 bg-[#0b0b01] flex items-center justify-center px-2">

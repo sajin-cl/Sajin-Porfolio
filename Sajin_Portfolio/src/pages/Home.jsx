@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
-import Testimonials from '@/components/Testimonials';
+import Testimonials from '@/sections/Testimonials';
 import { TESTIMONIALS_DATA } from '@/config/data';
 
 

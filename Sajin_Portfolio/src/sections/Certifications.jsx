@@ -1,28 +1,44 @@
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { CERTIFICATIONS_DATA } from '@/config/data';
 import { motion } from "framer-motion";
-import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import { useLayoutEffect, useRef } from "react";
+import {  useRef } from "react";
 
 const Certifications = () => {
-  const carouselRef = useRef(null);
-  const scrollAmountRef = useRef(0);
 
-  useLayoutEffect(() => {
-    const card = carouselRef.current.querySelector('.carousel-card');
-    if (card) scrollAmountRef.current = card.clientWidth + 16;
-  }, []);
+  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
 
-  const scroll = (direction) => {
-    if (!carouselRef.current || !scrollAmountRef.current) return;
+  useGSAP(() => {
+    if (!containerRef.current || !sectionRef.current) return;
 
-    carouselRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmountRef.current : scrollAmountRef.current,
-      behavior: 'smooth'
+    const section = sectionRef?.current;
+    const container = containerRef?.current;
+
+    const totalWidth = container.scrollWidth;
+    const scrollDistance = totalWidth - window.innerWidth;
+
+    gsap.to(container, {
+      x: -scrollDistance,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top top',
+        end: () => `+=${scrollDistance}`,
+        scrub: 1,
+        pin: true,
+        invalidateOnRefresh: true,
+      }
     });
-  };
+
+  }, { scope: sectionRef });
+
+
 
   return (
     <section
+      ref={sectionRef}
       id="certifications"
       className="flex min-h-screen justify-between items-center bg-stone-950 overflow-x-hidden"
     >
@@ -52,24 +68,10 @@ const Certifications = () => {
 
         {/* Carousel */}
         <div className="relative w-full max-w-full flex items-center">
-          {/* Left Arrow */}
-          <MdKeyboardDoubleArrowLeft
-            size={40}
-            className="absolute z-10 left-2 md:left-4 lg:left-0 cursor-pointer text-lime-300 hidden sm:block"
-            onClick={() => scroll("left")}
-          />
-
-          {/* Right Arrow */}
-          <MdKeyboardDoubleArrowRight
-            size={40}
-            className="absolute z-10 right-2 md:right-4 lg:right-0 cursor-pointer text-lime-300 hidden sm:block"
-            onClick={() => scroll("right")}
-          />
-
           {/* Scrollable container */}
           <div
-            ref={carouselRef}
-            className="flex overflow-x-auto scroll-smooth gap-4 w-full px-10 md:px-10 xl:px-15 py-3 carousel-scrollbar-hide"
+            ref={containerRef}
+            className="flex  scroll-smooth gap-4 w-full px-10 md:px-10 xl:px-15 py-3 carousel-scrollbar-hide"
           >
             {CERTIFICATIONS_DATA.map((cert, index) => (
               <div
