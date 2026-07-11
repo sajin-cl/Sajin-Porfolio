@@ -13,6 +13,9 @@ const Certifications = () => {
   useGSAP(() => {
     if (!containerRef.current || !sectionRef.current) return;
 
+    // Disable GSAP horizontal scroll on mobile to prevent excessive spacing
+    if (window.innerWidth < 768) return;
+
     const section = sectionRef?.current;
     const container = containerRef?.current;
 
@@ -40,7 +43,7 @@ const Certifications = () => {
     <section
       ref={sectionRef}
       id="certifications"
-      className="flex min-h-screen justify-between items-center bg-stone-950 overflow-x-hidden"
+      className="flex min-h-auto md:min-h-screen justify-between items-center bg-stone-950 overflow-x-hidden"
     >
       <div className="w-full py-10 flex flex-col items-center gap-1 relative">
         {/* Title */}
@@ -71,7 +74,7 @@ const Certifications = () => {
           {/* Scrollable container */}
           <div
             ref={containerRef}
-            className="flex  scroll-smooth gap-4 w-full px-10 md:px-10 xl:px-15 py-3 carousel-scrollbar-hide"
+            className="flex  scroll-smooth gap-4 w-full px-10 md:px-10 xl:px-15 py-3 carousel-scrollbar-hide overflow-x-auto md:overflow-x-visible"
           >
             {CERTIFICATIONS_DATA.map((cert, index) => (
               <div

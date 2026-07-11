@@ -17,6 +17,9 @@ function Projects() {
 
     if (!containerRef.current || !sectionRef.current) return;
 
+    // Disable GSAP horizontal scroll on mobile to prevent excessive spacing
+    if (window.innerWidth < 768) return;
+
     const section = sectionRef?.current;
     const container = containerRef?.current;
 
@@ -43,7 +46,7 @@ function Projects() {
   return (
     <section
       ref={sectionRef}
-      id="projects" className="flex min-h-screen justify-between items-center pt-5 bg-stone-950 overflow-hidden">
+      id="projects" className="flex min-h-auto md:min-h-screen justify-between items-center pt-5 bg-stone-950 overflow-hidden">
       <div className="w-full py-10 flex flex-col items-center gap-2 ">
 
         <div className="project-headings w-full flex flex-col flex-wrap items-end gap-2 mr-4 md:mr-20">
@@ -72,7 +75,7 @@ function Projects() {
         <div className="flex w-full max-w-full items-center relative">
           <div
             ref={containerRef}
-            className="flex gap-4 w-full py-1 px-4 md:px-10 xl:px-15 scroll-smooth carousel-scrollbar-hide "
+            className="flex gap-4 w-full py-1 px-4 md:px-10 xl:px-15 scroll-smooth carousel-scrollbar-hide overflow-x-auto md:overflow-x-visible "
           >
             {PROJECTS_DATA.map((project, index) => (
               <div
