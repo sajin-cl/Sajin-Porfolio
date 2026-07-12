@@ -100,3 +100,20 @@
     cursor: auto;
   }
 }
+
+/* Seamless marquee animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  width: fit-content;
+  animation: marquee-scroll linear infinite;
+  will-change: transform;
+}

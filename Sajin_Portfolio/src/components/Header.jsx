@@ -28,19 +28,18 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-black/10 backdrop-blur-sm z-50 overflow-x-hidden">
+    <header className="fixed top-0 w-full bg-stone-950/98 z-50 overflow-x-hidden">
       <nav className="container mx-auto px-2 h-14 flex items-center justify-between">
         <a
-          className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer"
+          className="text-xl font-bold text-lime-400 tracking-widest flex items-center gap-2 cursor-pointer "
           href="/#hero"
           onClick={(e) => {
             e.preventDefault();
             handleNavClick("/#hero");
           }}
         >
-          {"<"}
-          <span className="drop-shadow-[0_0_25px_#0aff47] animate-pulse">{"< SAJIN >"}</span>
-          {">"}
+          {"> >"}
+          <span className="drop-shadow-[0_0_55px_#0aff47] animate-pulse font-mono font-bold">{" SAJIN  CL"}</span>
         </a>
 
         {/* Desktop Navbar */}
