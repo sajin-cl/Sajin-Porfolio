@@ -56,8 +56,8 @@ export const CODING_PROFILE_DATA = [
   { title: 'LINKEDIN CONNECTIONS', count: 1300 },
   { title: 'GITHUB REPO', count: 20 },
   { title: 'LEETCODE PROBLEMS', count: LEETCODE_PORBLEMS_COUNT },
-  { title: 'FREELANCE PROJECT', count: FREELANCE_PROJECT_COUNT },
   { title: 'TOTAL PROJECTS', count: PROJECT_COUNT },
+  { title: 'FREELANCE PROJECT', count: FREELANCE_PROJECT_COUNT },
 ];
 
 

@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Links */}
         <div className="text-white font-mono flex flex-wrap justify-center items-center gap-5 mx-auto">
           {NAV_LINKS.map((link, idx) => (
-            <a key={idx} href={link.href} className="hover:text-lime-300 transition">
+            <a key={idx} href={link.href} className="hover:text-lime-300 transition text-sm">
               {link.name}
             </a>
           ))}
@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="text-white/70 text-xs text-center py-4 border-t border-white/10 font-bebas tracking-wider">
-        © {new Date().getFullYear()} sajin-cl. all rights reserved.
+      <div className="text-white/70 text-xs font-semibold text-center md:text-start md:ml-5 py-4 border-t border-white/10 font-mono tracking-wider">
+        © {new Date().getFullYear()} <span className="text-lime-300">Sajin CL</span>. All Rights Reserved.
       </div>
     </motion.footer>
   );
