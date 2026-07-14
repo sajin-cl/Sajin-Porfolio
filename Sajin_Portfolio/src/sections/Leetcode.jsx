@@ -21,11 +21,11 @@ const Leetcode = () => {
 
         {/* Text Section */}
         <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-bebas font-extrabold bg-gradient-to-r from-lime-400 via-lime-200 to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bebas font-extrabold bg-gradient-to-r from-lime-400 via-lime-200 to-gray-400 bg-clip-text text-transparent tracking-widest">
             LEETCODE
           </h1>
 
-          <h2 className="text-sm md:text-lg font-mono text-gray-400">
+          <h2 className="text-sm md:text-lg font-mono font-semibold text-gray-400">
             SOLVED
             <span
               className="text-lime-300 font-inter mx-2">

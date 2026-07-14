@@ -21,7 +21,7 @@ function CodingProfiles() {
               {prof?.title}
             </h1>
             <span className="inline-block text-lime-300 text-5xl font-bold">
-              <Counter value={prof?.count} start={start} />+
+              <Counter value={prof?.count} start={start} /> {prof?.count >= 10 ? '+' : ''}
             </span>
           </div>
         ))}
