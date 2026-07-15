@@ -226,6 +226,11 @@ const Contact = () => {
             >
               {loading ? 'SENDING...' : 'SEND MESSAGE'}
             </button>
+            <p className="mt-2 text-xs font-mono text-gray-400 text-center">
+             If you experience any issues with the contact form, please reach out to me directly via 
+              <a 
+              className="text-lime-300 underline ml-2 " 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.">Email</a>.</p>
           </form>
 
           {message && (
