@@ -41,28 +41,32 @@ const Contact = () => {
 
       const formDataToSend = new FormData(formRef.current);
 
-      formDataToSend.append("_subject", "Portfolio Inquiry Confirmation | SAJIN CL");
-      formDataToSend.append("_template", "table");
-      formDataToSend.append("_captcha", "false");
+      formDataToSend.append("access_key", import.meta.env.VITE_WEB3FORMS_TOKEN);
 
-      formDataToSend.append("_replyto", formData?.email);
-      formDataToSend.append("_autoresponse", AUTO_RESPONSE(formData?.name));
+      formDataToSend.append("subject", "Portfolio Inquiry Confirmation | SAJIN CL");
+      formDataToSend.append("from_name", "Portfolio Website");
+      formDataToSend.append("replyto", formData?.email);
 
 
-      const response = await fetch(`https://formsubmit.co/${import.meta.env.VITE_FORMSUBMIT_TOKEN}`,
-        {
-          method: "POST",
-          body: formDataToSend,
-        }
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+      }
       );
 
+    
+      const data = await response.json();
 
-      if (response.ok) {
+      if (data.success) {
         setStatus("success");
         setMessage("Message sent successfully!");
         formRef.current.reset();
-        setFormData({ name: "", email: "",inquiryType: "", message: "", });
+        setFormData({ name: "", email: "", inquiryType: "", message: "" });
+      } else {
+        setStatus("error");
+        setMessage(data.message || "Something went wrong");
       }
+
 
     } catch (error) {
       setStatus("error");
@@ -135,11 +139,11 @@ const Contact = () => {
           })}
 
 
-            <p className="relative text-xs text-lime-400 tracking-wide font-mono mt-5">
-              <span className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-[pulse_1s_linear_infinite] shadow-[0_0_8px_#84cc16] mr-2"></span>
-              AVAILABLE FOR WORK - FEEL FREE TO CONTACT ME
-            </p>
-       
+          <p className="relative text-xs text-lime-400 tracking-wide font-mono mt-5">
+            <span className="inline-block w-2 h-2 bg-lime-400 rounded-full animate-[pulse_1s_linear_infinite] shadow-[0_0_8px_#84cc16] mr-2"></span>
+            AVAILABLE FOR WORK - FEEL FREE TO CONTACT ME
+          </p>
+
         </div>
 
         {/* Form Container */}
@@ -227,10 +231,10 @@ const Contact = () => {
               {loading ? 'SENDING...' : 'SEND MESSAGE'}
             </button>
             <p className="mt-2 text-xs font-mono text-gray-400 text-center">
-             If you experience any issues with the contact form, please reach out to me directly via 
-              <a 
-              className="text-lime-300 underline ml-2 " 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.">Email</a>.</p>
+              If you experience any issues with the contact form, please reach out to me directly via
+              <a
+                className="text-lime-300 underline ml-2 "
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sajincl222@gmail.com&su=Hiring%20Inquiry&body=Hi%20Sajin,%0A%0AI%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.">Email</a>.</p>
           </form>
 
           {message && (
