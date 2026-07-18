@@ -3,12 +3,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { PROJECTS_DATA } from '@/config/data';
 import { motion } from 'framer-motion';
-import { useRef, useLayoutEffect } from 'react';
-import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
+import { useRef } from 'react';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Projects() {
+export default function Projects() {
 
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
@@ -174,5 +174,3 @@ function Projects() {
     </section>
   );
 };
-
-export default Projects;

@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS } from '@/config/data';
 
-const Header = () => {
+export default function Header() {
+
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -131,4 +132,3 @@ const Header = () => {
   );
 };
 
-export default Header;

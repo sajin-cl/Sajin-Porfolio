@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS,PROJECT_COUNT } from "@/config/data";
+import { SOCIAL_LINKS, PROJECT_COUNT } from "@/config/data";
 import { SiReact, SiTailwindcss, SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import { motion } from "framer-motion";
@@ -83,7 +83,7 @@ const Hero = () => {
               <span className="hidden lg:block text-gray-300">→</span>
               <Typewriter
                 options={{
-                  strings: ["MERN STACK DEVELOPER", "REACT DEVELOPER", "NODE DEVELOPER","Freelance Developer"],
+                  strings: ["MERN STACK DEVELOPER", "REACT DEVELOPER", "NODE DEVELOPER", "Freelance Developer"],
                   autoStart: true,
                   loop: true,
                   delay: 75,
@@ -138,17 +138,18 @@ const Hero = () => {
           {/* Download CV button */}
           <div className="mb-10 flex justify-center lg:justify-start">
             <motion.a
+              style={{ clipPath: "polygon(20px 0,100% 0, 100% 0,100% 100%, 0% 100%,0 20px)" }}
               initial={{ opacity: 0, filter: "blur(15px)" }}
-              whileInView={{ opacity: 1, filter: "blur(0px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }} 
               transition={{ duration: 1.2 }}
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(132,255,101,0.6)" }}
               whileTap={{ scale: 0.95 }}
               href="/SajinCL_Mern_Stack_Developer_Resume.pdf"
               download="SajinCL_Mern_Stack_Developer_Resume.pdf"
               onClick={() => toast.success("CV Downloaded!")}
-              className="whitespace-nowrap px-16 md:px-28 py-3 rounded-xl bg-lime-400 text-black font-semibold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95"
+              className="whitespace-nowrap px-16 md:px-28 py-3 bg-lime-400 text-black font-bold hover:bg-lime-300 transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-105 active:scale-95 tracking-wider"
             >
-             <span className="flex gap-3 items-center"> <GrDownload/> DOWNLOAD CV</span>
+              <span className="flex gap-3 items-center"> <GrDownload /> DOWNLOAD → CV</span>  
             </motion.a>
           </div>
         </div>

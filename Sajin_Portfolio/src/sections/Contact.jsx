@@ -3,7 +3,6 @@ import { FiAlertTriangle } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion';
 import { CONTACT_DETAILS_DATA } from "@/config/data";
-import { AUTO_RESPONSE } from "@/config/mail_template/autoResponseMail";
 
 
 
@@ -60,7 +59,6 @@ const Contact = () => {
       if (data.success) {
         setStatus("success");
         setMessage("Message sent successfully!");
-        formRef.current.reset();
         setFormData({ name: "", email: "", inquiryType: "", message: "" });
       } else {
         setStatus("error");
@@ -121,7 +119,7 @@ const Contact = () => {
             return (
               <div
                 key={idx}
-                className="contact-details flex gap-5 mb-5"
+                className="contact-details flex gap-5 mb-8"
               >
                 <div className="contact-icon-box flex items-center">
                   <Icon className="text-lime-300" />

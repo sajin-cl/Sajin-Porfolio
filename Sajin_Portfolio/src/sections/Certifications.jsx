@@ -3,10 +3,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { CERTIFICATIONS_DATA } from '@/config/data';
 import { motion } from "framer-motion";
-import {  useRef } from "react";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Certifications = () => {
-
+ 
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -79,7 +81,8 @@ const Certifications = () => {
             {CERTIFICATIONS_DATA.map((cert, index) => (
               <div
                 key={index}
-                className="carousel-card shrink-0 w-full md:w-1/2 lg:w-1/3 bg-stone-950 overflow-hidden flex flex-col outline outline-gray-900 hover:outline-lime-900 "
+                style={{ clipPath: "polygon(30px 0,100% 0, 100% 0,100% 100%, 0% 100%,0 30px)" }}
+                className="carousel-card shrink-0 w-full md:w-1/2 lg:w-1/3 bg-stone-950 overflow-hidden flex flex-col hover:border-gray-700 border border-gray-800"
               >
                 {/* Certificate Image */}
                 <img
@@ -95,13 +98,14 @@ const Certifications = () => {
                   <h3 className="text-lg font-mono font-bold text-white mb-2 min-h-[2rem]">
                     {cert?.name.toUpperCase()}
                   </h3>
-                  <p className="text-lime-400 mb-2 text-xs border-b pb-3 border-gray-800">
+                  <p className="text-lime-400 mb-2 text-xs pb-3 border-gray-800">
                     <span
                       className="inline-block w-2 h-2 mr-2 bg-lime-400 rounded-full animate-pulse shadow-[0_0_8px_#84cc16] [animation-duration:0.7s]"
                     ></span>
                     <span>{cert?.issuer}</span>
                   </p>
 
+                </div>
                   <a
                     href={cert?.credential}
                     target="_blank"
@@ -113,7 +117,6 @@ const Certifications = () => {
                   >
                     {cert?.credential ? "VIEW CREDENTIAL" : "NOT CREDENTIAL"}
                   </a>
-                </div>
               </div>
             ))}
           </div>
