@@ -126,7 +126,7 @@ const Skills = () => {
 
           {/* Dev Tools */}
           <div className="dev-tools-container px-5 py-2">
-            <h2 className="text-lime-300 text-xs mb-5 font-mono">DEV TOOLS</h2>
+            <h2 className="text-lime-300 text-xs mb-5 font-mono">DEV TOOLS & PLATFORM</h2>
             <div className="flex flex-wrap gap-2">
               {SKILLS_DATA.tools.map((tool, idx) => (
                 <motion.span

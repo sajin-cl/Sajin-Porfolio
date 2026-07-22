@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp,FaLinux } from "react-icons/fa";
 import {
   SiLeetcode, SiPostman, SiHtml5, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiExpress, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiMongodb, SiGithub, SiHandlebarsdotjs, SiSubstack,SiGsap
 } from "react-icons/si";
@@ -8,6 +8,7 @@ import { VscVscode } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandVite } from "react-icons/tb";
 import { MdAttachEmail, MdOutlineWifiCalling3 } from "react-icons/md";
+import { AiFillWindows } from "react-icons/ai";
 
 
 
@@ -53,7 +54,7 @@ export const LEETCODE_PORBLEMS_COUNT = 90;
 export const FREELANCE_PROJECT_COUNT = 3;
 
 export const CODING_PROFILE_DATA = [
-  { title: 'LINKEDIN CONNECTIONS', count: 1300 },
+  { title: 'LINKEDIN CONNECTIONS', count: 1400 },
   { title: 'GITHUB REPO', count: 20 },
   { title: 'LEETCODE PROBLEMS', count: LEETCODE_PORBLEMS_COUNT },
   { title: 'TOTAL PROJECTS', count: PROJECT_COUNT },
@@ -66,10 +67,11 @@ export const SKILLS_DATA = {
   tools: [
     { name: "VS Code", color: "#007ACC", icon: VscVscode, isVisible: true },
     { name: "Postman", color: "#FF6C37", icon: SiPostman, isVisible: true },
-    { name: "Vite", color: "#FFFF00", icon: TbBrandVite, isVisible: true },
     { name: "GitHub", color: "#FFFFFF", icon: SiGithub, isVisible: true },
     { name: "Figma", color: "#FF007F", icon: SiFigma, isVisible: true },
     { name: "Vercel", color: "#FFFFFF", icon: SiVercel, isVisible: true },
+    { name: "Windows", color: "#0078D4", icon: AiFillWindows , isVisible: true },
+    { name: "Linux", color: "#FFFFFF", icon: FaLinux , isVisible: true },
     { name: "Antigravity IDE", color: null, icon: null, isVisible: false },
   ],
   techStack: [
